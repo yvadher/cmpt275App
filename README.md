@@ -24,4 +24,5 @@
 -  [Doc2](https://github.com/yvadher/cmpt275App)
 
 
-### Support or Contact
+### Support or Contact 
+:sparkles: :camel: :boom:
