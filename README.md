@@ -6,8 +6,8 @@
 
 * **Fahad Chaudhary**
 * **Karmveer Dhilon**
-* **Ryan **
-* **Shawn Thai **
+* **Ryan**
+* **Shawn Thai**
 * **Yagnik Vadher**
 
 
