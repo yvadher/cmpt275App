@@ -11,7 +11,6 @@
 * **Yagnik Vadher**
 
 
-```markdown
 
 
 ## Project proposal : 
@@ -20,6 +19,9 @@
 ## Project repository 
 - [Link](https://github.com/yvadher/cmpt275App)
 
+## Project docs
+-  [Doc1](https://github.com/yvadher/cmpt275App)
+-  [Doc2](https://github.com/yvadher/cmpt275App)
 
 
 ### Support or Contact
