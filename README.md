@@ -4,11 +4,11 @@
 
 ### Team 2
 
-* **Fahad Chaudhary**
-* **Karmveer Dhilon**
-* **Ryan**
-* **Shawn Thai**
-* **Yagnik Vadher**
+* **Fahd Chaudhry** : mchaudhr@sfu.ca
+* **Karamveer Dhillon** : kasd8@sfu.ca
+* **Ryan Serkouh** : 
+* **Shawn Thai** : shawnt@sfu.ca
+* **Yagnik Vadher** : yvaddher@sfu.ca
 
 
 
@@ -25,4 +25,3 @@
 
 
 ### Support or Contact 
-:sparkles: :camel: :boom:
