@@ -4,7 +4,7 @@
 
 ### Group Number:  2
 
-### Team Name:  The Night Owles
+### Team Name:  The Night Owls
 
 * **Fahd Chaudhry** : mchaudhr@sfu.ca
 
