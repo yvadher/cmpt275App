@@ -6,7 +6,7 @@
 
 * **Fahd Chaudhry** : mchaudhr@sfu.ca
 * **Karamveer Dhillon** : kasd8@sfu.ca
-* **Ryan Serkouh** : 
+* **Ryan Serkouh** : hserkouh@sfu.ca
 * **Shawn Thai** : shawnt@sfu.ca
 * **Yagnik Vadher** : yvaddher@sfu.ca
 
