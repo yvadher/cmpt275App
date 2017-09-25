@@ -29,8 +29,8 @@
 - [Documents](https://drive.google.com/drive/u/1/folders/0BwsesvpyYdXJUXNBN3VfWEFCdE0?usp=sharing&pli=1)
 
 ## Meeting Minutes 
--  [Meeting 1](https://github.com/yvadher/cmpt275App)  - [Meeting 2](https://github.com/yvadher/cmpt275App)  
--  [Meeting 3](https://github.com/yvadher/cmpt275App)  - [Meeting 4](https://github.com/yvadher/cmpt275App)
+-  [Meeting 1](https://drive.google.com/open?id=0B7aK5G9fAl8ySWl3ZmxlUzRWckU)  - [Meeting 2](https://drive.google.com/open?id=0B7aK5G9fAl8yWUpvYm0wb3g5Snc)  
+-  [Meeting 3](https://drive.google.com/open?id=0B7aK5G9fAl8yNmUtYnhYTXdEVlU)  - [Meeting 4](https://drive.google.com/open?id=0B7aK5G9fAl8yOEdZWUVFWXBRdnM)
 
 
 ### Support or Contact 
