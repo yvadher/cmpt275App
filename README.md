@@ -20,7 +20,7 @@
 
 
 ## Project proposal : 
-[Link](https://docs.google.com/document/d/1Sjle3Uqf5rmHdhPMzWy1VnGbLSjvbW4b8QMaoAgdRVY/edit)
+- [Link](https://docs.google.com/document/d/1Sjle3Uqf5rmHdhPMzWy1VnGbLSjvbW4b8QMaoAgdRVY/edit)
 
 ## Project repository 
 - [Link](https://github.com/yvadher/cmpt275App)
