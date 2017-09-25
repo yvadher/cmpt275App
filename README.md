@@ -1,4 +1,4 @@
-## Welcome to CMPT275 App 
+## Welcome to CMPT 275 Application Page 
 
 
 
@@ -6,7 +6,7 @@
 
 ### Team Name:  The Night Owls
 
-* **Fahd Chaudhry** : mchaudhr@sfu.ca
+* **Fahd Chaudhry** : mchaudhr@sfu.ca --Fahd is a keen Engineering Science student studying at Simon Fraser Univeristy. With a deep interest in technology and computers, Fahd is ready to tackle the challenges in the real world. Having an innate passion for coding, Fahd can can develop in C/C++, Python and VB/VBA programming languages. 
 
 * **Karamveer Dhillon** : kasd8@sfu.ca
 
