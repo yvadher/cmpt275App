@@ -8,7 +8,7 @@
 
 * **Fahd Chaudhry** : mchaudhr@sfu.ca --Fahd is a keen Engineering Science student studying at Simon Fraser Univeristy. With a deep interest in technology and computers, Fahd is ready to tackle the challenges in the real world. Having an innate passion for coding, Fahd can can develop in C/C++, Python and VB/VBA programming languages. 
 
-* **Karamveer Dhillon** : kasd8@sfu.ca
+* **Karamveer Dhillon** : ksd8@sfu.ca --Karamveer is an inquisitive computer engineering student currently studying at Simon Fraser University. He loves technology in all its forms, and uses his knowledge of C and C++ to further explore the field. In addition engineering, Karamveer has also studied business management, which gives him a unique perspective on things. 
 
 * **Ryan Serkouh** : hserkouh@sfu.ca  --Ryan is an enthusiastic future computer engineer studying at Simon Fraser University currently in his Fourth year. Always loved working with computers to create cool things and that is why coding programs or writing computer or mobile applications is a passion for him. With ENSC251, CMPT128, 225, and 300 under his belt, Ryan is ready to tackle this course! Relevant skills include mobile programming, HTML & CSS, and team management! Ryan is also a fitness enthusiast as you can find him in the SFU gym doing sets when not in front of a computer!
 
