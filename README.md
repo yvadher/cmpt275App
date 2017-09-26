@@ -29,8 +29,10 @@
 - [Documents](https://drive.google.com/drive/u/1/folders/0BwsesvpyYdXJUXNBN3VfWEFCdE0?usp=sharing&pli=1)
 
 ## Meeting Minutes 
--  [Meeting 1](https://drive.google.com/open?id=0B7aK5G9fAl8ySWl3ZmxlUzRWckU)  - [Meeting 2](https://drive.google.com/open?id=0B7aK5G9fAl8yWUpvYm0wb3g5Snc)  
--  [Meeting 3](https://drive.google.com/open?id=0B7aK5G9fAl8yNmUtYnhYTXdEVlU)  - [Meeting 4](https://drive.google.com/open?id=0B7aK5G9fAl8yOEdZWUVFWXBRdnM)
+-  [Meeting 1](https://drive.google.com/open?id=0B7aK5G9fAl8ySWl3ZmxlUzRWckU) Monday, September 18, 2017
+-  [Meeting 2](https://drive.google.com/open?id=0B7aK5G9fAl8yWUpvYm0wb3g5Snc) Wednesday, September 20, 2017
+-  [Meeting 3](https://drive.google.com/open?id=0B7aK5G9fAl8yNmUtYnhYTXdEVlU) Friday, September 22, 2017
+-  [Meeting 4](https://drive.google.com/open?id=0B7aK5G9fAl8yOEdZWUVFWXBRdnM) Sunday, September 24, 2017
 
 
 ### Support or Contact 
