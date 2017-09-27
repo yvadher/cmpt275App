@@ -14,16 +14,17 @@
 
 * **Shawn Thai** : shawnt@sfu.ca  --Shawn is a third year SFU Engineering Science student with an interest in computer engineering. Shawn codes primarily in C++ and Python to create small programs and games, and during his free time, tries to learn new programming languages. Motivated by the coming of new, fast growing technologies, Shawn is eager to learn more about software development and project management.
 
-* **Yagnik Vadher** : yvaddher@sfu.ca
+* **Yagnik Vadher** : yvaddher@sfu.ca  --Yagnik is an avid computer engineering student with a passion for software systems. Yagnik codes mainly in Javascript with Angular framework, Python and C/C++. With co-op work experience both in IoT firmware project and backend system software has allowed him to develop a great softwares. Yagnik has worked with machine learning and has diverse experience in software technologies.  
+
 
 
 
 
 ## Project proposal : 
-- [Link](https://docs.google.com/document/d/1Sjle3Uqf5rmHdhPMzWy1VnGbLSjvbW4b8QMaoAgdRVY/edit)
+- [Proposal Document](https://docs.google.com/document/d/1Sjle3Uqf5rmHdhPMzWy1VnGbLSjvbW4b8QMaoAgdRVY/edit)
 
 ## Project repository 
-- [Link](https://github.com/yvadher/cmpt275App)
+- [Click here to check Repository](https://github.com/yvadher/cmpt275App)
 
 ## Project Drive 
 - [Documents](https://drive.google.com/drive/u/1/folders/0BwsesvpyYdXJUXNBN3VfWEFCdE0?usp=sharing&pli=1)
