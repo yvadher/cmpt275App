@@ -6,18 +6,21 @@
 
 ### Team Name:  The Night Owls
 
-* **Fahd Chaudhry** : mchaudhr@sfu.ca --Fahd is a keen Engineering Science student studying at Simon Fraser University. With a deep interest in technology and computers, Fahd is ready to tackle the challenges in the real world. Having an innate passion for coding, Fahd can can develop in C/C++, Python and VB/VBA programming languages. 
+* **Fahd Chaudhry** : mchaudhr@sfu.ca 
+> Fahd is a keen Engineering Science student studying at Simon Fraser University. With a deep interest in technology and computers, Fahd is ready to tackle the challenges in the real world. Having an innate passion for coding, Fahd can can develop in C/C++, Python and VB/VBA programming languages. 
 
-* **Karamveer Dhillon** : ksd8@sfu.ca --Karamveer is an inquisitive computer engineering student currently studying at Simon Fraser University. He loves technology in all its forms, and uses his knowledge of C and C++ to further explore the field. In addition to engineering, Karamveer has also studied business management, which gives him a unique perspective on things. 
+* **Karamveer Dhillon** : ksd8@sfu.ca 
+> Karamveer is an inquisitive computer engineering student currently studying at Simon Fraser University. He loves technology in all its forms, and uses his knowledge of C and C++ to further explore the field. In addition to engineering, Karamveer has also studied business management, which gives him a unique perspective on things. 
 
-* **Ryan Serkouh** : hserkouh@sfu.ca  --Ryan is an enthusiastic future computer engineer studying at Simon Fraser University currently in his Fourth year. Always loved working with computers to create cool things and that is why coding programs or writing computer or mobile applications is a passion for him. With ENSC251, CMPT128, 225, and 300 under his belt, Ryan is ready to tackle this course! Relevant skills include mobile programming, HTML & CSS, and team management! Ryan is also a fitness enthusiast as you can find him in the SFU gym doing sets when not in front of a computer!
+* **Ryan Serkouh** : hserkouh@sfu.ca  
+> Ryan is an enthusiastic future computer engineer studying at Simon Fraser University currently in his Fourth year. Always loved working with computers to create cool things and that is why coding programs or writing computer or mobile applications is a passion for him. With ENSC251, CMPT128, 225, and 300 under his belt, Ryan is ready to tackle this course! Relevant skills include mobile programming, HTML & CSS, and team management! Ryan is also a fitness enthusiast as you can find him in the SFU gym doing sets when not in front of a computer!
 
-* **Shawn Thai** : shawnt@sfu.ca  --Shawn is a third year SFU Engineering Science student with an interest in computer engineering. Shawn codes primarily in C++ and Python to create small programs and games, and during his free time, tries to learn new programming languages. Motivated by the coming of new, fast growing technologies, Shawn is eager to learn more about software development and project management.
+* **Shawn Thai** : shawnt@sfu.ca  
+> Shawn is a third year SFU Engineering Science student with an interest in computer engineering. Shawn codes primarily in C++ and Python to create small programs and games, and during his free time, tries to learn new programming languages. Motivated by the coming of new, fast growing technologies, Shawn is eager to learn more about software development and project management.
 
-* **Yagnik Vadher** : yvaddher@sfu.ca  --Yagnik is an avid computer engineering student with a passion for software systems. Yagnik codes mainly in Javascript with Angular framework, Python and C/C++. With co-op work experience in both IoT firmware projects and backend system software, he has developed a great software background. Yagnik has also worked with machine learning, and has diverse experience in software technologies.
+* **Yagnik Vadher** : yvaddher@sfu.ca  
+> Yagnik is an avid computer engineering student with a passion for software systems. Yagnik codes mainly in Javascript with Angular framework, Python and C/C++. With co-op work experience in both IoT firmware projects and backend system software, he has developed a great software background. Yagnik has also worked with machine learning, and has diverse experience in software technologies.
   
-
-
 
 
 ## Project proposal : 
