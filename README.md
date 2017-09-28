@@ -44,7 +44,7 @@
 > Yagnik is an avid computer engineering student with a passion for software systems. Yagnik codes mainly in Javascript with Angular framework, Python and C/C++. With co-op work experience in both IoT firmware projects and backend system software, he has developed a great software background. Yagnik has also worked with machine learning, and has diverse experience in software technologies.
   
 ## Team Schedule  
-- [Calander](url)
+- [Calander](https://calendar.google.com/calendar/embed?src=kishorraj110%40gmail.com&ctz=America/Vancouver)
 
 ## Project Proposal : 
 - [Proposal Document](https://docs.google.com/document/d/1Sjle3Uqf5rmHdhPMzWy1VnGbLSjvbW4b8QMaoAgdRVY/edit)
