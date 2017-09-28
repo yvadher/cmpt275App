@@ -1,10 +1,10 @@
 ## Welcome to CMPT 275 Application Page 
 
-### Fall 2017 - Professor Herbert H. Tsang
+#### Fall 2017 - Professor Herbert H. Tsang
 
-### Group Number:  2
+#### Group Number:  2
 
-### Team Name:  The Night Owls
+#####Team Name:  The Night Owls
 
 ## Table of contents
 
@@ -16,6 +16,7 @@
 * **Project Drive**
 * **Meeting Minutes**
 
+## Assignments
 | Task        | Assignment Details                                                                      | File                                        | Submission Date |
 |-------------|-----------------------------------------------------------------------------------------|---------------------------------------------|-----------------|
 | Assignment1 | [Project plan and website](Documents/Assignment1_Instruction.pdf)                       | [Submission Pdf](Documents/Assignment1.pdf) |                 |
