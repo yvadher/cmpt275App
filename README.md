@@ -6,11 +6,11 @@
 
 #### Team Name:  The Night Owls
 
-## Table of contents
+## Table of Contents
 
 * **Assignments**
 * **Team Members**
-* **Team Schedual**
+* **Team Schedule**
 * **Project Proposal**
 * **Project Repository**
 * **Project Drive**
@@ -43,14 +43,14 @@
 * **Yagnik Vadher** : yvaddher@sfu.ca  
 > Yagnik is an avid computer engineering student with a passion for software systems. Yagnik codes mainly in Javascript with Angular framework, Python and C/C++. With co-op work experience in both IoT firmware projects and backend system software, he has developed a great software background. Yagnik has also worked with machine learning, and has diverse experience in software technologies.
   
-## Team Schedual 
-[Link to Calander](url)
+## Team Schedule  
+- [Calander](url)
 
 ## Project Proposal : 
 - [Proposal Document](https://docs.google.com/document/d/1Sjle3Uqf5rmHdhPMzWy1VnGbLSjvbW4b8QMaoAgdRVY/edit)
 
 ## Project Repository 
-- [Click here to check Repository](https://github.com/yvadher/cmpt275App)
+- [Repository](https://github.com/yvadher/cmpt275App)
 
 ## Project Drive 
 - [Documents](https://drive.google.com/drive/u/1/folders/0BwsesvpyYdXJUXNBN3VfWEFCdE0?usp=sharing&pli=1)
