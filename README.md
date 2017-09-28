@@ -8,13 +8,13 @@
 
 ## Table of content
 
-| Task         | Assignment Details              | File                  | Submission Date |
-|--------------|---------------------------------|-----------------------|-----------------|
-| Assignment 1 | [Project plan and website](url) | [Submission Pdf](url) |                 |
-| Assignment 2 |                                 |                       |                 |
-| Assignment 3 |                                 |                       |                 |
-| Assignment 4 |                                 |                       |                 |
-| Assignment 5 |                                 |                       |                 |
+| Task         | Assignment Details                                                                      | File                                        | Submission Date |
+|--------------|-----------------------------------------------------------------------------------------|---------------------------------------------|-----------------|
+| Assignment 1 | [Project plan and website](Documents/Assignment1_Instruction.pdf)                       | [Submission](Documents/Assignment1.pdf)     |                 |
+| Assignment 2 | [Requirement, Design and Quality assurance plan](Documents/Assignment2_Instruction.pdf) |                                             |                 |
+| Assignment 3 |                                                                                         |                                             |                 |
+| Assignment 4 |                                                                                         |                                             |                 |
+| Assignment 5 |                                                                                         |                                             |                 |
 
 * **Fahd Chaudhry** : mchaudhr@sfu.ca 
 > Fahd is a keen Engineering Science student studying at Simon Fraser University. With a deep interest in technology and computers, Fahd is ready to tackle the challenges in the real world. Having an innate passion for coding, Fahd can can develop in C/C++, Python and VB/VBA programming languages. 
