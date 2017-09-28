@@ -17,6 +17,7 @@
 * **Meeting Minutes**
 
 ## Assignments
+
 | Task        | Assignment Details                                                                      | File                                        | Submission Date |
 |-------------|-----------------------------------------------------------------------------------------|---------------------------------------------|-----------------|
 | Assignment1 | [Project plan and website](Documents/Assignment1_Instruction.pdf)                       | [Submission Pdf](Documents/Assignment1.pdf) |                 |
