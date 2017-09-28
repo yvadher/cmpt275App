@@ -4,7 +4,7 @@
 
 #### Group Number:  2
 
-#####Team Name:  The Night Owls
+#### Team Name:  The Night Owls
 
 ## Table of contents
 
