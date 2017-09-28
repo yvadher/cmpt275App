@@ -6,7 +6,15 @@
 
 ### Team Name:  The Night Owls
 
-## Table of content
+## Table of contents
+
+* **Assignments**
+* **Team Members**
+* **Team Schedual**
+* **Project Proposal**
+* **Project Repository**
+* **Project Drive**
+* **Meeting Minutes**
 
 | Task        | Assignment Details                                                                      | File                                        | Submission Date |
 |-------------|-----------------------------------------------------------------------------------------|---------------------------------------------|-----------------|
@@ -16,6 +24,7 @@
 | Assignment4 |                                                                                         |                                             |                 |
 | Assignment5 |                                                                                         |                                             |                 |
 
+## Team Members
 
 * **Fahd Chaudhry** : mchaudhr@sfu.ca 
 > Fahd is a keen Engineering Science student studying at Simon Fraser University. With a deep interest in technology and computers, Fahd is ready to tackle the challenges in the real world. Having an innate passion for coding, Fahd can can develop in C/C++, Python and VB/VBA programming languages. 
@@ -32,12 +41,13 @@
 * **Yagnik Vadher** : yvaddher@sfu.ca  
 > Yagnik is an avid computer engineering student with a passion for software systems. Yagnik codes mainly in Javascript with Angular framework, Python and C/C++. With co-op work experience in both IoT firmware projects and backend system software, he has developed a great software background. Yagnik has also worked with machine learning, and has diverse experience in software technologies.
   
+## Team Schedual 
+[Link to Calander](url)
 
-
-## Project proposal : 
+## Project Proposal : 
 - [Proposal Document](https://docs.google.com/document/d/1Sjle3Uqf5rmHdhPMzWy1VnGbLSjvbW4b8QMaoAgdRVY/edit)
 
-## Project repository 
+## Project Repository 
 - [Click here to check Repository](https://github.com/yvadher/cmpt275App)
 
 ## Project Drive 
