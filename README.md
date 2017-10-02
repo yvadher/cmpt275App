@@ -60,5 +60,5 @@
 -  [Meeting 2](https://drive.google.com/open?id=0B7aK5G9fAl8yWUpvYm0wb3g5Snc) Wednesday, September 20, 2017
 -  [Meeting 3](https://drive.google.com/open?id=0B7aK5G9fAl8yNmUtYnhYTXdEVlU) Friday, September 22, 2017
 -  [Meeting 4](https://drive.google.com/open?id=0B7aK5G9fAl8yOEdZWUVFWXBRdnM) Sunday, September 24, 2017
-
+-  [Meeting 5](https://drive.google.com/open?id=0BwsesvpyYdXJQ0N5Y2h4WkxPblU) Sunday, October 1, 2017
 
