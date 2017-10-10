@@ -13,11 +13,10 @@
 * **[Team Schedule](#team-schedule)**<br>
 * **[Project Proposal](#project-proposal-)**<br>
 * **[Project Repository](#project-repository)**<br>
-* **[Project Drive**](#project-repository)<br>
+* **[Project Drive](#project-repository)**<br>
 * **[Meeting Minutes](#Meeting Minutes)**<br>
 
 ## Assignments
-team-members
 | Task        | Assignment Details                                                                      | File                                        | Submission Date |
 |-------------|-----------------------------------------------------------------------------------------|---------------------------------------------|-----------------|
 | Assignment1 | [Project Plan and Website](Documents/Assignment1_Instruction.pdf)                       | [Submission Pdf](Documents/Assignment1.pdf) |                 |
