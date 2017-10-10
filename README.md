@@ -14,7 +14,7 @@
 * **[Project Proposal](#project-proposal-)**<br>
 * **[Project Repository](#project-repository)**<br>
 * **[Project Drive](#project-repository)**<br>
-* **[Meeting Minutes](#Meeting Minutes)**<br>
+* **[Meeting Minutes](#meeting-minutes)**<br>
 
 ## Assignments
 
