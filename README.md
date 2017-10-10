@@ -8,7 +8,7 @@
 
 ## Table of Contents
 
-* **[Assignments](#Assignments)**<br>
+* **[Assignments](#assignments)**<br>
 * **Team Members**
 * **Team Schedule**
 * **Project Proposal**
