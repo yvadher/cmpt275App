@@ -61,4 +61,7 @@
 -  [Meeting 3](https://drive.google.com/open?id=0B7aK5G9fAl8yNmUtYnhYTXdEVlU) Friday, September 22, 2017
 -  [Meeting 4](https://drive.google.com/open?id=0B7aK5G9fAl8yOEdZWUVFWXBRdnM) Sunday, September 24, 2017
 -  [Meeting 5](https://drive.google.com/open?id=0BwsesvpyYdXJcEtHa216UXZXSUU) Sunday, October 1, 2017
+-  [Meeting 6](https://drive.google.com/open?id=0B7aK5G9fAl8yYU9kTzlnTUt1SW8) Monday, October 2, 2017
+-  [Meeting 7](https://drive.google.com/open?id=0B7aK5G9fAl8yaTJuTmtIN3kweU0) Wednesday, October 4, 2017
+-  [Meeting 8](https://drive.google.com/open?id=0B7aK5G9fAl8ySVpEUzJVNGg0ZzQ) Monday, October 9, 2017
 
