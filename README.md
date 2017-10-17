@@ -1,5 +1,5 @@
 ## Welcome to CMPT 275 Application Page 
-- Check out webpage at : [https://yvadher.github.io/](yvadher.github.io/cmpt275App)
+- Check out webpage at : [yvadher.github.io/cmpt275App](https://yvadher.github.io/cmpt275App/)
 #### Fall 2017 - Professor Herbert H. Tsang
 
 #### Group Number:  2
