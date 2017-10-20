@@ -21,7 +21,7 @@
  | Task        | Assignment Details                                                                      | File                                        | Submission Date |
  |-------------|-----------------------------------------------------------------------------------------|---------------------------------------------|-----------------|
  | Assignment1 | [Project Plan and Website](Documents/Assignment1_Instruction.pdf)                       | [Submission Pdf](Documents/Assignment1.pdf) |                 |
- | Assignment2 | [Requirement, Design and Quality Assurance Plan](Documents/Assignment2_Instruction.pdf) |   [Requirement Document](Documents/Assignment3_RequirmentDocument.pdf)    |                 |
+ | Assignment2 | [Requirement, Design and Quality Assurance Plan](Documents/Assignment2_Instruction.pdf) |   [Requirement Document](Documents/Assignment2_RequirmentDocument.pdf)    |                 |
  | Assignment3 |                                                                                         |                                             |                 |
  | Assignment4 |                                                                                         |                                             |                 |
  | Assignment5 |                                                                                         |                                             |                 |
