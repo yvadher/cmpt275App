@@ -20,8 +20,8 @@
 
  | Task        | Assignment Details                                                                      | File                                        | Submission Date |
  |-------------|-----------------------------------------------------------------------------------------|---------------------------------------------|-----------------|
- | Assignment1 | [Project Plan and Website](Documents/Assignment1_Instruction.pdf)                       | [Submission Pdf](Documents/Assignment1.pdf) |                 |
- | Assignment2 | [Requirement, Design and Quality Assurance Plan](Documents/Assignment2_Instruction.pdf) |   [Requirement Document](Documents/Assignment2_RequirmentDocument.pdf) <br> [Design Document](Documents/Assignment2_Design.pdf)<br> [QA Document](Documents/Assignment2_QA.pdf)   |                 |
+ | Assignment1 | [Project Plan and Website](Documents/Assignment1_Instruction.pdf)                       |- [Submission Pdf](Documents/Assignment1.pdf) |                 |
+ | Assignment2 | [Requirement, Design and Quality Assurance Plan](Documents/Assignment2_Instruction.pdf) |   - [Requirement Document](Documents/Assignment2_RequirmentDocument.pdf) <br> - [Design Document](Documents/Assignment2_Design.pdf)<br>- [QA Document](Documents/Assignment2_QA.pdf)   |                 |
  | Assignment3 |                                                                                         |                                             |                 |
  | Assignment4 |                                                                                         |                                             |                 |
  | Assignment5 |                                                                                         |                                             |                 |
