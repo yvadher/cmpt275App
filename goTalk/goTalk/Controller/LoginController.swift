@@ -3,7 +3,7 @@
 //  DEMOHSBC
 //
 //  Created by Ryan on 2017-10-26.
-//  Copyright © 2017 Min.erva. All rights reserved.
+//  Copyright © 2017 night.owls. All rights reserved.
 //
 
 import UIKit
@@ -36,7 +36,7 @@ class LoginController: UIViewController {
     }()
     
     //  mod. by Ryan on 2017-10-26.
-    let cardNumberTextField: UITextField = {
+    let nameTextField: UITextField = {
         let tf = UITextField()
         tf.placeholder = "Name"
         tf.translatesAutoresizingMaskIntoConstraints = false
@@ -44,7 +44,7 @@ class LoginController: UIViewController {
         return tf
     }()
     //  mod. by Ryan on 2017-10-26.
-    let cardNumberSeparatorView: UIView = {
+    let nameSeparatorView: UIView = {
         let view = UIView()
         view.backgroundColor = UIColor(r: 220, g: 220, b: 220)
         view.translatesAutoresizingMaskIntoConstraints=false
@@ -52,6 +52,22 @@ class LoginController: UIViewController {
         return view
     }()
     
+    //  mod. by Ryan on 2017-10-26.
+    let emailTextField: UITextField = {
+        let tf = UITextField()
+        tf.placeholder = "Email Address"
+        tf.translatesAutoresizingMaskIntoConstraints = false
+        
+        return tf
+    }()
+    //  mod. by Ryan on 2017-10-26.
+    let emailSeparatorView: UIView = {
+        let view = UIView()
+        view.backgroundColor = UIColor(r: 220, g: 220, b: 220)
+        view.translatesAutoresizingMaskIntoConstraints=false
+        
+        return view
+    }()
     //  mod. by Ryan on 2017-10-26.
     let passwordTextField: UITextField = {
         let tf = UITextField()
@@ -64,7 +80,7 @@ class LoginController: UIViewController {
     
     let profileImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "hsbc-logo")
+        imageView.image = UIImage(named: "goTalk-logo")
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFill
         
@@ -94,25 +110,37 @@ class LoginController: UIViewController {
         inputsContainerView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive=true
         inputsContainerView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive=true
         inputsContainerView.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -24).isActive=true
-        inputsContainerView.heightAnchor.constraint(equalToConstant: 100).isActive=true
+        inputsContainerView.heightAnchor.constraint(equalToConstant: 150).isActive=true
         
-        inputsContainerView.addSubview(cardNumberTextField)
-        cardNumberTextField.leftAnchor.constraint(equalTo: inputsContainerView.leftAnchor, constant: 12).isActive=true
-        cardNumberTextField.topAnchor.constraint(equalTo: inputsContainerView.topAnchor).isActive=true
-        cardNumberTextField.widthAnchor.constraint(equalTo: inputsContainerView.widthAnchor).isActive=true
-        cardNumberTextField.heightAnchor.constraint(equalTo: inputsContainerView.heightAnchor, multiplier: 1/2).isActive=true
+        inputsContainerView.addSubview(nameTextField)
+        nameTextField.leftAnchor.constraint(equalTo: inputsContainerView.leftAnchor, constant: 12).isActive=true
+        nameTextField.topAnchor.constraint(equalTo: inputsContainerView.topAnchor).isActive=true
+        nameTextField.widthAnchor.constraint(equalTo: inputsContainerView.widthAnchor).isActive=true
+        nameTextField.heightAnchor.constraint(equalTo: inputsContainerView.heightAnchor, multiplier: 1/3).isActive=true
         
-        inputsContainerView.addSubview(cardNumberSeparatorView)
-        cardNumberSeparatorView.leftAnchor.constraint(equalTo: inputsContainerView.leftAnchor).isActive=true
-        cardNumberSeparatorView.topAnchor.constraint(equalTo: cardNumberTextField.bottomAnchor).isActive=true
-        cardNumberSeparatorView.widthAnchor.constraint(equalTo: inputsContainerView.widthAnchor).isActive=true
-        cardNumberSeparatorView.heightAnchor.constraint(equalToConstant: 1).isActive=true
+        inputsContainerView.addSubview(nameSeparatorView)
+        nameSeparatorView.leftAnchor.constraint(equalTo: inputsContainerView.leftAnchor).isActive=true
+        nameSeparatorView.topAnchor.constraint(equalTo: nameTextField.bottomAnchor).isActive=true
+        nameSeparatorView.widthAnchor.constraint(equalTo: inputsContainerView.widthAnchor).isActive=true
+        nameSeparatorView.heightAnchor.constraint(equalToConstant: 1).isActive=true
+        
+        inputsContainerView.addSubview(emailTextField)
+        emailTextField.leftAnchor.constraint(equalTo: inputsContainerView.leftAnchor, constant: 12).isActive=true
+        emailTextField.topAnchor.constraint(equalTo: nameTextField.bottomAnchor).isActive=true
+        emailTextField.widthAnchor.constraint(equalTo: inputsContainerView.widthAnchor).isActive=true
+        emailTextField.heightAnchor.constraint(equalTo: inputsContainerView.heightAnchor, multiplier: 1/3).isActive=true
+        
+        inputsContainerView.addSubview(emailSeparatorView)
+        emailSeparatorView.leftAnchor.constraint(equalTo: inputsContainerView.leftAnchor).isActive=true
+        emailSeparatorView.topAnchor.constraint(equalTo: emailTextField.bottomAnchor).isActive=true
+        emailSeparatorView.widthAnchor.constraint(equalTo: inputsContainerView.widthAnchor).isActive=true
+        emailSeparatorView.heightAnchor.constraint(equalToConstant: 1).isActive=true
         
         inputsContainerView.addSubview(passwordTextField)
         passwordTextField.leftAnchor.constraint(equalTo: inputsContainerView.leftAnchor, constant: 12).isActive=true
-        passwordTextField.topAnchor.constraint(equalTo: cardNumberSeparatorView.bottomAnchor).isActive=true
+        passwordTextField.topAnchor.constraint(equalTo: emailTextField.bottomAnchor).isActive=true
         passwordTextField.widthAnchor.constraint(equalTo: inputsContainerView.widthAnchor).isActive=true
-        passwordTextField.heightAnchor.constraint(equalTo: inputsContainerView.heightAnchor, multiplier: 1/2).isActive=true
+        passwordTextField.heightAnchor.constraint(equalTo: inputsContainerView.heightAnchor, multiplier: 1/3).isActive=true
         
     }
     
@@ -131,6 +159,10 @@ class LoginController: UIViewController {
         profileImageView.bottomAnchor.constraint(equalTo: inputsContainerView.topAnchor, constant: -12).isActive=true
         profileImageView.widthAnchor.constraint(equalToConstant: 120).isActive=true
         profileImageView.heightAnchor.constraint(equalToConstant: 120).isActive=true
+        
+        
+        
+        
         
     }
     
@@ -153,4 +185,3 @@ class LoginController: UIViewController {
      */
     
 }
-
