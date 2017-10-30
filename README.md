@@ -21,10 +21,10 @@
  | Task        | Assignment Details                                                                      | File                                        | Submission Date |
  |-------------|-----------------------------------------------------------------------------------------|---------------------------------------------|-----------------|
  | Assignment1 | [Project Plan and Website](Documents/Assignment1_Instruction.pdf)                       |[Project Plan](Documents/Assignment1.pdf)  |                 |
- | Assignment2 | [Requirement, Design and Quality Assurance Plan](Documents/Assignment2_Instruction.pdf) |[Requirement Document](Documents/Assignment2_RequirmentDocument.pdf) <br> [Design Document](Documents/Assignment2_Design.pdf)<br>- [QA Document](Documents/Assignment2_QA.pdf)   |                 |
+ | Assignment2 | [Requirement, Design and Quality Assurance Plan](Documents/Assignment2_Instruction.pdf) |[Requirement Document](Documents/Assignment2_RequirmentDocument.pdf) <br> [Design Document](Documents/Assignment2_Design.pdf)<br> [QA Document](Documents/Assignment2_QA.pdf)   |                 |
  | Assignment3 | [Requirement, Design and Quality Assurance Plan 2]                                      |                                             |                 |
- | Assignment4 |                                                                                         |                                             |                 |
- | Assignment5 |                                                                                         |                                             |                 |
+ | Assignment4 | [Requirement, Design and Quality Assurance Plan 3]                                      |                                             |                 |
+ | Assignment5 | [Requirement, Design and Quality Assurance Plan 4]                                      |                                             |                 |
  
 ## Team Members
 
