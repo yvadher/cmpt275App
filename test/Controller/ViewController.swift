@@ -87,7 +87,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             let imageNames = photos.imageNames
             let imageName = imageNames[indexPath.item]
             cell.imageName = imageName
-            print ("Current : \(currentCategory) And : \(photoCategory[indexPath.section].categoryName) ")
+           // print ("Current : \(currentCategory) And : \(photoCategory[indexPath.section].categoryName) ")
             
             return cell
             
@@ -111,19 +111,20 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
            // let category = self.photoCategory[indexPath.section]
            // let image = UIImage(named: category.imageNames[indexPath.item])
             currentCategory = indexPath.section
-            print ("\(currentCategory) : \(indexPath.section) ")
+           // print ("\(currentCategory) : \(indexPath.section) ")
             
             pictographCollection.reloadData()
+            pictographCollection.layoutIfNeeded()
             
         }else if (collectionView == self.pictographCollection){
             
-            let category = self.photoCategory[indexPath.section]
+            let category = self.photoCategory[currentCategory]
             clickedPhotos.append(category.imageNames[indexPath.item])
             print (clickedPhotos)
             print ("Came here!! \(category.imageNames[indexPath.item])")
             displayCollection.reloadData()
+            displayCollection.layoutIfNeeded()
            
-            
         }else if (collectionView == self.displayCollection){
             //do nothing
         }else {
