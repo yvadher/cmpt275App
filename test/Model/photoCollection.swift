@@ -16,59 +16,40 @@ struct PhotoCategory {
     static func fetchPhotos() -> [PhotoCategory] {
         var categories = [PhotoCategory]()
         let photosData = PhotosLibrary.downloadPhotosData()
-        
-        for (categoryName, dict) in photosData {
-            if let dict = dict as? [String : Any] {
-                let categoryImageName = dict["categoryImageName"] as! String
-                if let imageNames = dict["imageNames"] as? [String] {
-                    let newCategory = PhotoCategory(categoryName: categoryImageName, title: categoryName, imageNames: imageNames)
-                    categories.append(newCategory)
-                }
+   
+        for i in 0...(photosData.count-1) {
+            let categoryImageName = photosData[i].caetegoryName
+            if let imageNames = photosData[i].imagesNames as? [String] {
+                let newCategory = PhotoCategory(categoryName: categoryImageName, title: categoryImageName, imageNames: imageNames)
+                categories.append(newCategory)
             }
         }
-        
         return categories
     }
 }
 
 class PhotosLibrary
 {
-    class func downloadPhotosData() -> [String : Any]
+    struct categoryUnit{
+        let caetegoryName: String
+        let imagesNames : [String]
+    }
+    class func downloadPhotosData() -> [categoryUnit]
     {
-        return [
-            "General" : [
-                "categoryImageName" : "General",
-                "imageNames" : PhotosLibrary.generateImage(categoryPrefix: "General"),
-            ],
-            "Feelings" : [
-                "categoryImageName" : "Feelings",
-                "imageNames" : PhotosLibrary.generateImage(categoryPrefix: "Feelings"),
-            ],
-            "Colors" : [
-                "categoryImageName" : "Colors",
-                "imageNames" : PhotosLibrary.generateImage(categoryPrefix: "Colors"),
-            ],
-            "Drinks" : [
-                "categoryImageName" : "Drinks",
-                "imageNames" : PhotosLibrary.generateImage(categoryPrefix: "Drinks"),
-            ],
-            "Food" : [
-                "categoryImageName" : "Food",
-                "imageNames" : PhotosLibrary.generateImage(categoryPrefix: "Food"),
-            ],
-            "Places" : [
-                "categoryImageName" : "Places",
-                "imageNames" : PhotosLibrary.generateImage(categoryPrefix: "Places"),
-            ],
-            "Toys" : [
-                "categoryImageName" : "Toys",
-                "imageNames" : PhotosLibrary.generateImage(categoryPrefix: "Toys"),
-            ],
-            "Numbers" : [
-                "categoryImageName" : "Numbers",
-                "imageNames" : PhotosLibrary.generateImage(categoryPrefix: "Numbers"),
-            ]
+        let object = [
+            categoryUnit(caetegoryName: "General", imagesNames: PhotosLibrary.generateImage(categoryPrefix: "General")),
+            categoryUnit(caetegoryName: "Feelings", imagesNames: PhotosLibrary.generateImage(categoryPrefix: "Feelings")),
+            categoryUnit(caetegoryName: "Colors", imagesNames: PhotosLibrary.generateImage(categoryPrefix: "Colors")),
+            categoryUnit(caetegoryName: "Drinks", imagesNames: PhotosLibrary.generateImage(categoryPrefix: "Drinks")),
+            categoryUnit(caetegoryName: "Food", imagesNames: PhotosLibrary.generateImage(categoryPrefix: "Food")),
+            categoryUnit(caetegoryName: "Places", imagesNames: PhotosLibrary.generateImage(categoryPrefix: "Places")),
+            categoryUnit(caetegoryName: "Toys", imagesNames: PhotosLibrary.generateImage(categoryPrefix: "Toys")),
+            categoryUnit(caetegoryName: "Numbers", imagesNames: PhotosLibrary.generateImage(categoryPrefix: "Numbers")),
         ]
+        
+        
+        //print (object)
+        return object
     }
     
     private class func generateImage(categoryPrefix: String) -> [String] {

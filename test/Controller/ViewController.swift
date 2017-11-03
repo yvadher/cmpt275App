@@ -12,6 +12,7 @@ import AVFoundation
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     var photoCategory: [PhotoCategory] = PhotoCategory.fetchPhotos()
+    
     @IBOutlet weak var displayCollection: UICollectionView!
     @IBOutlet weak var categoriesCollection: UICollectionView!
     @IBOutlet weak var pictographCollection: UICollectionView!    
@@ -53,7 +54,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         pictographCollection.delegate = self
         pictographCollection.dataSource = self
-        
+        //print (photoCategory)
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -90,7 +91,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Storyboard.categoryCell, for: indexPath) as! categoryCell
             let photos = photoCategory[indexPath.section]
             let imageName = photos.categoryName
-            
+           // print (photoCategory[indexPath.section])
             //cell.imageName = imageName
             cell.categoryLable.text = imageName
             return cell
