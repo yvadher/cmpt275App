@@ -44,7 +44,7 @@
                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="yeR-tS-Ggd" customClass="displayBarCell" customModule="test" customModuleProvider="target">
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="displayBarCell" id="yeR-tS-Ggd" customClass="displayBarCell" customModule="test" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="60" height="80"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -132,7 +132,7 @@
                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategoryCell" id="ZWu-20-Gej" customClass="categoryCell" customModule="test" customModuleProvider="target">
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="categoryCell" id="ZWu-20-Gej" customClass="categoryCell" customModule="test" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="88" height="120"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -145,7 +145,7 @@
                                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gQh-2O-N1s" userLabel="CategoryImage">
                                                                             <rect key="frame" x="0.0" y="0.0" width="88" height="99.5"/>
                                                                         </imageView>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O9P-Lu-MSV" userLabel="CategoryLabel">
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="General" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O9P-Lu-MSV" userLabel="CategoryLabel">
                                                                             <rect key="frame" x="0.0" y="99.5" width="88" height="20.5"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                             <nil key="textColor"/>
@@ -164,7 +164,6 @@
                                                         <connections>
                                                             <outlet property="categoryImg" destination="gQh-2O-N1s" id="Pye-1K-Lhd"/>
                                                             <outlet property="categoryLable" destination="O9P-Lu-MSV" id="TgA-Va-Fmi"/>
-                                                            <outlet property="lable" destination="O9P-Lu-MSV" id="h88-US-Azo"/>
                                                         </connections>
                                                     </collectionViewCell>
                                                 </cells>
@@ -191,7 +190,7 @@
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ButtonCell" id="xOq-Hb-hBY" customClass="pictographDisplayCell" customModule="test" customModuleProvider="target">
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="pictographDisplayCell" id="xOq-Hb-hBY" customClass="pictographDisplayCell" customModule="test" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="88" height="120"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -201,7 +200,7 @@
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Kf2-9s-z8O" userLabel="ButtonStack">
                                                             <rect key="frame" x="0.0" y="0.0" width="90" height="100"/>
                                                             <subviews>
-                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xf5-cX-IvH" userLabel="ButtonImage">
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="angry" translatesAutoresizingMaskIntoConstraints="NO" id="xf5-cX-IvH" userLabel="ButtonImage">
                                                                     <rect key="frame" x="0.0" y="0.0" width="88" height="80"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="80" id="1yf-1Q-DYV"/>
@@ -210,7 +209,7 @@
                                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RwH-Ni-TCy" userLabel="ButtonDetailsStack">
                                                                     <rect key="frame" x="0.0" y="80" width="88" height="40"/>
                                                                     <subviews>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s5Z-WV-eNw" userLabel="ButtonLabel">
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Angry" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s5Z-WV-eNw" userLabel="ButtonLabel">
                                                                             <rect key="frame" x="0.0" y="0.0" width="88" height="40"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                             <nil key="textColor"/>
@@ -258,4 +257,7 @@
             <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="angry" width="390" height="390"/>
+    </resources>
 </document>

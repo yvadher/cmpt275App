@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0738BB631FAC4E9900ACFF8D /* displayBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0738BB621FAC4E9900ACFF8D /* displayBar.swift */; };
 		073CE3091FAC0B19000B3759 /* photoCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073CE3081FAC0B19000B3759 /* photoCollection.swift */; };
 		073CE30C1FAC15C8000B3759 /* categoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073CE30B1FAC15C8000B3759 /* categoryCell.swift */; };
 		073CE3121FAC1C94000B3759 /* pictographDisplayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073CE3111FAC1C94000B3759 /* pictographDisplayCell.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0738BB621FAC4E9900ACFF8D /* displayBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = displayBar.swift; sourceTree = "<group>"; };
 		073CE3081FAC0B19000B3759 /* photoCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = photoCollection.swift; sourceTree = "<group>"; };
 		073CE30B1FAC15C8000B3759 /* categoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = categoryCell.swift; sourceTree = "<group>"; };
 		073CE3111FAC1C94000B3759 /* pictographDisplayCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pictographDisplayCell.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				073CE3081FAC0B19000B3759 /* photoCollection.swift */,
+				0738BB621FAC4E9900ACFF8D /* displayBar.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 				073CE3121FAC1C94000B3759 /* pictographDisplayCell.swift in Sources */,
 				CAB3A9811FA53A700036147C /* ViewController.swift in Sources */,
 				073CE30C1FAC15C8000B3759 /* categoryCell.swift in Sources */,
+				0738BB631FAC4E9900ACFF8D /* displayBar.swift in Sources */,
 				073CE3091FAC0B19000B3759 /* photoCollection.swift in Sources */,
 				CAB3A97F1FA53A700036147C /* AppDelegate.swift in Sources */,
 			);
