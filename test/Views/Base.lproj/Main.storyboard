@@ -69,6 +69,9 @@
                                 <state key="normal" title="Login">
                                     <color key="titleColor" red="0.21674171090126038" green="0.5310065746307373" blue="0.48695468902587891" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="ZRY-eI-L44"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.96056312322616577" green="0.96470874547958374" blue="0.96871882677078247" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
