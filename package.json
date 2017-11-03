@@ -1,0 +1,37 @@
+{
+	"name": "SportsAnalytics",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"start": "node index.js",
+        "server": "node index.js",
+        "server_local": "SET NODE_ENV=local&&node index.js",
+        "server_develop": "SET NODE_ENV=development&& node index.js",
+        "server_staging": "SET NODE_ENV=staging&& node index.js"
+	},
+    "engines": {
+        "npm": ">3.0.0",
+        "node": "^6.2.2"
+    },
+    "dependencies": {
+        "async": "*",
+        "body-parser": "*",
+        "express": "4.13.x",
+        "cfenv": "1.0.x",
+        "colors": "^1.1.2",
+        "http": "0.0.0",
+        "nconf": "*",
+        "path": "^0.12.7",
+        "exceljs":"*",
+        "log-timestamp":"*"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/YagnikV/SportAnalytics.git"
+    },
+    "author": "Yagnik",
+    "bugs": {
+      "url": "https://github.com/YagnikV/SportAnalytics/issues"
+    },
+    "homepage": "https://github.com/YagnikV/SportAnalytics#readme"
+}

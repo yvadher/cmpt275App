@@ -1,0 +1,5 @@
+{
+    "name": "localhost:8000",
+    "port": "8080",
+    "secret": "tokenCuePath"
+}
