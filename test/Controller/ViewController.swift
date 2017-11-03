@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
@@ -15,8 +16,21 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     @IBOutlet weak var categoriesCollection: UICollectionView!
     @IBOutlet weak var pictographCollection: UICollectionView!    
     
+   
     var clickedPhotos: [String] = []
     var currentCategory: Int = 0
+    
+    @IBAction func eraseButton(_ sender: Any) {
+        if (!clickedPhotos.isEmpty){
+            clickedPhotos.removeLast()
+            displayCollection.reloadData()
+        }
+    }
+    
+    @IBAction func goButton(_ sender: Any) {
+        let lineToSpeak: String = clickedPhotos.joined(separator: " ")
+        speakLine(line: lineToSpeak)
+    }
     
     struct Storyboard {
         static let categoryCell = "categoryCell"
@@ -119,9 +133,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }else if (collectionView == self.pictographCollection){
             
             let category = self.photoCategory[currentCategory]
-            clickedPhotos.append(category.imageNames[indexPath.item])
+            let imgName = category.imageNames[indexPath.item]
+            clickedPhotos.append(imgName)
+            speakLine(line: imgName)
             print (clickedPhotos)
-            print ("Came here!! \(category.imageNames[indexPath.item])")
+            print ("Came here!! \(imgName)")
             displayCollection.reloadData()
             displayCollection.layoutIfNeeded()
            
@@ -131,10 +147,14 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             //Encapsulate in try and catch error block
             print ("This should not happen ! In the collectionView didselct!")
         }
-        
     }
     
-    
+    func speakLine(line: String){
+        let speechSynthesizer = AVSpeechSynthesizer()
+        let speechUtterance = AVSpeechUtterance(string: line)
+        speechUtterance.rate = 0.45
+        speechSynthesizer.speak(speechUtterance)
 
+    }
 }
 

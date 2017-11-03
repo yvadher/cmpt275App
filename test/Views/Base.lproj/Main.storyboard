@@ -22,11 +22,13 @@
                                 <subviews>
                                     <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ueb-pz-6rD" userLabel="NavigationBar">
                                         <rect key="frame" x="0.0" y="0.0" width="365" height="44"/>
+                                        <color key="backgroundColor" red="0.98958333333333337" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="1tr-2D-DwT"/>
                                         </constraints>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <items>
-                                            <navigationItem title="goTalk" id="WEp-SP-rIt">
+                                            <navigationItem title="goTalk" largeTitleDisplayMode="always" id="WEp-SP-rIt">
                                                 <barButtonItem key="leftBarButtonItem" title="Menu" id="TOR-A2-o5p"/>
                                             </navigationItem>
                                         </items>
@@ -36,7 +38,7 @@
                                         <subviews>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="jtd-BI-d1j" userLabel="displayCollection">
                                                 <rect key="frame" x="0.0" y="0.0" width="205" height="100"/>
-                                                <color key="backgroundColor" red="0.96797557745897211" green="1" blue="0.17318362241111795" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="pli-9f-j6c">
                                                     <size key="itemSize" width="88" height="100"/>
                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -63,21 +65,31 @@
                                                     </collectionViewCell>
                                                 </cells>
                                             </collectionView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QCn-oq-uzY" userLabel="eraseButton">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QCn-oq-uzY" userLabel="eraseButton">
                                                 <rect key="frame" x="205" y="0.0" width="80" height="100"/>
-                                                <color key="backgroundColor" red="1" green="0.41333392288916337" blue="0.36190500495789202" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="80" id="ZG1-Nf-LYo"/>
                                                 </constraints>
-                                                <state key="normal" title="X"/>
+                                                <state key="normal" image="crossButton"/>
+                                                <connections>
+                                                    <action selector="eraseButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dcV-tN-efN"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ud-lZ-HyR" userLabel="goButton">
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ud-lZ-HyR" userLabel="goButton">
                                                 <rect key="frame" x="285" y="0.0" width="80" height="100"/>
-                                                <color key="backgroundColor" red="0.26807102783515535" green="1" blue="0.26319831563428697" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="0.51936793327331543" green="0.84114766120910645" blue="0.46155792474746704" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="80" id="8Sj-fI-hjI"/>
                                                 </constraints>
-                                                <state key="normal" title="GO!"/>
+                                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <state key="normal" title="GO!">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleShadowColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="goButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QRE-8d-8m4"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -123,7 +135,7 @@
                                             </stackView>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="q8a-b5-ism" userLabel="CategoriesCollection">
                                                 <rect key="frame" x="88" y="0.0" width="277" height="120"/>
-                                                <color key="backgroundColor" red="1" green="0.71260518650000004" blue="0.89283031089999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="8F4-mj-pbc">
                                                     <size key="itemSize" width="88" height="120"/>
                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -168,6 +180,7 @@
                                                 </cells>
                                             </collectionView>
                                         </subviews>
+                                        <color key="backgroundColor" red="0.96460121870040894" green="0.96476620435714722" blue="0.96459084749221802" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="q8a-b5-ism" firstAttribute="leading" secondItem="7Lc-JJ-tyG" secondAttribute="trailing" id="OmT-tJ-eY5"/>
                                             <constraint firstAttribute="bottom" secondItem="7Lc-JJ-tyG" secondAttribute="bottom" id="PTJ-Rx-Fyy"/>
@@ -181,7 +194,7 @@
                                     </stackView>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="syN-ZM-abO" userLabel="ButtonCollection">
                                         <rect key="frame" x="0.0" y="279" width="365" height="363"/>
-                                        <color key="backgroundColor" red="0.90161290999999999" green="0.90807334520000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.95283776521682739" green="0.95300072431564331" blue="0.95282751321792603" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="kN0-51-c0R">
                                             <size key="itemSize" width="88" height="120"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -258,6 +271,7 @@
     </scenes>
     <resources>
         <image name="angry" width="390" height="390"/>
+        <image name="crossButton" width="128" height="128"/>
         <image name="four" width="200" height="200"/>
     </resources>
 </document>

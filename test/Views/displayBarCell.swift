@@ -13,7 +13,6 @@ class displayBarCell: UICollectionViewCell
  
     @IBOutlet weak var displayBarImg: UIImageView!
     
-    
     var imageName: String! {
         didSet {
             displayBarImg.image = UIImage(named: imageName)
