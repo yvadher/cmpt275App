@@ -250,7 +250,7 @@
                     <connections>
                         <outlet property="categoriesCollection" destination="q8a-b5-ism" id="yOO-k3-wNw"/>
                         <outlet property="displayCollection" destination="jtd-BI-d1j" id="6V1-WQ-8Fw"/>
-                        <outlet property="pictographCollection" destination="xOq-Hb-hBY" id="gT8-4l-Lor"/>
+                        <outlet property="pictographCollection" destination="syN-ZM-abO" id="p9q-VI-ELV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
