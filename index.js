@@ -5,33 +5,50 @@ var util      = require('util');
 var path = require('path');
 var Excel = require('exceljs');
 var async = require('async');
-var json = require('./convertcsv.json');
 var colors  = require('colors');
 var mongoose = require('mongoose');
+var cors = require('cors');
+
+
+
+
 var Schema = mongoose.Schema;
-const MONGO_URL = 'mongodb://userPublic:public@ds121535.mlab.com:21535/gotalkdev';
+const MONGO_URL = 'mongodb://admin:admin@ds121535.mlab.com:21535/gotalkdev';
 
 
 
-var test = new Schema({
-	request: String,
-	time: Number
-}, {
-	collection: 'test'
-});
+//To - do : Move all the data mongoose to differnet file.
+
+
+// var test = new Schema({
+// 	request: String,
+// 	time: Number
+// }, {
+// 	collection: 'test'
+// });
 
 
 
 
-var Model = mongoose.model('Model', test);
+var users = new Schema({
+		userName : String,
+		userEmail : String,
+		userPassword : String
+	},
+	{
+		collection: 'users'
+	});
+
+
+var Model = mongoose.model('Model', users);
 
 mongoose.connect(MONGO_URL);
 
 console.log(('Server time: ').yellow, (new Date()).toString());
 require('log-timestamp')(function() { return '[' + new Date() + '] %s' });
 
-let app = express();
 
+let app = express();
 var bodyParser = require('body-parser');
 app.use(bodyParser.json()); // support json encoded bodies
 app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
@@ -40,26 +57,40 @@ app.use(express.static(__dirname + '/public'));
 
 
 
-app.get('/save/:query', cors(), function(req, res) {
-	var query = req.params.query;
+app.post('/save/', cors(), function(req, res) {
+	var data = req.body;
 
-	var savedata = new Model({
-		'request': query,
-		'time': Math.floor(Date.now() / 1000)
+	var userName = null;
+	var userEmail = null; 
+	var userPassword = null;
+	if (data.userName){
+		userName = data.userName;
+	}
+	if (data.userEmail){
+		userEmail = data.userEmail;
+	}
+	if (data.userPassword){
+		userPassword = data.userPassword;
+	}
+
+	var saveUserData = new Model({
+		'userName': userName,
+		'userEmail': userEmail,
+		'userPassword': userPassword
 	}).save(function(err, result) {
 		if (err) throw err;
-
 		if(result) {
-			res.json(result)
+			res.status(200).send("Saved!");
 		}
-	})
+	});
+	
 })
 
 app.get('/find/:query', cors(), function(req, res) {
 	var query = req.params.query;
  
 	Model.find({
-		'request': query
+		'userName': query
 	}, function(err, result) {
 		if (err) throw err;
 		if (result) {
