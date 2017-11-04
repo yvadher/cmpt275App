@@ -7,6 +7,26 @@ var Excel = require('exceljs');
 var async = require('async');
 var json = require('./convertcsv.json');
 var colors  = require('colors');
+var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
+const MONGO_URL = 'mongodb://userPublic:public@ds121535.mlab.com:21535/gotalkdev';
+
+
+
+var test = new Schema({
+	request: String,
+	time: Number
+}, {
+	collection: 'test'
+});
+
+
+
+
+var Model = mongoose.model('Model', test);
+
+mongoose.connect(MONGO_URL);
+
 console.log(('Server time: ').yellow, (new Date()).toString());
 require('log-timestamp')(function() { return '[' + new Date() + '] %s' });
 
@@ -20,15 +40,37 @@ app.use(express.static(__dirname + '/public'));
 
 
 
+app.get('/save/:query', cors(), function(req, res) {
+	var query = req.params.query;
 
-app.get('/api/getPlayer1Pass',function(req,res){
-	
-	var img = fs.readFileSync('./player1Pass.png');
-     res.writeHead(200, {'Content-Type': 'image/png' });
-     res.end(img, 'binary');
+	var savedata = new Model({
+		'request': query,
+		'time': Math.floor(Date.now() / 1000)
+	}).save(function(err, result) {
+		if (err) throw err;
 
-});
+		if(result) {
+			res.json(result)
+		}
+	})
+})
 
+app.get('/find/:query', cors(), function(req, res) {
+	var query = req.params.query;
+ 
+	Model.find({
+		'request': query
+	}, function(err, result) {
+		if (err) throw err;
+		if (result) {
+			res.json(result)
+		} else {
+			res.send(JSON.stringify({
+				error : 'Error'
+			}))
+		}
+	})
+})
 
 
 app.get('/api/users',function(req,res){
