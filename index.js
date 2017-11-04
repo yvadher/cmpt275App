@@ -3,7 +3,6 @@ var config  = require('./config');
 var http      = require('http');
 var util      = require('util');
 var path = require('path');
-var Excel = require('exceljs');
 var async = require('async');
 var colors  = require('colors');
 var mongoose = require('mongoose');
