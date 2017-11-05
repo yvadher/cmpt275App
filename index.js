@@ -18,17 +18,6 @@ const MONGO_URL = 'mongodb://admin:admin@ds121535.mlab.com:21535/gotalkdev';
 
 //To - do : Move all the data mongoose to differnet file.
 
-
-// var test = new Schema({
-// 	request: String,
-// 	time: Number
-// }, {
-// 	collection: 'test'
-// });
-
-
-
-
 var users = new Schema({
 		userName : String,
 		userEmail : String,
@@ -119,17 +108,17 @@ app.post('/find/', cors(), function(req, res) {
 				if (userPassword == dbPwd){
 					responseData = 'true';
 					var jsonObj = {"result" : responseData};
-					console.log("Sending : "+ jsonObj);
+					console.log("Sending : "+ JSON.stringify(jsonObj));
 					res.json(jsonObj);
 				}else {
 					var jsonObj = {"result" : responseData};
 					res.json(jsonObj);
-					console.log("Sending : "+ jsonObj);
+					console.log("Sending : "+ JSON.stringify(jsonObj));
 				}
 			}else {
 				var jsonObj = {"result" : responseData};
 				res.json(jsonObj);
-				console.log("Sending : "+ jsonObj);
+				console.log("Sending : "+ JSON.stringify(jsonObj));
 			};
 
 		} else {
