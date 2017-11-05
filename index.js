@@ -85,22 +85,62 @@ app.post('/save/', cors(), function(req, res) {
 	
 })
 
-app.get('/find/:query', cors(), function(req, res) {
-	var query = req.params.query;
- 
+app.post('/find/', cors(), function(req, res) {
+	var data = req.body;
+ 	
+ 	var userEmail = "";
+ 	var userPwd =  "";
+
+ 	if (data.userEmail){
+ 		//console.log("I came: "+ data.userName)
+		userEmail = data.userEmail;
+	}
+	if (data.userPassword){
+		userPassword = data.userPassword;
+	}
+
+	console.log("Data came in : User email: "+ userEmail + " userPassword: " + userPassword);
+	var responseData = 'false';
 	Model.find({
-		'userName': query
+		'userEmail': userEmail
 	}, function(err, result) {
 		if (err) throw err;
 		if (result) {
-			res.json(result)
+			//res.json(result);
+			console.log("Data found : "+ result);
+			var dbPwd = "";
+
+			if (result != ""){
+				if (result[0].userPassword){
+					dbPwd = result[0].userPassword;
+				}
+				console.log(result[0].userPassword + " dbpwd: "+dbPwd + " is = :"+ userPassword);
+				//console.log(result[0].userPassword);
+				if (userPassword == dbPwd){
+					responseData = 'true';
+					var jsonObj = {"result" : responseData};
+					console.log("Sending : "+ jsonObj);
+					res.json(jsonObj);
+				}else {
+					var jsonObj = {"result" : responseData};
+					res.json(jsonObj);
+					console.log("Sending : "+ jsonObj);
+				}
+			}else {
+				var jsonObj = {"result" : responseData};
+				res.json(jsonObj);
+				console.log("Sending : "+ jsonObj);
+			};
+
 		} else {
 			res.send(JSON.stringify({
-				error : 'Error'
+				error : responseData
 			}))
-		}
-	})
-})
+		};
+	});
+
+
+});
 
 
 app.get('/api/users',function(req,res){
@@ -117,9 +157,17 @@ app.get('*', function(req, res) {
     res.status(200).sendFile(path.resolve('public/index.html'));
 });
 
-let port = process.env.VCAP_APP_PORT || config.get('port');
 
-console.log("Listening port: " + port);
-let server = http.createServer(app).listen(port, function() {
-    console.log('Express server listening on port ' + port);
+app.set('port', (process.env.PORT || 5000));
+
+
+//MARK::::: HEROKU does not listen in any other port than 5000
+app.listen(app.get('port'), function() {
+  console.log('Node app is running on port', app.get('port'));
 });
+
+
+
+// let server = http.createServer(app).listen(port, function() {
+//     console.log('Express server listening on port ' + port);
+// });
