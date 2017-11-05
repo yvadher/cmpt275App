@@ -320,6 +320,9 @@
                                                 <rect key="frame" x="0.0" y="95" width="275" height="29"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <state key="normal" title="Forgot your password?"/>
+                                                <connections>
+                                                    <action selector="forgotPwd:" destination="Db4-hd-Jvp" eventType="touchUpInside" id="eYU-7y-8fM"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJO-lK-gpd">
                                                 <rect key="frame" x="0.0" y="129" width="275" height="44"/>
@@ -327,6 +330,9 @@
                                                 <state key="normal" title="Login">
                                                     <color key="titleColor" red="0.2167417109" green="0.5310065746" blue="0.486954689" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="LogIn:" destination="Db4-hd-Jvp" eventType="touchUpInside" id="DvG-zN-NtY"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -345,6 +351,9 @@
                                                 <state key="normal" title="Create a new account">
                                                     <color key="titleColor" red="1" green="0.34946540570000001" blue="0.22158147310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="goToRegister:" destination="Db4-hd-Jvp" eventType="touchUpInside" id="cIv-M5-k88"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -364,6 +373,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dMN-UF-Gf2"/>
                     </view>
+                    <connections>
+                        <outlet property="_userName" destination="kKB-ik-aDr" id="xvK-Ic-uiC"/>
+                        <outlet property="_userPwd" destination="dxU-Oz-WY8" id="nrB-KW-dPx"/>
+                        <outlet property="forgotPwdButton" destination="NF8-8L-pEF" id="GoY-X1-QRA"/>
+                        <outlet property="loginButton" destination="zJO-lK-gpd" id="LQJ-cd-j5L"/>
+                        <outlet property="registerButton" destination="bQl-bZ-FBa" id="kWG-4g-gCs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wwx-7z-4MC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
