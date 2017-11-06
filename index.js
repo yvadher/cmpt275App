@@ -61,18 +61,34 @@ app.post('/save/', cors(), function(req, res) {
 		userPassword = data.userPassword;
 	}
 
-	var saveUserData = new Model({
-		'userName': userName,
-		'userEmail': userEmail,
-		'userPassword': userPassword
-	}).save(function(err, result) {
+	var isInDB = false;
+
+	Model.find({
+		'userEmail': userEmail
+	}, function(err, result) {
 		if (err) throw err;
-		if(result) {
-			res.status(200).send("Saved!");
-		}
+		if (result != "") {
+			console.log('Result :' + result);
+			var jsonObj = {"result" : "exist"};
+			console.log("Sending : "+ JSON.stringify(jsonObj));
+			res.json(jsonObj);
+		} else {
+			var saveUserData = new Model({
+				'userName': userName,
+				'userEmail': userEmail,
+				'userPassword': userPassword
+			}).save(function(err, result) {
+				if (err) throw err;
+				if(result) {
+					var jsonObj = {"result" : "Saved"};
+					console.log("Sending : "+ JSON.stringify(jsonObj));
+					res.json(jsonObj);
+				}
+			});
+		};
 	});
 	
-})
+});
 
 app.post('/find/', cors(), function(req, res) {
 	var data = req.body;
