@@ -379,6 +379,7 @@
                         <outlet property="forgotPwdButton" destination="NF8-8L-pEF" id="GoY-X1-QRA"/>
                         <outlet property="loginButton" destination="zJO-lK-gpd" id="LQJ-cd-j5L"/>
                         <outlet property="registerButton" destination="bQl-bZ-FBa" id="kWG-4g-gCs"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="mainPageSegue" id="Wlv-mB-wNO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wwx-7z-4MC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -503,7 +504,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bZF-ho-PG4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-654" y="107"/>
+            <point key="canvasLocation" x="-622" y="879"/>
         </scene>
     </scenes>
     <resources>

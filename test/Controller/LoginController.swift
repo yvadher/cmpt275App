@@ -46,17 +46,19 @@ class LoginController: UIViewController{
             
             if let data = data {
                 do {
-                    let json = try JSONSerialization.jsonObject(with: data, options: [])
-                    print(json)
+                    let json = try JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
+                    print("Here is json: \(json)")
+                    let item = json["result"] as! String
                     
-                    guard let item = json as? [String: Any],
-                        let person = item["result"] as? [String: Any] else {
-                            return
+                    print (item)
+                    if (item == "true"){
+                        print ("Came here !!!!!")
+                        OperationQueue.main.addOperation {
+                            self.performSegue(withIdentifier: "mainPageSegue", sender: self)
+                        }
+                    }else {
+                        print ("Its incorrect password")
                     }
-
-                    print ("Here is the data: \(person)")
-                    
-                    
                     
                     //Perfomr seguve to go to main page
                 } catch {
