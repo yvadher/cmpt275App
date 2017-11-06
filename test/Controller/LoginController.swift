@@ -40,10 +40,7 @@ class LoginController: UIViewController{
         print (sendJSON)
         let session = URLSession.shared
         session.dataTask(with: request) { (data, response, error) in
-            if let response = response {
-                //print(response)
-            }
-            
+
             if let data = data {
                 do {
                     let json = try JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
@@ -72,6 +69,9 @@ class LoginController: UIViewController{
     
     
     @IBAction func goToRegister(_ sender: Any) {
+        OperationQueue.main.addOperation {
+            self.performSegue(withIdentifier: "registerSegue", sender: self)
+        }
     }
     
     

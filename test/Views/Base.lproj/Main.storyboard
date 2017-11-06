@@ -380,16 +380,17 @@
                         <outlet property="loginButton" destination="zJO-lK-gpd" id="LQJ-cd-j5L"/>
                         <outlet property="registerButton" destination="bQl-bZ-FBa" id="kWG-4g-gCs"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="mainPageSegue" id="Wlv-mB-wNO"/>
+                        <segue destination="vAG-Fc-IcV" kind="show" identifier="registerSegue" id="JIi-9S-ttS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wwx-7z-4MC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1386" y="108"/>
         </scene>
-        <!--View Controller-->
+        <!--Register Controller-->
         <scene sceneID="647-cO-8W6">
             <objects>
-                <viewController id="vAG-Fc-IcV" sceneMemberID="viewController">
+                <viewController id="vAG-Fc-IcV" customClass="registerController" customModule="test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rWA-ry-NYm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -482,6 +483,9 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="51" height="29"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <state key="normal" title="Sign Up"/>
+                                                <connections>
+                                                    <action selector="signUp:" destination="vAG-Fc-IcV" eventType="touchUpInside" id="x47-aa-yFg"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -501,6 +505,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6dT-hb-u9e"/>
                     </view>
+                    <connections>
+                        <outlet property="_firstName" destination="EJe-Uy-Z2j" id="WMN-zw-9fy"/>
+                        <outlet property="_lastName" destination="25t-qT-NHj" id="3RN-74-Hbx"/>
+                        <outlet property="_userEmail" destination="fia-gh-03e" id="Kr1-Qy-VRJ"/>
+                        <outlet property="_userName" destination="7SG-tZ-CYi" id="4Ro-5l-SLu"/>
+                        <outlet property="_userPassword" destination="3qn-W2-fLJ" id="ubb-lw-zC5"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="mainSegueRegister" id="Z8b-44-tY5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bZF-ho-PG4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -513,4 +525,7 @@
         <image name="four" width="200" height="200"/>
         <image name="logo" width="232" height="138"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Z8b-44-tY5"/>
+    </inferredMetricsTieBreakers>
 </document>
