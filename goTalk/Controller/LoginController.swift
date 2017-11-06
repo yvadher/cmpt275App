@@ -31,8 +31,19 @@ class LoginController: UIViewController{
         // Check if empty
         if (userNameData == "" || userPwdData == ""){
             print("Error: All fields required")
+            displayAlertMessage(messageToDisplay: "Useremail and user password can not be empty!! Please try again :)")
             return
         }
+        let isEmailAddressValid = isValidEmailAddress(emailAddressString: userNameData)
+        
+        if isEmailAddressValid
+        {
+            print("Email address is valid")
+        } else {
+            print("Email address is not valid")
+            displayAlertMessage(messageToDisplay: "Email address is not valid")
+        }
+        
         
         let sendJSON = ["userEmail": userNameData , "userPassword" : userPwdData]
         
@@ -69,6 +80,9 @@ class LoginController: UIViewController{
                             self.performSegue(withIdentifier: "mainPageSegue", sender: self)
                         }
                     }else {
+                        OperationQueue.main.addOperation {
+                            self.displayAlertMessage(messageToDisplay: "Check your email and Password please!! Please try again :)")
+                        }
                         print ("Error: Incorrect password")
                     }
                     
@@ -89,8 +103,42 @@ class LoginController: UIViewController{
         }
     }
     
-    
+    //Version 2
     @IBAction func forgotPwd(_ sender: Any) {
+    }
+    
+    func isValidEmailAddress(emailAddressString: String) -> Bool {
+        
+        var returnValue = true
+        let emailRegEx = "[A-Z0-9a-z.-_]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,3}"
+        
+        do {
+            let regex = try NSRegularExpression(pattern: emailRegEx)
+            let nsString = emailAddressString as NSString
+            let results = regex.matches(in: emailAddressString, range: NSRange(location: 0, length: nsString.length))
+            
+            if results.count == 0
+            {
+                returnValue = false
+            }
+            
+        } catch let error as NSError {
+            print("invalid regex: \(error.localizedDescription)")
+            returnValue = false
+        }
+        
+        return  returnValue
+    }
+    
+    func displayAlertMessage(messageToDisplay: String)
+    {
+        let alertController = UIAlertController(title: "Alert", message: messageToDisplay, preferredStyle: .alert)
+        let OKAction = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction!) in
+            // Code in this block will trigger when OK button tapped.
+            print("Ok button tapped");
+        }
+        alertController.addAction(OKAction)
+        self.present(alertController, animated: true, completion:nil)
     }
 }
 

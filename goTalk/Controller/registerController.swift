@@ -21,7 +21,9 @@ class registerController: UIViewController{
     @IBOutlet weak var _userName: UITextField!
     @IBOutlet weak var _userEmail: UITextField!
     @IBOutlet weak var _userPassword: UITextField!
-
+    @IBOutlet weak var letMeLogInButton: UIButton!
+    
+    
     // Takes in user data, which is sent to the database for user registration.
     // Makes a request at database URL and adds new JSON data.
     @IBAction func signUp(_ sender: Any) {
@@ -30,12 +32,22 @@ class registerController: UIViewController{
         let _userEmailData: String = _userEmail.text!
         let _userPasswordData: String = _userPassword.text!
         
-        // Check if empty
         if (_userNameData == "" || _userEmailData == "" || _userPasswordData == ""){
-            print("Error: All fields required")
+            displayAlertMessage(messageToDisplay: "Username, useremail and userpassword can not be empty!! Please try again :)")
             return
         }
         
+        // Check if email address
+        let isEmailAddressValid = isValidEmailAddress(emailAddressString: _userEmailData)
+        
+        if isEmailAddressValid
+        {
+            print("Email address is valid")
+        } else {
+            print("Email address is not valid")
+            displayAlertMessage(messageToDisplay: "Email address is not valid")
+        }
+    
         let sendJSON = ["userName": _userNameData , "userEmail" : _userEmailData, "userPassword" : _userPasswordData]
         
         guard let url = URL(string: "http://gotalkapp.herokuapp.com/save")
@@ -61,16 +73,76 @@ class registerController: UIViewController{
           
             if let data = data {
                 do {
-                    let json = try JSONSerialization.jsonObject(with: data, options: [])
+                    let json = try JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
                     print(json)
+                    
+                    let item = json["result"] as! String
+                    
+                    if (item == "exist"){
+                        OperationQueue.main.addOperation {
+                            self.displayAlertMessage(messageToDisplay: "User email is registered!! Please try again with new email :)")
+                            self.letMeLogInButton.isHidden = false
+                        }
+                        
+                        
+                    }else {
+                        print (item)
+                        OperationQueue.main.addOperation {
+                            self.performSegue(withIdentifier: "mainSegueRegister", sender: self)
+                        }
+                        
+                    }
+        
                 } catch {
                     print(error)
                 }
             }
-            OperationQueue.main.addOperation {
-                self.performSegue(withIdentifier: "mainSegueRegister", sender: self)
-            }
+            
             }.resume()
+    }
+    
+    
+    @IBAction func goToLogin(_ sender: Any) {
+        performSegue(withIdentifier: "toLoginRegisterSegue", sender: self)
+    }
+    
+    func isValidEmailAddress(emailAddressString: String) -> Bool {
+        
+        var returnValue = true
+        let emailRegEx = "[A-Z0-9a-z.-_]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,3}"
+        
+        do {
+            let regex = try NSRegularExpression(pattern: emailRegEx)
+            let nsString = emailAddressString as NSString
+            let results = regex.matches(in: emailAddressString, range: NSRange(location: 0, length: nsString.length))
+            
+            if results.count == 0
+            {
+                returnValue = false
+            }
+            
+        } catch let error as NSError {
+            print("invalid regex: \(error.localizedDescription)")
+            returnValue = false
+        }
+        
+        return  returnValue
+    }
+    
+    func displayAlertMessage(messageToDisplay: String)
+    {
+        let alertController = UIAlertController(title: "Alert", message: messageToDisplay, preferredStyle: .alert)
+        
+        let OKAction = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction!) in
+            
+            // Code in this block will trigger when OK button tapped.
+            print("Ok button tapped");
+            
+        }
+        
+        alertController.addAction(OKAction)
+        
+        self.present(alertController, animated: true, completion:nil)
     }
 }
 

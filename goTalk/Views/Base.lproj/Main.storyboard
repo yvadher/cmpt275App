@@ -9,6 +9,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Book</string>
+        </array>
         <array key="AvenirNext.ttc">
             <string>AvenirNext-Regular</string>
         </array>
@@ -295,17 +298,17 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="lds-5A-kSq">
                                                 <rect key="frame" x="0.0" y="0.0" width="314" height="90"/>
                                                 <subviews>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kKB-ik-aDr">
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kKB-ik-aDr">
                                                         <rect key="frame" x="0.0" y="0.0" width="314" height="45"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" textContentType="email"/>
                                                     </textField>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dxU-Oz-WY8">
                                                         <rect key="frame" x="0.0" y="45" width="314" height="45"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                                     </textField>
                                                 </subviews>
                                                 <constraints>
@@ -413,13 +416,13 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="157" height="30"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                <textInputTraits key="textInputTraits"/>
+                                                                <textInputTraits key="textInputTraits" textContentType="name"/>
                                                             </textField>
                                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="25t-qT-NHj">
                                                                 <rect key="frame" x="157" y="0.0" width="157" height="30"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                <textInputTraits key="textInputTraits"/>
+                                                                <textInputTraits key="textInputTraits" textContentType="family-name"/>
                                                             </textField>
                                                         </subviews>
                                                     </stackView>
@@ -427,19 +430,19 @@
                                                         <rect key="frame" x="0.0" y="30.000000000000028" width="314" height="30"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" textContentType="username"/>
                                                     </textField>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fia-gh-03e" userLabel="Email">
                                                         <rect key="frame" x="0.0" y="60.000000000000021" width="314" height="29.666666666666664"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                        <textInputTraits key="textInputTraits" textContentType="email"/>
                                                     </textField>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3qn-W2-fLJ">
                                                         <rect key="frame" x="0.0" y="89.666666666666657" width="314" height="30"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                                     </textField>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xdk-np-5Op">
                                                         <rect key="frame" x="0.0" y="119.66666666666664" width="314" height="130.33333333333337"/>
@@ -478,6 +481,14 @@
                                                     <constraint firstAttribute="height" constant="250" id="6FK-i8-CPL"/>
                                                 </constraints>
                                             </stackView>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a7L-Ed-zM9">
+                                                <rect key="frame" x="0.0" y="-232.66666666666666" width="314" height="0.0"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                                <state key="normal" title="Go back to logIn! "/>
+                                                <connections>
+                                                    <action selector="goToLogin:" destination="vAG-Fc-IcV" eventType="touchUpInside" id="Tap-Tv-F2j"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="t3g-Wm-Zk7" userLabel="newAccount">
@@ -515,7 +526,9 @@
                         <outlet property="_userEmail" destination="fia-gh-03e" id="Kr1-Qy-VRJ"/>
                         <outlet property="_userName" destination="7SG-tZ-CYi" id="4Ro-5l-SLu"/>
                         <outlet property="_userPassword" destination="3qn-W2-fLJ" id="ubb-lw-zC5"/>
+                        <outlet property="letMeLogInButton" destination="a7L-Ed-zM9" id="r8x-ze-98R"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="mainSegueRegister" id="Z8b-44-tY5"/>
+                        <segue destination="Db4-hd-Jvp" kind="show" identifier="toLoginRegisterSegue" id="XNJ-hQ-gfi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bZF-ho-PG4" userLabel="First Responder" sceneMemberID="firstResponder"/>
