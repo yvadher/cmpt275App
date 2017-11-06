@@ -66,7 +66,7 @@ class PhotosLibrary
         
         switch categoryPrefix {
         case "General":
-            imageNames = ["I", "No", "Okay", "See", "Sleep", "What", "Yes", "You", "Dislike", "Hear", "Like"]
+            imageNames = ["i", "No", "Okay", "See", "Sleep", "What", "Yes", "You", "Dislike", "Hear", "Like"]
             
         case "Feelings":
             imageNames = ["Afraid", "Angry", "Confused", "Happy", "Nervous", "Sad", "Shy", "Sick", "Surprised", "Tired"]

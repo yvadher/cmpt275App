@@ -165,7 +165,9 @@
                                                                         </label>
                                                                     </subviews>
                                                                     <constraints>
-                                                                        <constraint firstItem="gQh-2O-N1s" firstAttribute="top" secondItem="zlz-7X-CWP" secondAttribute="top" id="IhC-dd-YAY"/>
+                                                                        <constraint firstItem="gQh-2O-N1s" firstAttribute="leading" secondItem="zlz-7X-CWP" secondAttribute="leading" constant="5" id="3jk-yB-FRT"/>
+                                                                        <constraint firstItem="gQh-2O-N1s" firstAttribute="top" secondItem="zlz-7X-CWP" secondAttribute="top" id="AlY-VI-hXh"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="gQh-2O-N1s" secondAttribute="trailing" constant="5" id="zDh-g8-9hh"/>
                                                                     </constraints>
                                                                 </stackView>
                                                             </subviews>
@@ -404,22 +406,22 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="eaa-Ch-Iu2" userLabel="registrationStack">
-                                        <rect key="frame" x="0.0" y="212.66666666666663" width="314" height="250"/>
+                                        <rect key="frame" x="0.0" y="192.33333333333337" width="314" height="291"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="3dM-Tj-dpf">
                                                 <rect key="frame" x="0.0" y="0.0" width="314" height="250"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="VKO-ZU-Fvr">
-                                                        <rect key="frame" x="0.0" y="0.0" width="314" height="30"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="314" height="29.666666666666668"/>
                                                         <subviews>
                                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EJe-Uy-Z2j">
-                                                                <rect key="frame" x="0.0" y="0.0" width="157" height="30"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="157" height="29.666666666666668"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" textContentType="name"/>
                                                             </textField>
                                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="25t-qT-NHj">
-                                                                <rect key="frame" x="157" y="0.0" width="157" height="30"/>
+                                                                <rect key="frame" x="157" y="0.0" width="157" height="29.666666666666668"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" textContentType="family-name"/>
@@ -427,13 +429,13 @@
                                                         </subviews>
                                                     </stackView>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7SG-tZ-CYi">
-                                                        <rect key="frame" x="0.0" y="30.000000000000028" width="314" height="30"/>
+                                                        <rect key="frame" x="0.0" y="29.666666666666657" width="314" height="30"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" textContentType="username"/>
                                                     </textField>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fia-gh-03e" userLabel="Email">
-                                                        <rect key="frame" x="0.0" y="60.000000000000021" width="314" height="29.666666666666664"/>
+                                                        <rect key="frame" x="0.0" y="59.666666666666657" width="314" height="30"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" textContentType="email"/>
@@ -470,7 +472,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZEX-O5-pJM">
-                                                                <rect key="frame" x="0.0" y="97.333333333333371" width="314" height="33"/>
+                                                                <rect key="frame" x="0.0" y="97.333333333333314" width="314" height="33"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <state key="normal" title="terms &amp; conditions."/>
                                                             </button>
@@ -481,8 +483,8 @@
                                                     <constraint firstAttribute="height" constant="250" id="6FK-i8-CPL"/>
                                                 </constraints>
                                             </stackView>
-                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a7L-Ed-zM9">
-                                                <rect key="frame" x="0.0" y="-232.66666666666666" width="314" height="0.0"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a7L-Ed-zM9">
+                                                <rect key="frame" x="0.0" y="254.99999999999997" width="314" height="36"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                                 <state key="normal" title="Go back to logIn! "/>
                                                 <connections>
