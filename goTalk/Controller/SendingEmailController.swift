@@ -13,10 +13,8 @@ import UIKit
 
 class SendingEmailController: UIViewController {
 
-    @IBOutlet weak var loginButton: UIButton!
+  
 
-    @IBAction func goToLogin(_ sender: Any) {
-        performSegue(withIdentifier: "toLoginRegisterSegue", sender: self)
-    }
+    
     
 }

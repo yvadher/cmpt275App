@@ -462,16 +462,17 @@
                     </view>
                     <connections>
                         <outlet property="_userEmail" destination="gO2-RY-6xx" id="uy4-R4-erE"/>
+                        <segue destination="Kcj-d2-wPN" kind="show" identifier="forgetToDoneEmail" id="RDy-Xe-Roz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hi2-L6-izf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1387" y="-651"/>
+            <point key="canvasLocation" x="-1552" y="-651"/>
         </scene>
         <!--Sending Email Controller-->
         <scene sceneID="HJN-fd-Mdf">
             <objects>
-                <viewController id="Kcj-d2-wPN" customClass="SendingEmailController" sceneMemberID="viewController">
+                <viewController id="Kcj-d2-wPN" customClass="SendingEmailController" customModule="goTalk" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="K6v-J3-dbr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -540,8 +541,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Back to Login Page"/>
                                         <connections>
-                                            <action selector="goToLogin:" destination="Kcj-d2-wPN" eventType="touchUpInside" id="hB7-L9-e8b"/>
-                                            <action selector="signUp:" destination="vAG-Fc-IcV" eventType="touchUpInside" id="xBT-DR-gIr"/>
+                                            <segue destination="Db4-hd-Jvp" kind="show" id="hL1-Xj-1oU"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -560,9 +560,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZI8-4w-R2b"/>
                     </view>
-                    <connections>
-                        <outlet property="loginButton" destination="stx-Xm-ikA" id="wYW-pU-Dgs"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="437-96-lqV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -713,6 +710,7 @@
         <image name="logo" width="200" height="109"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="hL1-Xj-1oU"/>
         <segue reference="Wlv-mB-wNO"/>
     </inferredMetricsTieBreakers>
 </document>

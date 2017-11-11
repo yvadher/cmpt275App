@@ -26,7 +26,7 @@ class ForgotPassController: UIViewController {
             let sendJSON = ["userEmail": _userEmail.text]
             
             // Connect to webpage
-            guard let url = URL(string: "http://gotalkapp.herokuapp.com/forgotpwd")
+            guard let url = URL(string: "http://gotalkapp.herokuapp.com/api/email")
                 else {
                     print("Error: URL not found.")
                     return
@@ -55,10 +55,11 @@ class ForgotPassController: UIViewController {
                         if (result == "sentEmail"){
                             print ("Came here! Matching JSON data has been found.")
                             
-                            // Perform segue to go to main page
-//                            OperationQueue.main.addOperation {
-//                                self.performSegue(withIdentifier: "mainPageSegue", sender: self)
-//                            }
+                            // Perform segue to go to Login page
+                            OperationQueue.main.addOperation {
+                                self.performSegue(withIdentifier: "forgetToDoneEmail", sender: self)
+                            }
+                            
                             
                         }else if (result == "notFound"){
                             
