@@ -8,13 +8,8 @@ var colors  = require('colors');
 var mongoose = require('mongoose');
 var cors = require('cors');
 
-
-
-
 var Schema = mongoose.Schema;
 const MONGO_URL = 'mongodb://admin:admin@ds121535.mlab.com:21535/gotalkdev';
-
-
 
 //To - do : Move all the data mongoose to differnet file.
 
@@ -27,7 +22,6 @@ var users = new Schema({
 		collection: 'users'
 	});
 
-
 var Model = mongoose.model('Model', users);
 
 mongoose.connect(MONGO_URL);
@@ -35,15 +29,11 @@ mongoose.connect(MONGO_URL);
 console.log(('Server time: ').yellow, (new Date()).toString());
 require('log-timestamp')(function() { return '[' + new Date() + '] %s' });
 
-
 let app = express();
 var bodyParser = require('body-parser');
 app.use(bodyParser.json()); // support json encoded bodies
 app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 app.use(express.static(__dirname + '/public'));
-
-
-
 
 app.post('/save/', cors(), function(req, res) {
 	var data = req.body;
@@ -143,19 +133,60 @@ app.post('/find/', cors(), function(req, res) {
 			}))
 		};
 	});
+});
 
+app.post('/api/email',cors(),function(req,res){
+	var data = req.body;
+ 	var userEmail = "";
+ 	if (data.userEmail) userEmail = data.userEmail;
 
+ 	console.log("user email recived : " +userEmail);
+ 	Model.find({
+		'userEmail': userEmail
+	}, function(err, result) {
+		if (err) throw err;
+		if (result != "") {
+			console.log('Result :' + result);
+			var jsonObj = {"result" : "sentEmail"};
+			res.json(jsonObj);
+
+			var pwd = result[0].userPassword;
+			console.log("User password :" + pwd + " | "+ userEmail);
+			var emailText = "Hi,\n Your password is \""+  pwd + "\"  Keep it with you. Do not forget it!\n Thank you. \nGoTalk Team"
+			sendEmail(userEmail, emailText);
+			console.log("Sending : "+ JSON.stringify(jsonObj));
+			
+
+		} else {
+			var jsonObj = {"result" : "notFound"};
+			console.log("Sending : "+ JSON.stringify(jsonObj));
+			res.json(jsonObj);
+		};
+	});
 });
 
 
-app.get('/api/users',function(req,res){
-	res.status(200).json(users);
-});
+function sendEmail(email, stringToPass){
+
+	// using SendGrid's v3 Node.js Library
+	// https://github.com/sendgrid/sendgrid-nodejs
+	console.log("@@@@@@ email: "+email+" pwd: "+ stringToPass);
+	const sgMail = require('@sendgrid/mail');
+	sgMail.setApiKey("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");
+	var msg = {
+	  to: email,
+	  from: 'noreply@gotalk.com',
+	  subject: 'Password reset',
+	  text: stringToPass,	
+	};
+	sgMail.send(msg);
+}
 
 app.get('/api/config', function(req,res){
 	var obj = { 'name' : 'yagnik'};
 	res.status(200).json(obj);
 });
+
 
 app.get('*', function(req, res) {
 	console.log("Sending the index.html");
@@ -165,14 +196,8 @@ app.get('*', function(req, res) {
 
 app.set('port', (process.env.PORT || 5000));
 
-
 //MARK::::: HEROKU does not listen in any other port than 5000
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
 });
 
-
-
-// let server = http.createServer(app).listen(port, function() {
-//     console.log('Express server listening on port ' + port);
-// });
