@@ -43,11 +43,6 @@ class LoginController: UIViewController{
         }
     }
     
-    // Placeholder for future implementation.
-    @IBAction func forgotPwd(_ sender: Any) {
-    }
-    
-    
     // LogIn activates when the 'Login' button has been tapped.
     // Takes in user data, which is sent to the database for user verification, where it makes a request for JSON data.
     // If successfully finds matching data, then user is navigated to Main Screen, otherwise, is given an error message.
