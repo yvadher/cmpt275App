@@ -18,6 +18,7 @@ import UIKit
 
 class registerController: UIViewController {
     
+    //outlet for all fields
     @IBOutlet weak var _firstName: UITextField!
     @IBOutlet weak var _lastName: UITextField!
     @IBOutlet weak var _userName: UITextField!
@@ -25,6 +26,8 @@ class registerController: UIViewController {
     @IBOutlet weak var _userPassword: UITextField!
     @IBOutlet weak var letMeLogInButton: UIButton!
     
+    
+    //goToLogin button to go back to login view controller
     @IBAction func goToLogin(_ sender: Any) {
         performSegue(withIdentifier: "toLoginRegisterSegue", sender: self)
     }
@@ -53,8 +56,10 @@ class registerController: UIViewController {
             displayAlertMessage(messageToDisplay: "Email address is not valid.")
         }
         
+        //Prepare JSON data to post the request
         let sendJSON = ["userName": _userNameData , "userEmail" : _userEmailData, "userPassword" : _userPasswordData]
         
+        //URL for the server API
         guard let url = URL(string: "http://gotalkapp.herokuapp.com/save")
             else {
                 print("Error: URL not found.")
@@ -62,6 +67,7 @@ class registerController: UIViewController {
         }
         var request = URLRequest(url: url)
         
+        //Make a post request object
         request.httpMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         
@@ -74,6 +80,7 @@ class registerController: UIViewController {
         
         let session = URLSession.shared
         
+        //Start session to send post request
         session.dataTask(with: request) { (data, response, error) in
             
             if let data = data {
@@ -83,13 +90,16 @@ class registerController: UIViewController {
                     
                     let item = json["result"] as! String
                     
+                    
                     if (item == "exist"){
+                        
+                        // json file with user name exits on server than display message
                         OperationQueue.main.addOperation {
                             self.displayAlertMessage(messageToDisplay: "Email has already been registered. Please try again with a different email.")
                             self.letMeLogInButton.isHidden = false
                         }
                     }else {
-                        print (item)
+                        
                         //Save user logged in(true) information to the userDefaults
                         UserDefaults.standard.set(true, forKey: "isLoggedIn")
                         UserDefaults.standard.synchronize()
