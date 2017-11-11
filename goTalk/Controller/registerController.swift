@@ -88,10 +88,13 @@ class registerController: UIViewController {
                             self.displayAlertMessage(messageToDisplay: "Email has already been registered. Please try again with a different email.")
                             self.letMeLogInButton.isHidden = false
                         }
-                        
-                        
                     }else {
                         print (item)
+                        //Save user logged in(true) information to the userDefaults
+                        UserDefaults.standard.set(true, forKey: "isLoggedIn")
+                        UserDefaults.standard.synchronize()
+                        
+                        //Perform segue to go to the main page
                         OperationQueue.main.addOperation {
                             self.performSegue(withIdentifier: "mainSegueRegister", sender: self)
                         }

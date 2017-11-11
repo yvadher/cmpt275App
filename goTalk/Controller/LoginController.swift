@@ -16,7 +16,20 @@
 
 import UIKit
 
+
 class LoginController: UIViewController{
+    
+    override func viewDidLoad() {
+        
+        print ("User logged in: ")
+        print (UserDefaults.standard.bool(forKey: "isLoggedIn"))
+        if (UserDefaults.standard.bool(forKey: "isLoggedIn")){
+            // Perform segue to go to main page
+            OperationQueue.main.addOperation {
+                self.performSegue(withIdentifier: "mainPageSegue", sender: self)
+            }
+        }
+    }
     
     @IBOutlet weak var _userName: UITextField!
     @IBOutlet weak var _userPwd: UITextField!
@@ -87,6 +100,11 @@ class LoginController: UIViewController{
                     
                     if (item == "true"){
                         print ("Came here! Matching JSON data has been found.")
+                        
+                        //Save user logged in(true) information to the userDefaults
+                        UserDefaults.standard.set(true, forKey: "isLoggedIn")
+                        UserDefaults.standard.synchronize()
+                        
                         // Perform segue to go to main page
                         OperationQueue.main.addOperation {
                             self.performSegue(withIdentifier: "mainPageSegue", sender: self)
