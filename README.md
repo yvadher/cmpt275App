@@ -1,5 +1,6 @@
 ## Welcome to CMPT 275 Application Page 
 - Check out webpage at for development history: [yvadher.github.io/cmpt275App](https://yvadher.github.io/cmpt275App/)
+- App website [https://gotalkapp.herokuapp.com/](https://gotalkapp.herokuapp.com/)
 #### Fall 2017 - Professor Herbert H. Tsang
 
 #### Group Number:  2
