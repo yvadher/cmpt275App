@@ -25,7 +25,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     // call Photocategory model function to get the data of categories with its photos
     var photoCategory: [PhotoCategory] = PhotoCategory.fetchPhotos()
-    
+    var favoritesButtons : [String] = []
     //get the outlet for collection views
     @IBOutlet weak var displayCollection: UICollectionView!
     @IBOutlet weak var categoriesCollection: UICollectionView!
@@ -133,6 +133,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             let imageNames = photos.imageNames
             let imageName = imageNames[indexPath.item]
             cell.imageName = imageName
+            
+            cell.delegate = self
             return cell
         
         }else if (collectionView == self.displayCollection) {
@@ -191,3 +193,31 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         speechSynthesizer.speak(speechUtterance)
     }
 }
+
+
+extension ViewController: pictographicCellDelegate{
+    func heartTapped(cell: pictographDisplayCell) {
+        if let indexPath = pictographCollection.indexPath(for: cell){
+            if (cell.isLiked){
+                let imgName = photoCategory[currentCategory].imageNames[indexPath.item]
+                favoritesButtons = favoritesButtons.filter{$0 != imgName}
+                print (favoritesButtons)
+                cell.favoriteButton.setImage(UIImage(named: "emptyHeart"), for: .normal)
+                cell.isLiked = false
+                
+            }else {
+                let imgName = photoCategory[currentCategory].imageNames[indexPath.item]
+                favoritesButtons.append(imgName)
+                cell.favoriteButton.setImage(UIImage(named: "filledHeart"), for: .normal)
+                cell.isLiked = true
+            }
+        }
+    }
+}
+
+
+
+
+
+
+

@@ -42,6 +42,7 @@ class registerController: UIViewController {
         let _userPasswordData: String = _userPassword.text!
         
         // Check if empty data
+        
         if (_userNameData == "" || _userEmailData == "" || _userPasswordData == "") {
             displayAlertMessage(messageToDisplay: "Please fill in your email and password and try again.")
             return

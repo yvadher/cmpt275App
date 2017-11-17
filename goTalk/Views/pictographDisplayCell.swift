@@ -12,12 +12,21 @@ import Foundation
 
 import UIKit
 
+protocol pictographicCellDelegate: class {
+    func heartTapped(cell : pictographDisplayCell)
+}
+
 class pictographDisplayCell: UICollectionViewCell
 {
+    weak var delegate: pictographicCellDelegate?
     
     @IBOutlet weak var pictographImg: UIImageView!
     
     @IBOutlet weak var pictographLable: UILabel!
+    @IBOutlet weak var favoriteButton: UIButton!
+    
+    
+    var isLiked: Bool = false
     // For border colors
     var borderColor = UIColor(red: 100.0/255.0, green: 130.0/255.0, blue: 230.0/255.0, alpha: 1.0)    
     
@@ -31,5 +40,10 @@ class pictographDisplayCell: UICollectionViewCell
             pictographLable.text = imageName
         }
     }
+    
+    @IBAction func favoriteButtonTapped(_ sender: Any) {
+        delegate?.heartTapped(cell: self)
+    }
+    
 }
 
