@@ -320,7 +320,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <state key="normal" title="Forgot your password?"/>
                                                 <connections>
-                                                    <action selector="forgotPwd:" destination="Db4-hd-Jvp" eventType="touchUpInside" id="eYU-7y-8fM"/>
+                                                    <segue destination="gbT-yv-qyN" kind="show" id="zJI-QG-czT"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJO-lK-gpd">
@@ -389,43 +389,39 @@
         <!--Forgot Pass Controller-->
         <scene sceneID="Oxw-Mp-qtT">
             <objects>
-                <viewController id="gbT-yv-qyN" customClass="ForgotPassController" sceneMemberID="viewController">
+                <viewController id="gbT-yv-qyN" customClass="ForgotPassController" customModule="goTalk" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dxE-eJ-DNo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="BBl-eo-ahq" userLabel="ForgotPassPageStack">
-                                <rect key="frame" x="50" y="60" width="314" height="626"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="BBl-eo-ahq" userLabel="ForgotPassPageStack">
+                                <rect key="frame" x="50" y="66" width="414" height="626"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password Recovery" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lu4-4A-ARw">
-                                        <rect key="frame" x="35" y="0.0" width="244" height="38.333333333333336"/>
+                                        <rect key="frame" x="157" y="0.0" width="244" height="38.333333333333336"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="28"/>
                                         <color key="textColor" red="0.2167417109" green="0.5310065746" blue="0.486954689" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="cIA-t2-HTa" userLabel="ForgotPassStack">
-                                        <rect key="frame" x="0.0" y="241" width="314" height="146.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="241" width="414" height="146.66666666666663"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dj8-92-3s6" userLabel="Go back to Login">
-                                                <rect key="frame" x="0.0" y="0.33333333333331439" width="314" height="36"/>
+                                                <rect key="frame" x="0.0" y="0.33333333333331439" width="414" height="36"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                                 <state key="normal" title="Go back to Login!"/>
-                                                <connections>
-                                                    <action selector="goToLogin:" destination="gbT-yv-qyN" eventType="touchUpInside" id="0R6-Uh-A4M"/>
-                                                    <action selector="goToLogin:" destination="vAG-Fc-IcV" eventType="touchUpInside" id="GSM-13-Rdt"/>
-                                                </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="XS5-m8-7M5" userLabel="TermCondStack">
-                                                <rect key="frame" x="0.0" y="56.333333333333314" width="314" height="40.666666666666657"/>
+                                                <rect key="frame" x="0.0" y="56.333333333333314" width="414" height="40.666666666666657"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you have forgotten your password," textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Lg-PM-0ZM">
-                                                        <rect key="frame" x="0.0" y="0.0" width="314" height="20.333333333333332"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you have forgotten your password," textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Lg-PM-0ZM">
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="20.333333333333332"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="please enter your goTalk account email." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RGR-sz-77n">
-                                                        <rect key="frame" x="0.0" y="20.333333333333314" width="314" height="20.333333333333329"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="please enter your goTalk account email." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RGR-sz-77n">
+                                                        <rect key="frame" x="0.0" y="20.333333333333314" width="414" height="20.333333333333329"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -433,7 +429,7 @@
                                                 </subviews>
                                             </stackView>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gO2-RY-6xx" userLabel="Email">
-                                                <rect key="frame" x="0.0" y="117" width="314" height="30"/>
+                                                <rect key="frame" x="0.0" y="117" width="414" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" textContentType="email"/>
@@ -441,11 +437,11 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J8Z-DN-6on">
-                                        <rect key="frame" x="117" y="590" width="80" height="36"/>
+                                        <rect key="frame" x="157" y="590" width="80" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Continue"/>
                                         <connections>
-                                            <action selector="signUp:" destination="vAG-Fc-IcV" eventType="touchUpInside" id="4vY-pg-Neo"/>
+                                            <action selector="continueAction:" destination="gbT-yv-qyN" eventType="touchUpInside" id="hYe-jq-SEm"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -466,18 +462,17 @@
                     </view>
                     <connections>
                         <outlet property="_userEmail" destination="gO2-RY-6xx" id="uy4-R4-erE"/>
-                        <outlet property="continueButton" destination="J8Z-DN-6on" id="jWx-9O-e7X"/>
-                        <outlet property="loginButton" destination="dj8-92-3s6" id="VeJ-dF-dc7"/>
+                        <segue destination="Kcj-d2-wPN" kind="show" identifier="forgetToDoneEmail" id="RDy-Xe-Roz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hi2-L6-izf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1387" y="-651"/>
+            <point key="canvasLocation" x="-1552" y="-651"/>
         </scene>
         <!--Sending Email Controller-->
         <scene sceneID="HJN-fd-Mdf">
             <objects>
-                <viewController id="Kcj-d2-wPN" customClass="SendingEmailController" sceneMemberID="viewController">
+                <viewController id="Kcj-d2-wPN" customClass="SendingEmailController" customModule="goTalk" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="K6v-J3-dbr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -546,8 +541,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Back to Login Page"/>
                                         <connections>
-                                            <action selector="goToLogin:" destination="Kcj-d2-wPN" eventType="touchUpInside" id="hB7-L9-e8b"/>
-                                            <action selector="signUp:" destination="vAG-Fc-IcV" eventType="touchUpInside" id="xBT-DR-gIr"/>
+                                            <segue destination="Db4-hd-Jvp" kind="show" id="hL1-Xj-1oU"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -566,9 +560,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZI8-4w-R2b"/>
                     </view>
-                    <connections>
-                        <outlet property="loginButton" destination="stx-Xm-ikA" id="wYW-pU-Dgs"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="437-96-lqV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -719,6 +710,7 @@
         <image name="logo" width="200" height="109"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Z8b-44-tY5"/>
+        <segue reference="hL1-Xj-1oU"/>
+        <segue reference="Wlv-mB-wNO"/>
     </inferredMetricsTieBreakers>
 </document>
