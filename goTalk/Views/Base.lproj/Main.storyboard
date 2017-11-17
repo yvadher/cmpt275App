@@ -410,6 +410,9 @@
                                                 <rect key="frame" x="0.0" y="0.33333333333331439" width="414" height="36"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                                 <state key="normal" title="Go back to Login!"/>
+                                                <connections>
+                                                    <segue destination="Db4-hd-Jvp" kind="show" id="cIW-dx-mhR"/>
+                                                </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="XS5-m8-7M5" userLabel="TermCondStack">
                                                 <rect key="frame" x="0.0" y="56.333333333333314" width="414" height="40.666666666666657"/>
@@ -710,7 +713,7 @@
         <image name="logo" width="200" height="109"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="hL1-Xj-1oU"/>
+        <segue reference="cIW-dx-mhR"/>
         <segue reference="Wlv-mB-wNO"/>
     </inferredMetricsTieBreakers>
 </document>
