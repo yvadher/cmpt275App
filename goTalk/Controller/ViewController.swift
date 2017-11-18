@@ -16,6 +16,8 @@
 //  11/16/2017 : Added a favorites buttons (Yagnik Vadher)
 //  11/17/2017 : Changed the data model (Yagnik Vadher)
 //             : Chnaged the liked buttons (Yagnik Vadher)
+//             : Added category selection lable highlight
+//             : Added like button in favorites category
 //  11/06/2017: Code formatting and removed comments used for debugging. (Shawn Thai)
 //  11/10/2017: Code formatting. (Shawn Thai)
 //
@@ -152,7 +154,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                     cell.categoryLable.backgroundColor = UIColorFromRGB(rgbValue: 0xe3f2fd)
                 }else{
                     cell.categoryLable.backgroundColor = UIColorFromRGB(rgbValue: 0xffffff)
-                }
+                }s
             }
             
             return cell
