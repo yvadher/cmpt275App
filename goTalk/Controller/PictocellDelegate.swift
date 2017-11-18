@@ -13,6 +13,8 @@ extension ViewController: pictographicCellDelegate{
         if let indexPath = pictographCollection.indexPath(for: cell){
             // If cell is liked than chage the heart to filled heart
             if (cell.isLiked){
+                
+                //If current category is favorites then remove heart and relode the pictographic collection
                 if (currentCategory == -1){
                     let imgName = favoritesButtons[indexPath.item]
                     favoritesButtons = favoritesButtons.filter{$0 != imgName}
@@ -21,6 +23,7 @@ extension ViewController: pictographicCellDelegate{
                     pictographCollection.reloadData()
                     pictographCollection.layoutIfNeeded()
                     
+                //If category is not the favorites then remove the heart sign and set heart to empty heart img
                 }else{
                     let imgName = photoCategory[currentCategory].imageNames[indexPath.item]
                     photoCategory[currentCategory].likedButtons[indexPath.item] = false
@@ -29,6 +32,7 @@ extension ViewController: pictographicCellDelegate{
                     cell.isLiked = false
                 }
                 
+            //If cell is not liked then add a filled heart and change data to Photographic model
             }else {
                 let imgName = photoCategory[currentCategory].imageNames[indexPath.item]
                 photoCategory[currentCategory].likedButtons[indexPath.item] = true
