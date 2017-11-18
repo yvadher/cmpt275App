@@ -40,16 +40,24 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     @IBOutlet weak var displayCollection: UICollectionView!
     @IBOutlet weak var categoriesCollection: UICollectionView!
     @IBOutlet weak var pictographCollection: UICollectionView!
-    
+    @IBOutlet weak var favoriteButtonOutlet: UIButton!
+    @IBOutlet weak var favoriteLableOutlet: UILabel!
     
     
     // Favorite button category action
     //1. change the picture collection view with favorites buttons
 
     @IBAction func favoriteButtonTapped(_ sender: Any) {
+        // change current category to the favorite category and relode the category collection view and the pictographic collection view
         currentCategory = favCategoryName
+        
+        //change the pictographicColleciton view
         pictographCollection.reloadData()
         pictographCollection.layoutIfNeeded()
+        
+        //Relode category collection view
+        categoriesCollection.reloadData()
+        categoriesCollection.layoutIfNeeded()
     }
     
     //Struct object to keep track of the identifier
@@ -131,9 +139,22 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             let imageName = photos.categoryName
             cell.imageName = imageName
             cell.categoryLable.text = imageName
-//            if (currentCategory == imageName){
-//                cell.categoryLable.backgroundColor =
-//            }
+            
+            //If its Favorites category than change the bacground of button and layout for favorites and other category white backgroud
+            if (currentCategory == -1 ){
+                favoriteLableOutlet.backgroundColor = UIColorFromRGB(rgbValue: 0xe3f2fd)
+                cell.categoryLable.backgroundColor = UIColorFromRGB(rgbValue: 0xffffff)
+                
+            }else {
+                //If its normal category than change the bacground of category which is selected.
+                favoriteLableOutlet.backgroundColor = UIColorFromRGB(rgbValue: 0xffffff)
+                if (currentCategory == indexPath.section){
+                    cell.categoryLable.backgroundColor = UIColorFromRGB(rgbValue: 0xe3f2fd)
+                }else{
+                    cell.categoryLable.backgroundColor = UIColorFromRGB(rgbValue: 0xffffff)
+                }
+            }
+            
             return cell
             
         }else if (collectionView == self.pictographCollection) {
@@ -187,6 +208,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             
             //Change the content of the pictographic collection accroding to the category
             currentCategory = indexPath.section
+            categoriesCollection.reloadData()
+            categoriesCollection.layoutIfNeeded()
             pictographCollection.reloadData()
             pictographCollection.layoutIfNeeded()
         

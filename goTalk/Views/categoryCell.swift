@@ -16,6 +16,7 @@ class categoryCell: UICollectionViewCell
     
     @IBOutlet weak var categoryLable: UILabel!
     
+    @IBOutlet weak var categoryButtonOutlet: UIImageView!
     var imageName: String! {
         didSet {
             categoryImg.image = UIImage(named: imageName)

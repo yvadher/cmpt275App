@@ -277,6 +277,8 @@
                     <connections>
                         <outlet property="categoriesCollection" destination="q8a-b5-ism" id="yOO-k3-wNw"/>
                         <outlet property="displayCollection" destination="jtd-BI-d1j" id="6V1-WQ-8Fw"/>
+                        <outlet property="favoriteButtonOutlet" destination="dHr-Mf-vg0" id="MDR-3w-KdD"/>
+                        <outlet property="favoriteLableOutlet" destination="lrH-P8-GeC" id="Jlh-Y5-dXv"/>
                         <outlet property="pictographCollection" destination="syN-ZM-abO" id="p9q-VI-ELV"/>
                     </connections>
                 </viewController>
