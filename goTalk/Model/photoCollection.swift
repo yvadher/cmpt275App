@@ -20,6 +20,7 @@ struct PhotoCategory {
     var categoryName: String
     var title: String
     var imageNames: [String]
+    var likedButtons : [Bool]
     
     static func fetchPhotos() -> [PhotoCategory] {
         var categories = [PhotoCategory]()
@@ -28,7 +29,7 @@ struct PhotoCategory {
         for i in 0...(photosData.count-1) {
             let categoryImageName = photosData[i].caetegoryName
             if let imageNames = photosData[i].imagesNames as? [String] {
-                let newCategory = PhotoCategory(categoryName: categoryImageName, title: categoryImageName, imageNames: imageNames)
+                let newCategory = PhotoCategory(categoryName: categoryImageName, title: categoryImageName, imageNames: imageNames, likedButtons : photosData[i].liked)
                 categories.append(newCategory)
             }
         }
@@ -41,19 +42,20 @@ class PhotosLibrary
     struct categoryUnit{
         let caetegoryName: String
         let imagesNames : [String]
+        let liked : [Bool]
     }
     class func downloadPhotosData() -> [categoryUnit]
     {
         let object = [
-            categoryUnit(caetegoryName: "General", imagesNames: PhotosLibrary.generateImage(categoryPrefix: "General")),
-            categoryUnit(caetegoryName: "Feelings", imagesNames: PhotosLibrary.generateImage(categoryPrefix: "Feelings")),
-            categoryUnit(caetegoryName: "Colors", imagesNames: PhotosLibrary.generateImage(categoryPrefix: "Colors")),
-            categoryUnit(caetegoryName: "Drinks", imagesNames: PhotosLibrary.generateImage(categoryPrefix: "Drinks")),
-            categoryUnit(caetegoryName: "Food", imagesNames: PhotosLibrary.generateImage(categoryPrefix: "Food")),
-            categoryUnit(caetegoryName: "Places", imagesNames: PhotosLibrary.generateImage(categoryPrefix: "Places")),
-            categoryUnit(caetegoryName: "Toys", imagesNames: PhotosLibrary.generateImage(categoryPrefix: "Toys")),
-            categoryUnit(caetegoryName: "Numbers", imagesNames: PhotosLibrary.generateImage(categoryPrefix: "Numbers")),
-            categoryUnit(caetegoryName: "Letters", imagesNames: PhotosLibrary.generateImage(categoryPrefix: "Letters")),
+            categoryUnit(caetegoryName: "General", imagesNames: PhotosLibrary.generateImage(categoryPrefix: "General"), liked: PhotosLibrary.generateImageLiked(categoryPrefix: "General")),
+            categoryUnit(caetegoryName: "Feelings", imagesNames: PhotosLibrary.generateImage(categoryPrefix: "Feelings"), liked: PhotosLibrary.generateImageLiked(categoryPrefix: "Feelings")),
+            categoryUnit(caetegoryName: "Colors", imagesNames: PhotosLibrary.generateImage(categoryPrefix: "Colors"), liked: PhotosLibrary.generateImageLiked(categoryPrefix: "Colors")),
+            categoryUnit(caetegoryName: "Drinks", imagesNames: PhotosLibrary.generateImage(categoryPrefix: "Drinks"), liked: PhotosLibrary.generateImageLiked(categoryPrefix: "Drinks")),
+            categoryUnit(caetegoryName: "Food", imagesNames: PhotosLibrary.generateImage(categoryPrefix: "Food"), liked: PhotosLibrary.generateImageLiked(categoryPrefix: "Food")),
+            categoryUnit(caetegoryName: "Places", imagesNames: PhotosLibrary.generateImage(categoryPrefix: "Places"), liked: PhotosLibrary.generateImageLiked(categoryPrefix: "Places")),
+            categoryUnit(caetegoryName: "Toys", imagesNames: PhotosLibrary.generateImage(categoryPrefix: "Toys"), liked: PhotosLibrary.generateImageLiked(categoryPrefix: "Toys")),
+            categoryUnit(caetegoryName: "Numbers", imagesNames: PhotosLibrary.generateImage(categoryPrefix: "Numbers"), liked: PhotosLibrary.generateImageLiked(categoryPrefix: "Numbers")),
+            categoryUnit(caetegoryName: "Letters", imagesNames: PhotosLibrary.generateImage(categoryPrefix: "Letters"), liked: PhotosLibrary.generateImageLiked(categoryPrefix: "Letters")),
         ]
         
         
@@ -99,7 +101,38 @@ class PhotosLibrary
         
         return imageNames
     }
+    
+    private class func generateImageLiked(categoryPrefix: String) -> [Bool] {
+        var imageNames = [Bool]()
+        
+        switch categoryPrefix {
+        case "General":
+            imageNames = Array(repeating: false, count: 11)
+        case "Feelings":
+            imageNames = Array(repeating: false, count: 10)
+        case "Colors":
+            imageNames = Array(repeating: false, count: 9)
+        case "Food":
+            imageNames = Array(repeating: false, count: 14)
+        case "Drinks":
+            imageNames = Array(repeating: false, count: 5)
+        case "Places":
+            imageNames = Array(repeating: false, count: 8)
+        case "Toys":
+            imageNames = Array(repeating: false, count: 7)
+        case "Numbers":
+            imageNames = Array(repeating: false, count: 10)
+        case "Letters":
+            imageNames = Array(repeating: false, count: 26)
+        default:
+            imageNames = []
+        }
+        print ("\(categoryPrefix)  -> \(imageNames)")
+        return imageNames
+    }
 }
+
+
 
 
 

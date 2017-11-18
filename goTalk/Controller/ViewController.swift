@@ -134,6 +134,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             let imageName = imageNames[indexPath.item]
             cell.imageName = imageName
             
+            if (photoCategory[currentCategory].likedButtons[indexPath.item]){
+                cell.favoriteButton.setImage(UIImage(named: "filledHeart"), for: .normal)
+            }else {
+                cell.favoriteButton.setImage(UIImage(named: "emptyHeart"), for: .normal)
+            }
             cell.delegate = self
             return cell
         
@@ -200,13 +205,14 @@ extension ViewController: pictographicCellDelegate{
         if let indexPath = pictographCollection.indexPath(for: cell){
             if (cell.isLiked){
                 let imgName = photoCategory[currentCategory].imageNames[indexPath.item]
+                photoCategory[currentCategory].likedButtons[indexPath.item] = false
                 favoritesButtons = favoritesButtons.filter{$0 != imgName}
                 print (favoritesButtons)
                 cell.favoriteButton.setImage(UIImage(named: "emptyHeart"), for: .normal)
                 cell.isLiked = false
-                
             }else {
                 let imgName = photoCategory[currentCategory].imageNames[indexPath.item]
+                photoCategory[currentCategory].likedButtons[indexPath.item] = true
                 favoritesButtons.append(imgName)
                 cell.favoriteButton.setImage(UIImage(named: "filledHeart"), for: .normal)
                 cell.isLiked = true
