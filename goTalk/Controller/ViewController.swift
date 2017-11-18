@@ -255,6 +255,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         speakLine(line: lineToSpeak)    //Speak the passed arugument
     }
     
+    //Function to convert rgb color to the UIcolor object
     func UIColorFromRGB(rgbValue: UInt) -> UIColor {
         return UIColor(
             red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
