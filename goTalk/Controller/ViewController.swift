@@ -48,23 +48,12 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 
     @IBAction func favoriteButtonTapped(_ sender: Any) {
         currentCategory = favCategoryName
-        
+        pictographCollection.reloadData()
+        pictographCollection.layoutIfNeeded()
     }
     
     
-    //Erase button for removing the buttons from the display bar
-    @IBAction func eraseButton(_ sender: Any) {
-        if (!clickedPhotos.isEmpty){
-            clickedPhotos.removeLast()
-            displayCollection.reloadData()
-        }
-    }
-    
-    //go button for the playing the message
-    @IBAction func goButton(_ sender: Any) {
-        let lineToSpeak: String = clickedPhotos.joined(separator: " ")
-        speakLine(line: lineToSpeak)    //Speak the passed arugument
-    }
+   
     
     //Struct object to keep track of the identifier
     struct Storyboard {
@@ -116,7 +105,13 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             
         }else if (collectionView == self.pictographCollection) {
             //return current category images count
-            return photoCategory[currentCategory].imageNames.count
+            if (currentCategory == -1){
+                return favoritesButtons.count
+            }else
+            {
+                return photoCategory[currentCategory].imageNames.count
+            }
+            
             
         }else if (collectionView == self.displayCollection) {
             //clicked images to form sentance on display bar
@@ -145,15 +140,24 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             
             //Add pictographic collection cell with the image and the label name
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Storyboard.pictographCell, for: indexPath) as! pictographDisplayCell
-            let photos = photoCategory[currentCategory]
-            let imageNames = photos.imageNames
-            let imageName = imageNames[indexPath.item]
-            cell.imageName = imageName
-            
-            if (photoCategory[currentCategory].likedButtons[indexPath.item]){
+            if (currentCategory == -1){
+                cell.imageName = favoritesButtons[indexPath.item]
                 cell.favoriteButton.setImage(UIImage(named: "filledHeart"), for: .normal)
+                
             }else {
-                cell.favoriteButton.setImage(UIImage(named: "emptyHeart"), for: .normal)
+                cell.isLiked = false
+                let photos = photoCategory[currentCategory]
+                let imageNames = photos.imageNames
+                let imageName = imageNames[indexPath.item]
+                cell.imageName = imageName
+                
+                if (photoCategory[currentCategory].likedButtons[indexPath.item]){
+                    cell.isLiked = true
+                    cell.favoriteButton.setImage(UIImage(named: "filledHeart"), for: .normal)
+                }else {
+                    cell.favoriteButton.setImage(UIImage(named: "emptyHeart"), for: .normal)
+                }
+                
             }
             cell.delegate = self
             return cell
@@ -205,6 +209,19 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
     }
     
+    //Erase button for removing the buttons from the display bar
+    @IBAction func eraseButton(_ sender: Any) {
+        if (!clickedPhotos.isEmpty){
+            clickedPhotos.removeLast()
+            displayCollection.reloadData()
+        }
+    }
+    
+    //go button for the playing the message
+    @IBAction func goButton(_ sender: Any) {
+        let lineToSpeak: String = clickedPhotos.joined(separator: " ")
+        speakLine(line: lineToSpeak)    //Speak the passed arugument
+    }
     
 }
 

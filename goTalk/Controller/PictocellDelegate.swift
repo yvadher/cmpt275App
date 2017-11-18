@@ -7,16 +7,15 @@
 //
 
 import UIKit
-import AVFoundation
 
 extension ViewController: pictographicCellDelegate{
     func heartTapped(cell: pictographDisplayCell) {
         if let indexPath = pictographCollection.indexPath(for: cell){
+            // If cell is liked than chage the heart to filled heart
             if (cell.isLiked){
                 let imgName = photoCategory[currentCategory].imageNames[indexPath.item]
                 photoCategory[currentCategory].likedButtons[indexPath.item] = false
                 favoritesButtons = favoritesButtons.filter{$0 != imgName}
-                print (favoritesButtons)
                 cell.favoriteButton.setImage(UIImage(named: "emptyHeart"), for: .normal)
                 cell.isLiked = false
             }else {
