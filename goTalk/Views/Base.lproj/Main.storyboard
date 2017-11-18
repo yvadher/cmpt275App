@@ -125,6 +125,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="88" id="v1U-VX-aHc"/>
                                                 </constraints>
@@ -1059,6 +1060,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="XNJ-hQ-gfi"/>
-        <segue reference="Z8b-44-tY5"/>
+        <segue reference="Wlv-mB-wNO"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -13,11 +13,22 @@ extension ViewController: pictographicCellDelegate{
         if let indexPath = pictographCollection.indexPath(for: cell){
             // If cell is liked than chage the heart to filled heart
             if (cell.isLiked){
-                let imgName = photoCategory[currentCategory].imageNames[indexPath.item]
-                photoCategory[currentCategory].likedButtons[indexPath.item] = false
-                favoritesButtons = favoritesButtons.filter{$0 != imgName}
-                cell.favoriteButton.setImage(UIImage(named: "emptyHeart"), for: .normal)
-                cell.isLiked = false
+                if (currentCategory == -1){
+                    let imgName = favoritesButtons[indexPath.item]
+                    favoritesButtons = favoritesButtons.filter{$0 != imgName}
+                    cell.favoriteButton.setImage(UIImage(named: "emptyHeart"), for: .normal)
+                    cell.isLiked = false
+                    pictographCollection.reloadData()
+                    pictographCollection.layoutIfNeeded()
+                    
+                }else{
+                    let imgName = photoCategory[currentCategory].imageNames[indexPath.item]
+                    photoCategory[currentCategory].likedButtons[indexPath.item] = false
+                    favoritesButtons = favoritesButtons.filter{$0 != imgName}
+                    cell.favoriteButton.setImage(UIImage(named: "emptyHeart"), for: .normal)
+                    cell.isLiked = false
+                }
+                
             }else {
                 let imgName = photoCategory[currentCategory].imageNames[indexPath.item]
                 photoCategory[currentCategory].likedButtons[indexPath.item] = true

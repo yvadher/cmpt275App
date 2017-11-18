@@ -52,9 +52,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         pictographCollection.layoutIfNeeded()
     }
     
-    
-   
-    
     //Struct object to keep track of the identifier
     struct Storyboard {
         static let categoryCell = "categoryCell"
@@ -134,6 +131,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             let imageName = photos.categoryName
             cell.imageName = imageName
             cell.categoryLable.text = imageName
+//            if (currentCategory == imageName){
+//                cell.categoryLable.backgroundColor =
+//            }
             return cell
             
         }else if (collectionView == self.pictographCollection) {
@@ -143,6 +143,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             if (currentCategory == -1){
                 cell.imageName = favoritesButtons[indexPath.item]
                 cell.favoriteButton.setImage(UIImage(named: "filledHeart"), for: .normal)
+
                 
             }else {
                 cell.isLiked = false
@@ -192,8 +193,14 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }else if (collectionView == self.pictographCollection) {
            
             //Speak the picture that is clicked and add it to the clickedButtons array
-            let category = self.photoCategory[currentCategory]
-            let imgName = category.imageNames[indexPath.item]
+            var imgName : String = ""
+            if (currentCategory == -1){
+                imgName = favoritesButtons[indexPath.item]
+            }else {
+                let category = self.photoCategory[currentCategory]
+                imgName = category.imageNames[indexPath.item]
+            }
+            
             
             clickedPhotos.append(imgName)
             speakLine(line: imgName)
@@ -221,6 +228,15 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     @IBAction func goButton(_ sender: Any) {
         let lineToSpeak: String = clickedPhotos.joined(separator: " ")
         speakLine(line: lineToSpeak)    //Speak the passed arugument
+    }
+    
+    func UIColorFromRGB(rgbValue: UInt) -> UIColor {
+        return UIColor(
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: CGFloat(1.0)
+        )
     }
     
 }
