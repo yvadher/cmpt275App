@@ -11,6 +11,11 @@
 //              Fixed image glitch when pictographic button is tapped. (Yagnik Vadher)
 //              Added text-to-speech functionality. (Yagnik Vadher)
 //              Configured scrolling for pictograph buttons. (Karamveer Dhillon)
+//  11/10/2017 : Added forget email functionality class (Yagnik Vadher)
+//  11/15/2017 : Synced up with server functionality (Yagnik Vadher)
+//  11/16/2017 : Added a favorites buttons (Yagnik Vadher)
+//  11/17/2017 : Changed the data model (Yagnik Vadher)
+//             : Chnaged the liked buttons (Yagnik Vadher)
 //  11/06/2017: Code formatting and removed comments used for debugging. (Shawn Thai)
 //  11/10/2017: Code formatting. (Shawn Thai)
 //
@@ -26,14 +31,25 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     // call Photocategory model function to get the data of categories with its photos
     var photoCategory: [PhotoCategory] = PhotoCategory.fetchPhotos()
     var favoritesButtons : [String] = []
+    //varibles that tracks the display bar images (ClickedPhotos) and the currentCategory
+    var clickedPhotos: [String] = []
+    var currentCategory: Int = 0
+    let favCategoryName : Int = -1
+    
     //get the outlet for collection views
     @IBOutlet weak var displayCollection: UICollectionView!
     @IBOutlet weak var categoriesCollection: UICollectionView!
     @IBOutlet weak var pictographCollection: UICollectionView!
     
-    //varibles that tracks the display bar images (ClickedPhotos) and the currentCategory
-    var clickedPhotos: [String] = []
-    var currentCategory: Int = 0
+    
+    
+    // Favorite button category action
+    //1. change the picture collection view with favorites buttons
+
+    @IBAction func favoriteButtonTapped(_ sender: Any) {
+        currentCategory = favCategoryName
+        
+    }
     
     
     //Erase button for removing the buttons from the display bar
@@ -189,37 +205,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
     }
     
-    //Speak function that speaks out string that is being passed as argument
-    func speakLine(line: String){
-        let speechSynthesizer = AVSpeechSynthesizer()
-        let speechUtterance = AVSpeechUtterance(string: line)
-        
-        speechUtterance.rate = 0.45
-        speechSynthesizer.speak(speechUtterance)
-    }
+    
 }
 
 
-extension ViewController: pictographicCellDelegate{
-    func heartTapped(cell: pictographDisplayCell) {
-        if let indexPath = pictographCollection.indexPath(for: cell){
-            if (cell.isLiked){
-                let imgName = photoCategory[currentCategory].imageNames[indexPath.item]
-                photoCategory[currentCategory].likedButtons[indexPath.item] = false
-                favoritesButtons = favoritesButtons.filter{$0 != imgName}
-                print (favoritesButtons)
-                cell.favoriteButton.setImage(UIImage(named: "emptyHeart"), for: .normal)
-                cell.isLiked = false
-            }else {
-                let imgName = photoCategory[currentCategory].imageNames[indexPath.item]
-                photoCategory[currentCategory].likedButtons[indexPath.item] = true
-                favoritesButtons.append(imgName)
-                cell.favoriteButton.setImage(UIImage(named: "filledHeart"), for: .normal)
-                cell.isLiked = true
-            }
-        }
-    }
-}
+
 
 
 

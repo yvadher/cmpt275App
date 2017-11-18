@@ -93,7 +93,7 @@ class PhotosLibrary
         
         case "Letters":
             imageNames = ["A", "B", "C", "D", "E", "F", "G", "H", "I (Letter)", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
-            
+    
         default:
             imageNames = []
         }
