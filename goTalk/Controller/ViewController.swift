@@ -154,7 +154,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                     cell.categoryLable.backgroundColor = UIColorFromRGB(rgbValue: 0xe3f2fd)
                 }else{
                     cell.categoryLable.backgroundColor = UIColorFromRGB(rgbValue: 0xffffff)
-                }s
+                }
             }
             
             return cell

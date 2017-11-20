@@ -55,25 +55,7 @@ class LoginTests: XCTestCase {
         XCTAssertTrue(outputVal)
     }
     
-    func testEmailEmpty(){
-        let testEmail = ""
-        let register = registerController()
-        outputVal = register.isEmpty(stringData: testEmail)
-        XCTAssertTrue(outputVal)
-    }
-    
-    func testNameEmpty(){
-        let testName = ""
-        let register = registerController()
-        outputVal = register.isEmpty(stringData: testName)
-        XCTAssertTrue(outputVal)
-    }
-    func testPasswordEmpty(){
-        let testPwd = ""
-        let register = registerController()
-        outputVal = register.isEmpty(stringData: testPwd)
-        XCTAssertTrue(outputVal)
-    }
+   
     
     
 }
