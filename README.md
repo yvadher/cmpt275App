@@ -1,6 +1,5 @@
 ## Welcome to CMPT 275 Application Page 
-- Check out webpage at for development history: [yvadher.github.io/cmpt275App](https://yvadher.github.io/cmpt275App/)
-- App website [https://gotalkapp.herokuapp.com/](https://gotalkapp.herokuapp.com/)
+- Check out webpage at : [yvadher.github.io/cmpt275App](https://yvadher.github.io/cmpt275App/)
 #### Fall 2017 - Professor Herbert H. Tsang
 
 #### Group Number:  2
@@ -21,11 +20,11 @@
 
  | Task        | Assignment Details                                                                      | File                                        | Submission Date |
  |-------------|-----------------------------------------------------------------------------------------|---------------------------------------------|-----------------|
- | Assignment1 | [Project Plan and Website](Documents/Assignment1_Instruction.pdf)                       |- [Submission Pdf](Documents/Assignment1.pdf) |                 |
- | Assignment2 | [Requirement, Design and Quality Assurance Plan](Documents/Assignment2_Instruction.pdf) |   - [Requirement Document](Documents/Assignment2_RequirmentDocument.pdf) <br> - [Design Document](Documents/Assignment2_Design.pdf)<br>- [QA Document](Documents/Assignment2_QA.pdf)   |                 |
- | Assignment3 |                                                                                         |                                             |                 |
- | Assignment4 |                                                                                         |                                             |                 |
- | Assignment5 |                                                                                         |                                             |                 |
+ | Assignment1 | [Project Plan and Website](Documents/Assignment1_Instruction.pdf)                       |[Project Plan](Documents/Assignment1.pdf)  |                 |
+ | Assignment2 | [Requirement, Design and Quality Assurance Plan](Documents/Assignment2_Instruction.pdf) |[Requirement Document](Documents/Assignment2_RequirmentDocument.pdf) <br> [Design Document](Documents/Assignment2_Design.pdf)<br> [QA Document](Documents/Assignment2_QA.pdf)   |                 |
+ | Assignment3 | [Requirement, Design and Quality Assurance Plan 2]                                      |                                             |                 |
+ | Assignment4 | [Requirement, Design and Quality Assurance Plan 3]                                      |                                             |                 |
+ | Assignment5 | [Requirement, Design and Quality Assurance Plan 4]                                      |                                             |                 |
  
 ## Team Members
 
@@ -45,7 +44,7 @@
 > Yagnik is an avid computer engineering student with a passion for software systems. Yagnik codes mainly in Javascript with Angular framework, Python and C/C++. With co-op work experience in both IoT firmware projects and backend system software, he has developed a great software background. Yagnik has also worked with machine learning, and has diverse experience in software technologies.
   
 ## Team Schedule  
-- [Calender](https://calendar.google.com/calendar/embed?src=kishorraj110%40gmail.com&ctz=America/Vancouver)
+- [Calendar](https://calendar.google.com/calendar/embed?src=kishorraj110%40gmail.com&ctz=America/Vancouver)
 
 ## Project Proposal : 
 - [Proposal Document](https://docs.google.com/document/d/1Sjle3Uqf5rmHdhPMzWy1VnGbLSjvbW4b8QMaoAgdRVY/edit)
