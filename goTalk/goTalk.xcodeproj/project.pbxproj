@@ -19,6 +19,7 @@
 		07E057B61FBFB59E00305119 /* PictocellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E057B51FBFB59E00305119 /* PictocellDelegate.swift */; };
 		07E057B81FBFB6E300305119 /* speakWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E057B71FBFB6E300305119 /* speakWords.swift */; };
 		07FB5B9B1FC2752600DC69A4 /* EmailValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FB5B9A1FC2752600DC69A4 /* EmailValidation.swift */; };
+		5EDD72651FC2E36800388E36 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EDD72631FC2E36800388E36 /* SWRevealViewController.m */; };
 		BDAD10A41FB02CA400D0366D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDAD10A31FB02CA400D0366D /* Info.plist */; };
 		CAB3A97F1FA53A700036147C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB3A97E1FA53A700036147C /* AppDelegate.swift */; };
 		CAB3A9811FA53A700036147C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB3A9801FA53A700036147C /* ViewController.swift */; };
@@ -67,6 +68,9 @@
 		07E057B51FBFB59E00305119 /* PictocellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictocellDelegate.swift; sourceTree = "<group>"; };
 		07E057B71FBFB6E300305119 /* speakWords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = speakWords.swift; sourceTree = "<group>"; };
 		07FB5B9A1FC2752600DC69A4 /* EmailValidation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidation.swift; sourceTree = "<group>"; };
+		5EDD72621FC2E36700388E36 /* goTalk-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "goTalk-Bridging-Header.h"; sourceTree = "<group>"; };
+		5EDD72631FC2E36800388E36 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		5EDD72641FC2E36800388E36 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		BDAD10A31FB02CA400D0366D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CAB3A97B1FA53A700036147C /* goTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = goTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAB3A97E1FA53A700036147C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +123,8 @@
 		073CE3051FAC0AB7000B3759 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				5EDD72641FC2E36800388E36 /* SWRevealViewController.h */,
+				5EDD72631FC2E36800388E36 /* SWRevealViewController.m */,
 				07FB5B9A1FC2752600DC69A4 /* EmailValidation.swift */,
 				07D94D6D1FB684D9003E5BF7 /* ForgotPassController.swift */,
 				CAB3A9801FA53A700036147C /* ViewController.swift */,
@@ -126,6 +132,7 @@
 				075DCB281FAFE91E0007517D /* registerController.swift */,
 				0738BB661FAC872000ACFF8D /* LoginController.swift */,
 				07E057B51FBFB59E00305119 /* PictocellDelegate.swift */,
+				5EDD72621FC2E36700388E36 /* goTalk-Bridging-Header.h */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -142,6 +149,7 @@
 		073CE3071FAC0AEC000B3759 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				073CE3151FAC228E000B3759 /* displayBarCell.swift */,
 				073CE3081FAC0B19000B3759 /* photoCollection.swift */,
 				0738BB621FAC4E9900ACFF8D /* displayBar.swift */,
 			);
@@ -151,7 +159,6 @@
 		073CE30A1FAC1573000B3759 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				073CE3151FAC228E000B3759 /* displayBarCell.swift */,
 				073CE3111FAC1C94000B3759 /* pictographDisplayCell.swift */,
 				CAB3A9821FA53A700036147C /* Main.storyboard */,
 				073CE30B1FAC15C8000B3759 /* categoryCell.swift */,
@@ -299,6 +306,7 @@
 				TargetAttributes = {
 					CAB3A97A1FA53A700036147C = {
 						CreatedOnToolsVersion = 9.0.1;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 					CAD89FD61FB122800062DB03 = {
@@ -386,6 +394,7 @@
 				CAB3A9811FA53A700036147C /* ViewController.swift in Sources */,
 				073CE30C1FAC15C8000B3759 /* categoryCell.swift in Sources */,
 				07E057B81FBFB6E300305119 /* speakWords.swift in Sources */,
+				5EDD72651FC2E36800388E36 /* SWRevealViewController.m in Sources */,
 				075DCB291FAFE91E0007517D /* registerController.swift in Sources */,
 				0738BB631FAC4E9900ACFF8D /* displayBar.swift in Sources */,
 				07FB5B9B1FC2752600DC69A4 /* EmailValidation.swift in Sources */,
@@ -572,12 +581,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/goTalk/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ghj.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "goTalk/Controller/goTalk-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -587,12 +599,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/goTalk/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ghj.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "goTalk/Controller/goTalk-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
