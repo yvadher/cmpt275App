@@ -127,7 +127,6 @@ class PhotosLibrary
         default:
             imageNames = []
         }
-        print ("\(categoryPrefix)  -> \(imageNames)")
         return imageNames
     }
 }

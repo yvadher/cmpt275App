@@ -32,7 +32,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     // call Photocategory model function to get the data of categories with its photos
     var photoCategory: [PhotoCategory] = PhotoCategory.fetchPhotos()
+    
     var favoritesButtons : [String] = []
+    
     //varibles that tracks the display bar images (ClickedPhotos) and the currentCategory
     var clickedPhotos: [String] = []
     var currentCategory: Int = 0
@@ -166,7 +168,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             if (currentCategory == -1){
                 cell.imageName = favoritesButtons[indexPath.item]
                 cell.favoriteButton.setImage(UIImage(named: "filledHeart"), for: .normal)
-
+                cell.isLiked = true
                 
             }else {
                 cell.isLiked = false

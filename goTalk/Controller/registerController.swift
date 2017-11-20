@@ -40,12 +40,43 @@ class registerController: UIViewController {
         let _userNameData: String = _userName.text!
         let _userEmailData: String = _userEmail.text!
         let _userPasswordData: String = _userPassword.text!
+        let _firstNameData: String = _firstName.text!
+        let _lastNameData: String = _lastName.text!
         
         // Check if empty data
         
         if (_userNameData == "" || _userEmailData == "" || _userPasswordData == "") {
             displayAlertMessage(messageToDisplay: "Please fill in your email and password and try again.")
             return
+        }
+        
+        //Check if firsname is empty
+        if isValidFirstName(_firstNameData){
+            print("First name is valid.")
+        } else {
+            print("First name is empty")
+        }
+        
+        //Check if lastname is empty
+        if isValidLastName(_lastNameData){
+            print("Last name is valid.")
+        } else {
+            print("Last name is empty")
+        }
+        
+        
+        //Check if password is empty
+        if isValidPassword(_userPasswordData){
+            print("Password is valid.")
+        } else {
+            print("Password is empty.")
+        }
+        
+        //Check if name is empty
+        if isValidName(_userNameData){
+            print("Name is valid.")
+        } else {
+            print("Name is empty.")
         }
         
         // Check if email address is valid format
@@ -58,13 +89,20 @@ class registerController: UIViewController {
         }
         
         //Prepare JSON data to post the request
-        let sendJSON = ["userName": _userNameData , "userEmail" : _userEmailData, "userPassword" : _userPasswordData]
+        let inputJSON = ["userName": _userNameData , "userEmail" : _userEmailData, "userPassword" : _userPasswordData]
         
+        sendToServer(inputJSON)
+        
+    }
+    
+    
+    func sendToServer(_ sendJSON: [String: String]) -> Bool{
         //URL for the server API
+        var testFlag = true
         guard let url = URL(string: "http://gotalkapp.herokuapp.com/save")
             else {
                 print("Error: URL not found.")
-                return
+                return false
         }
         var request = URLRequest(url: url)
         
@@ -75,7 +113,7 @@ class registerController: UIViewController {
         guard let httpBody = try? JSONSerialization.data(withJSONObject: sendJSON, options: [])
             else {
                 print("Error: Problem with JSON data.")
-                return
+                return false
         }
         request.httpBody = httpBody
         
@@ -98,6 +136,7 @@ class registerController: UIViewController {
                         OperationQueue.main.addOperation {
                             self.displayAlertMessage(messageToDisplay: "Email has already been registered. Please try again with a different email.")
                             self.letMeLogInButton.isHidden = false
+                            testFlag = false
                         }
                     }else {
                         
@@ -114,46 +153,15 @@ class registerController: UIViewController {
                     
                 } catch {
                     print(error)
+                    testFlag = false
                 }
             }
             
             }.resume()
+        return testFlag
     }
     
     
-    // isValidEmailAddress checks if the input (email address) is of valid format, ie. contains XXXXX@XXX.XXX
-    // Returns true if valid, otherwise false.
-    func isValidEmailAddress(emailAddressString: String) -> Bool {
-        
-        var returnValue = true
-        let emailRegEx = "[A-Z0-9a-z.-_]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,3}"
-        
-        do {
-            let regex = try NSRegularExpression(pattern: emailRegEx)
-            let nsString = emailAddressString as NSString
-            let results = regex.matches(in: emailAddressString, range: NSRange(location: 0, length: nsString.length))
-            
-            if results.count == 0 {
-                returnValue = false
-            }
-        } catch let error as NSError {
-            print("Invalid regex: \(error.localizedDescription)")
-            returnValue = false
-        }
-        return returnValue
-    }
-    
-    
-    // displayAlertMessage takes in an input string (error message) and displays it to user via pop-up window.
-    // The pop-up window will have an OK button, which when tapped, will close the window.
-    func displayAlertMessage(messageToDisplay: String) {
-        
-        let alertController = UIAlertController(title: "Alert", message: messageToDisplay, preferredStyle: .alert)
-        let OKAction = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction!) in
-            // Code in this block will trigger when OK button tapped.
-            print("OK button tapped.");
-        }
-        alertController.addAction(OKAction)
-        self.present(alertController, animated: true, completion:nil)
-    }
 }
+
+

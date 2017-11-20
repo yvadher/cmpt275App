@@ -9,6 +9,19 @@
 import UIKit
 
 extension ViewController: pictographicCellDelegate{
+    
+    //MARK: Helper function
+    // Function that keep tracks of the heart button being liked or not according to there image names
+    func changeLikedButton(str : String){
+        for i in 0...(photoCategory.count-1){
+            for j in 0...(photoCategory[i].imageNames.count-1){
+                if (photoCategory[i].imageNames[j] == str){
+                     photoCategory[i].likedButtons[j] = !photoCategory[i].likedButtons[j]
+                }
+            }
+        }
+    }
+    //Function that is called when user presses the favorites button
     func heartTapped(cell: pictographDisplayCell) {
         if let indexPath = pictographCollection.indexPath(for: cell){
             // If cell is liked than chage the heart to filled heart
@@ -16,10 +29,13 @@ extension ViewController: pictographicCellDelegate{
                 
                 //If current category is favorites then remove heart and relode the pictographic collection
                 if (currentCategory == -1){
+                    
                     let imgName = favoritesButtons[indexPath.item]
                     favoritesButtons = favoritesButtons.filter{$0 != imgName}
+                    changeLikedButton(str: imgName)
                     cell.favoriteButton.setImage(UIImage(named: "emptyHeart"), for: .normal)
                     cell.isLiked = false
+                    //Relode the collection view
                     pictographCollection.reloadData()
                     pictographCollection.layoutIfNeeded()
                     

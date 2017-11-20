@@ -17,6 +17,7 @@
 		07D94D6F1FB684D9003E5BF7 /* ForgotPassController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D94D6D1FB684D9003E5BF7 /* ForgotPassController.swift */; };
 		07E057B61FBFB59E00305119 /* PictocellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E057B51FBFB59E00305119 /* PictocellDelegate.swift */; };
 		07E057B81FBFB6E300305119 /* speakWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E057B71FBFB6E300305119 /* speakWords.swift */; };
+		07FB5B9B1FC2752600DC69A4 /* EmailValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FB5B9A1FC2752600DC69A4 /* EmailValidation.swift */; };
 		BDAD10A41FB02CA400D0366D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDAD10A31FB02CA400D0366D /* Info.plist */; };
 		CAB3A97F1FA53A700036147C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB3A97E1FA53A700036147C /* AppDelegate.swift */; };
 		CAB3A9811FA53A700036147C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB3A9801FA53A700036147C /* ViewController.swift */; };
@@ -63,6 +64,7 @@
 		07D94D6D1FB684D9003E5BF7 /* ForgotPassController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPassController.swift; sourceTree = "<group>"; };
 		07E057B51FBFB59E00305119 /* PictocellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictocellDelegate.swift; sourceTree = "<group>"; };
 		07E057B71FBFB6E300305119 /* speakWords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = speakWords.swift; sourceTree = "<group>"; };
+		07FB5B9A1FC2752600DC69A4 /* EmailValidation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidation.swift; sourceTree = "<group>"; };
 		BDAD10A31FB02CA400D0366D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CAB3A97B1FA53A700036147C /* goTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = goTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAB3A97E1FA53A700036147C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 		073CE3051FAC0AB7000B3759 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				07FB5B9A1FC2752600DC69A4 /* EmailValidation.swift */,
 				07D94D6D1FB684D9003E5BF7 /* ForgotPassController.swift */,
 				CAB3A9801FA53A700036147C /* ViewController.swift */,
 				07E057B71FBFB6E300305119 /* speakWords.swift */,
@@ -382,6 +385,7 @@
 				07E057B81FBFB6E300305119 /* speakWords.swift in Sources */,
 				075DCB291FAFE91E0007517D /* registerController.swift in Sources */,
 				0738BB631FAC4E9900ACFF8D /* displayBar.swift in Sources */,
+				07FB5B9B1FC2752600DC69A4 /* EmailValidation.swift in Sources */,
 				0738BB671FAC872000ACFF8D /* LoginController.swift in Sources */,
 				073CE3091FAC0B19000B3759 /* photoCollection.swift in Sources */,
 				CAB3A97F1FA53A700036147C /* AppDelegate.swift in Sources */,
