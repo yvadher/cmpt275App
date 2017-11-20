@@ -33,19 +33,7 @@ class LoginTests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        let register = registerController()
-        let _userNameData = "testName"
-        let _userEmailData = "testEmail"
-        let _userPasswordData = "testPassword"
-        let testJSON = ["userName": _userNameData , "userEmail" : _userEmailData, "userPassword" : _userPasswordData]
-        
-        self.measure {
-            register.sendToServer(testJSON)
-            // Put the code you want to measure the time of here.
-        }
-    }
+    
     
     func testLoginEmail(){
         let testEmail = "testEmail@email.com"
@@ -97,17 +85,7 @@ class LoginTests: XCTestCase {
         XCTAssertTrue(outputVal)
     }
     
-    //Test registeration communication with server
-    func testForRegistrationServerComm(){
-        let register = registerController()
-        let _userNameData = "testName"
-        let _userEmailData = "testEmail"
-        let _userPasswordData = "testPassword"
-        let testJSON = ["userName": _userNameData , "userEmail" : _userEmailData, "userPassword" : _userPasswordData]
-        outputVal = register.sendToServer(testJSON)
-        XCTAssertTrue(outputVal)
-        
-    }
+   
     
 }
 

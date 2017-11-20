@@ -14,6 +14,7 @@
 		073CE3121FAC1C94000B3759 /* pictographDisplayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073CE3111FAC1C94000B3759 /* pictographDisplayCell.swift */; };
 		073CE3161FAC228E000B3759 /* displayBarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073CE3151FAC228E000B3759 /* displayBarCell.swift */; };
 		075DCB291FAFE91E0007517D /* registerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075DCB281FAFE91E0007517D /* registerController.swift */; };
+		075ECDA11FC276A600642843 /* registerationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075ECDA01FC276A600642843 /* registerationTest.swift */; };
 		07D94D6F1FB684D9003E5BF7 /* ForgotPassController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D94D6D1FB684D9003E5BF7 /* ForgotPassController.swift */; };
 		07E057B61FBFB59E00305119 /* PictocellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E057B51FBFB59E00305119 /* PictocellDelegate.swift */; };
 		07E057B81FBFB6E300305119 /* speakWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E057B71FBFB6E300305119 /* speakWords.swift */; };
@@ -61,6 +62,7 @@
 		073CE3111FAC1C94000B3759 /* pictographDisplayCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pictographDisplayCell.swift; sourceTree = "<group>"; };
 		073CE3151FAC228E000B3759 /* displayBarCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = displayBarCell.swift; sourceTree = "<group>"; };
 		075DCB281FAFE91E0007517D /* registerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registerController.swift; sourceTree = "<group>"; };
+		075ECDA01FC276A600642843 /* registerationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registerationTest.swift; sourceTree = "<group>"; };
 		07D94D6D1FB684D9003E5BF7 /* ForgotPassController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPassController.swift; sourceTree = "<group>"; };
 		07E057B51FBFB59E00305119 /* PictocellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictocellDelegate.swift; sourceTree = "<group>"; };
 		07E057B71FBFB6E300305119 /* speakWords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = speakWords.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 				CAD89FF51FB129A60062DB03 /* goTalkTestsTwo.swift */,
 				CAD89FFD1FB12AAF0062DB03 /* LoginTests.swift */,
 				CAD89FF71FB129A60062DB03 /* Info.plist */,
+				075ECDA01FC276A600642843 /* registerationTest.swift */,
 			);
 			path = goTalkTestsTwo;
 			sourceTree = "<group>";
@@ -411,6 +414,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				075ECDA11FC276A600642843 /* registerationTest.swift in Sources */,
 				CAD89FF61FB129A60062DB03 /* goTalkTestsTwo.swift in Sources */,
 				CAD89FFE1FB12AAF0062DB03 /* LoginTests.swift in Sources */,
 			);
