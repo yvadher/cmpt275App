@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:goTalk.xcodeproj">
+      location = "self:/Users/fahdchaudhry/Desktop/cmpt275App-devYagnik-2/goTalk.xcodeproj">
    </FileRef>
 </Workspace>

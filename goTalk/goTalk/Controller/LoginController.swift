@@ -1,187 +1,158 @@
 //
 //  LoginController.swift
-//  DEMOHSBC
+//  Manages the Login Screen functionality and connection with database.
 //
-//  Created by Ryan on 2017-10-26.
-//  Copyright © 2017 night.owls. All rights reserved.
+//  CMPT 275 Fall 2017 - Group 02: The Night Owls
+//  Created by Yagnik Vadher on 11/3/17.
+//  Worked on by Yagnik Vadher and Shawn Thai
+//
+//  11/06/2017: Code formatting. (Shawn Thai)
+//              Added error case if empty data was inputted by user. (Yagnik Vadher)
+//              Added error case if email address of invalid format was inputted by user. (Yagnik Vadher)
+//  11/10/2017: Code formatting, commenting, and rewriting of error messages. (Shawn Thai)
+//
+//  Copyright © 2017 ksd8. All rights reserved.
 //
 
 import UIKit
 
-class LoginController: UIViewController {
-    
-    //  mod. by Ryan on 2017-10-26.
-    
-    let inputsContainerView: UIView = {
-        let view = UIView()
-        view.backgroundColor=UIColor.white
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.layer.cornerRadius = 5
-        view.layer.masksToBounds = true
-        
-        return view
-        
-    }()
-    
-    //  mod. by Ryan on 2017-10-26.
-    let loginRegisterButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.backgroundColor = UIColor(r: 221, g: 31, b: 38)
-        button.setTitle("Login", for: .normal)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitleColor(UIColor.white, for: .normal)
-        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
-        
-        return button
-    }()
-    
-    //  mod. by Ryan on 2017-10-26.
-    let nameTextField: UITextField = {
-        let tf = UITextField()
-        tf.placeholder = "Name"
-        tf.translatesAutoresizingMaskIntoConstraints = false
-        
-        return tf
-    }()
-    //  mod. by Ryan on 2017-10-26.
-    let nameSeparatorView: UIView = {
-        let view = UIView()
-        view.backgroundColor = UIColor(r: 220, g: 220, b: 220)
-        view.translatesAutoresizingMaskIntoConstraints=false
-        
-        return view
-    }()
-    
-    //  mod. by Ryan on 2017-10-26.
-    let emailTextField: UITextField = {
-        let tf = UITextField()
-        tf.placeholder = "Email Address"
-        tf.translatesAutoresizingMaskIntoConstraints = false
-        
-        return tf
-    }()
-    //  mod. by Ryan on 2017-10-26.
-    let emailSeparatorView: UIView = {
-        let view = UIView()
-        view.backgroundColor = UIColor(r: 220, g: 220, b: 220)
-        view.translatesAutoresizingMaskIntoConstraints=false
-        
-        return view
-    }()
-    //  mod. by Ryan on 2017-10-26.
-    let passwordTextField: UITextField = {
-        let tf = UITextField()
-        tf.placeholder = "Password"
-        tf.translatesAutoresizingMaskIntoConstraints = false
-        tf.isSecureTextEntry = true
-        
-        return tf
-    }()
-    
-    let profileImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.image = UIImage(named: "goTalk-logo")
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.contentMode = .scaleAspectFill
-        
-        return imageView
-    }()
+
+class LoginController: UIViewController{
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        //  mod. by Ryan on 2017-10-26.
-        // all code below is for the login page
-        //good and cool
-        view.backgroundColor = UIColor(r: 232, g: 232, b: 232) // this is for the page color
         
-        view.addSubview(inputsContainerView)
-        view.addSubview(loginRegisterButton)
-        view.addSubview(profileImageView)
-        
-        setupInputsContainerView() //this is for the box anchors
-        setupLoginRegisterButton() //this is for login button
-        setupProfileImageView() //this is for prof pic
-        
-        // Do any additional setup after loading the view.
+        print ("User logged in: ")
+        print (UserDefaults.standard.bool(forKey: "isLoggedIn"))
+        if (UserDefaults.standard.bool(forKey: "isLoggedIn")){
+            // Perform segue to go to main page
+            OperationQueue.main.addOperation {
+                self.performSegue(withIdentifier: "mainPageSegue", sender: self)
+            }
+        }
     }
     
-    //  mod. by Ryan on 2017-10-26.
-    func setupInputsContainerView(){
-        inputsContainerView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive=true
-        inputsContainerView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive=true
-        inputsContainerView.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -24).isActive=true
-        inputsContainerView.heightAnchor.constraint(equalToConstant: 150).isActive=true
-        
-        inputsContainerView.addSubview(nameTextField)
-        nameTextField.leftAnchor.constraint(equalTo: inputsContainerView.leftAnchor, constant: 12).isActive=true
-        nameTextField.topAnchor.constraint(equalTo: inputsContainerView.topAnchor).isActive=true
-        nameTextField.widthAnchor.constraint(equalTo: inputsContainerView.widthAnchor).isActive=true
-        nameTextField.heightAnchor.constraint(equalTo: inputsContainerView.heightAnchor, multiplier: 1/3).isActive=true
-        
-        inputsContainerView.addSubview(nameSeparatorView)
-        nameSeparatorView.leftAnchor.constraint(equalTo: inputsContainerView.leftAnchor).isActive=true
-        nameSeparatorView.topAnchor.constraint(equalTo: nameTextField.bottomAnchor).isActive=true
-        nameSeparatorView.widthAnchor.constraint(equalTo: inputsContainerView.widthAnchor).isActive=true
-        nameSeparatorView.heightAnchor.constraint(equalToConstant: 1).isActive=true
-        
-        inputsContainerView.addSubview(emailTextField)
-        emailTextField.leftAnchor.constraint(equalTo: inputsContainerView.leftAnchor, constant: 12).isActive=true
-        emailTextField.topAnchor.constraint(equalTo: nameTextField.bottomAnchor).isActive=true
-        emailTextField.widthAnchor.constraint(equalTo: inputsContainerView.widthAnchor).isActive=true
-        emailTextField.heightAnchor.constraint(equalTo: inputsContainerView.heightAnchor, multiplier: 1/3).isActive=true
-        
-        inputsContainerView.addSubview(emailSeparatorView)
-        emailSeparatorView.leftAnchor.constraint(equalTo: inputsContainerView.leftAnchor).isActive=true
-        emailSeparatorView.topAnchor.constraint(equalTo: emailTextField.bottomAnchor).isActive=true
-        emailSeparatorView.widthAnchor.constraint(equalTo: inputsContainerView.widthAnchor).isActive=true
-        emailSeparatorView.heightAnchor.constraint(equalToConstant: 1).isActive=true
-        
-        inputsContainerView.addSubview(passwordTextField)
-        passwordTextField.leftAnchor.constraint(equalTo: inputsContainerView.leftAnchor, constant: 12).isActive=true
-        passwordTextField.topAnchor.constraint(equalTo: emailTextField.bottomAnchor).isActive=true
-        passwordTextField.widthAnchor.constraint(equalTo: inputsContainerView.widthAnchor).isActive=true
-        passwordTextField.heightAnchor.constraint(equalTo: inputsContainerView.heightAnchor, multiplier: 1/3).isActive=true
-        
+    @IBOutlet weak var _userName: UITextField!
+    @IBOutlet weak var _userPwd: UITextField!
+    @IBOutlet weak var forgotPwdButton: UIButton!
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var registerButton: UIButton!
+    
+    @IBAction func goToRegister(_ sender: Any) {
+        OperationQueue.main.addOperation {
+            self.performSegue(withIdentifier: "registerSegue", sender: self)
+        }
     }
     
-    //  mod. by Ryan on 2017-10-26.
-    func setupLoginRegisterButton(){
-        loginRegisterButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive=true
-        loginRegisterButton.topAnchor.constraint(equalTo: inputsContainerView.bottomAnchor, constant: 12).isActive=true
-        loginRegisterButton.widthAnchor.constraint(equalTo: inputsContainerView.widthAnchor ).isActive=true
-        loginRegisterButton.heightAnchor.constraint(equalToConstant: 50).isActive=true
+    // LogIn activates when the 'Login' button has been tapped.
+    // Takes in user data, which is sent to the database for user verification, where it makes a request for JSON data.
+    // If successfully finds matching data, then user is navigated to Main Screen, otherwise, is given an error message.
+    @IBAction func LogIn(_ sender: Any) {
+        let userNameData: String = _userName.text!
+        let userPwdData: String = _userPwd.text!
         
+        // Check if empty
+        if (userNameData == "" || userPwdData == ""){
+            print("Error: All fields required.")
+            displayAlertMessage(messageToDisplay: "Please fill in your email and password and try again.")
+            return
+        }
+        
+        // Check if email address is valid
+        if isValidEmailAddress(emailAddressString: userNameData) {
+            print("Email address is valid.")
+        } else {
+            print("Error: Invalid email address.")
+            displayAlertMessage(messageToDisplay: "Email address is not valid.")
+        }
+        
+        let sendJSON = ["userEmail": userNameData , "userPassword" : userPwdData]
+        
+        // Connect to webpage
+        guard let url = URL(string: "http://gotalkapp.herokuapp.com/find")
+            else {
+                print("Error: URL not found.")
+                return
+        }
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        guard let httpBody = try? JSONSerialization.data(withJSONObject: sendJSON, options: [])
+            else {
+                print("Error: Problem with JSON data.")
+                return
+        }
+        request.httpBody = httpBody
+        loginButton.isEnabled = false
+        print (sendJSON)
+        let session = URLSession.shared
+        session.dataTask(with: request) { (data, response, error) in
+            if let data = data {
+                do {
+                    let json = try JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
+                    print("Here is json: \(json)")
+                    let item = json["result"] as! String
+                    print (item)
+                    
+                    if (item == "true"){
+                        print ("Came here! Matching JSON data has been found.")
+                        
+                        //Save user logged in(true) information to the userDefaults
+                        UserDefaults.standard.set(true, forKey: "isLoggedIn")
+                        UserDefaults.standard.synchronize()
+                        
+                        // Perform segue to go to main page
+                        OperationQueue.main.addOperation {
+                            self.performSegue(withIdentifier: "mainPageSegue", sender: self)
+                        }
+                    }else {
+                        OperationQueue.main.addOperation {
+                            self.displayAlertMessage(messageToDisplay: "Incorrect email and password. Please try again.")
+                        }
+                        print ("Error: Incorrect password.")
+                    }
+                } catch {
+                    print(error)
+                }
+            }
+            
+            }.resume()
+        self.loginButton.isEnabled = true
     }
     
-    //  mod. by Ryan on 2017-10-26.
-    func setupProfileImageView(){
-        profileImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive=true
-        profileImageView.bottomAnchor.constraint(equalTo: inputsContainerView.topAnchor, constant: -12).isActive=true
-        profileImageView.widthAnchor.constraint(equalToConstant: 120).isActive=true
-        profileImageView.heightAnchor.constraint(equalToConstant: 120).isActive=true
+    
+    // isValidEmailAddress takes in an input string (email address) and checks to see if it has the format XXXX@XXX.XXX
+    // Returns false if contradiction is found, otherwise true.
+    func isValidEmailAddress(emailAddressString: String) -> Bool {
         
+        var returnValue = true
+        let emailRegEx = "[A-Z0-9a-z.-_]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,3}"
         
+        do {
+            let regex = try NSRegularExpression(pattern: emailRegEx)
+            let nsString = emailAddressString as NSString
+            let results = regex.matches(in: emailAddressString, range: NSRange(location: 0, length: nsString.length))
+            
+            if results.count == 0 {
+                returnValue = false
+            }
+        } catch let error as NSError {
+            print("invalid regex: \(error.localizedDescription)")
+            returnValue = false
+        }
         
-        
-        
+        return returnValue
     }
     
-    /* //  mod. by Ryan on 2017-10-26.
-     
-     override func didReceiveMemoryWarning() {
-     super.didReceiveMemoryWarning()
-     // Dispose of any resources that can be recreated.
-     }
-     */
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
+    // displayAlertMessage takes in an input string (error message) and displays it to user via pop-up window.
+    // The user may close the window by tapping the OK button that appears.
+    func displayAlertMessage(messageToDisplay: String) {
+        let alertController = UIAlertController(title: "Alert", message: messageToDisplay, preferredStyle: .alert)
+        let OKAction = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction!) in
+            // Code in this block will trigger when OK button tapped.
+            print("Ok button tapped.");
+        }
+        alertController.addAction(OKAction)
+        self.present(alertController, animated: true, completion:nil)
+    }
 }
