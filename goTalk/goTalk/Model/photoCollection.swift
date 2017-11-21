@@ -10,6 +10,7 @@
 //  11/02/2017: Added dynamic category changing. (Yagnik Vadher)
 //              Category objects changed from dictionary -> array objects to maintain order of elements. (Yagnik Vadher)
 //  11/05/2017: Added Categories: Actions, Letters. Capitalized image names (Fahd Chaudhry, Shawn Thai).
+//  11/19/2017: Added more buttons (Shawn Thai).
 //
 //  Copyright © 2017 ksd8. All rights reserved.
 //
@@ -25,7 +26,7 @@ struct PhotoCategory {
     static func fetchPhotos() -> [PhotoCategory] {
         var categories = [PhotoCategory]()
         let photosData = PhotosLibrary.downloadPhotosData()
-   
+        
         for i in 0...(photosData.count-1) {
             let categoryImageName = photosData[i].caetegoryName
             if let imageNames = photosData[i].imagesNames as? [String] {
@@ -48,15 +49,17 @@ class PhotosLibrary
     {
         let object = [
             categoryUnit(caetegoryName: "General", imagesNames: PhotosLibrary.generateImage(categoryPrefix: "General"), liked: PhotosLibrary.generateImageLiked(categoryPrefix: "General")),
+            categoryUnit(caetegoryName: "People", imagesNames: PhotosLibrary.generateImage(categoryPrefix: "People"), liked: PhotosLibrary.generateImageLiked(categoryPrefix: "People")),
+            categoryUnit(caetegoryName: "Actions", imagesNames: PhotosLibrary.generateImage(categoryPrefix: "Actions"), liked: PhotosLibrary.generateImageLiked(categoryPrefix: "Actions")),
             categoryUnit(caetegoryName: "Feelings", imagesNames: PhotosLibrary.generateImage(categoryPrefix: "Feelings"), liked: PhotosLibrary.generateImageLiked(categoryPrefix: "Feelings")),
-            categoryUnit(caetegoryName: "Colors", imagesNames: PhotosLibrary.generateImage(categoryPrefix: "Colors"), liked: PhotosLibrary.generateImageLiked(categoryPrefix: "Colors")),
-            categoryUnit(caetegoryName: "Drinks", imagesNames: PhotosLibrary.generateImage(categoryPrefix: "Drinks"), liked: PhotosLibrary.generateImageLiked(categoryPrefix: "Drinks")),
             categoryUnit(caetegoryName: "Food", imagesNames: PhotosLibrary.generateImage(categoryPrefix: "Food"), liked: PhotosLibrary.generateImageLiked(categoryPrefix: "Food")),
-            categoryUnit(caetegoryName: "Places", imagesNames: PhotosLibrary.generateImage(categoryPrefix: "Places"), liked: PhotosLibrary.generateImageLiked(categoryPrefix: "Places")),
+            categoryUnit(caetegoryName: "Drinks", imagesNames: PhotosLibrary.generateImage(categoryPrefix: "Drinks"), liked: PhotosLibrary.generateImageLiked(categoryPrefix: "Drinks")),
             categoryUnit(caetegoryName: "Toys", imagesNames: PhotosLibrary.generateImage(categoryPrefix: "Toys"), liked: PhotosLibrary.generateImageLiked(categoryPrefix: "Toys")),
+            categoryUnit(caetegoryName: "Places", imagesNames: PhotosLibrary.generateImage(categoryPrefix: "Places"), liked: PhotosLibrary.generateImageLiked(categoryPrefix: "Places")),
+            categoryUnit(caetegoryName: "Colors", imagesNames: PhotosLibrary.generateImage(categoryPrefix: "Colors"), liked: PhotosLibrary.generateImageLiked(categoryPrefix: "Colors")),
             categoryUnit(caetegoryName: "Numbers", imagesNames: PhotosLibrary.generateImage(categoryPrefix: "Numbers"), liked: PhotosLibrary.generateImageLiked(categoryPrefix: "Numbers")),
             categoryUnit(caetegoryName: "Letters", imagesNames: PhotosLibrary.generateImage(categoryPrefix: "Letters"), liked: PhotosLibrary.generateImageLiked(categoryPrefix: "Letters")),
-        ]
+            ]
         
         
         //print (object)
@@ -68,36 +71,42 @@ class PhotosLibrary
         
         switch categoryPrefix {
         case "General":
-            imageNames = ["i", "No", "Okay", "See", "Sleep", "What", "Yes", "You", "Dislike", "Hear", "Like"]
+            imageNames = ["i", "You", "Okay", "Yes", "No", "Do", "Not", "What", "Where", "Why", "Who", "Help", "Now", "Later", "And", "Or", "Am", "Because", "But", "To", "On", "It", "Is"]
+            
+        case "People":
+            imageNames = ["He", "She"]
+            
+        case "Actions":
+            imageNames = ["Like", "Dislike", "See", "Look", "Hear", "Play", "Make", "Come", "Eat", "Think", "Give", "Sleep"]
             
         case "Feelings":
-            imageNames = ["Afraid", "Angry", "Confused", "Happy", "Nervous", "Sad", "Shy", "Sick", "Surprised", "Tired"]
+            imageNames = ["Happy", "Surprised", "Sorry", "Shy", "Nervous", "Afraid", "Confused", "Angry", "Tired", "Sleepy", "Sick", "Warm", "Hot", "Cold"]
             
         case "Colors":
             imageNames = ["Black", "Blue", "Brown", "Green", "Grey", "Orange", "Pink", "Purple", "Red"]
             
         case "Food":
-            imageNames = ["Apple", "Banana", "Bread", "Breakfast", "Burger", "Butter", "Cereal", "Chocolate", "Grapes", "IceCream", "Noodles", "Pizza", "Sandwich", "Eat"]
+            imageNames = ["Breakfast", "Lunch", "Dinner", "Snacks", "Vegetables", "Fruit", "Apple", "Banana", "Grapes", "Cereal", "Noodles", "Pizza", "Sandwich", "Bread", "Butter", "Chocolate", "IceCream"]
             
         case "Drinks":
-            imageNames = ["Juice", "Lemonade", "Milk", "Soda", "Water"]
+            imageNames = ["Juice", "Lemonade", "Milk", "Soda", "Water", "Coffee", "Tea"]
             
         case "Places":
-            imageNames = ["Home", "School", "Clinic", "Store", "Bedroom", "Bathroom", "Kitchen", "Playground"]
+            imageNames = ["Home", "Bathroom", "School", "Store", "Bedroom", "Kitchen", "Playground", "Clinic"]
             
         case "Toys":
-            imageNames = ["Ball", "Book", "Car", "Pencils", "Lego", "Swing", "Play"]
+            imageNames = ["Ball", "Book", "Car", "Pencils", "Lego", "Swing"]
             
         case "Numbers":
-            imageNames = ["Nine", "Eight", "Seven", "Six", "Five", "Four", "Three", "Two", "One", "Zero"]
-        
+            imageNames = ["Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"]
+            
         case "Letters":
             imageNames = ["A", "B", "C", "D", "E", "F", "G", "H", "I (Letter)", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
-    
+            
         default:
             imageNames = []
         }
-
+        
         
         return imageNames
     }
@@ -107,19 +116,23 @@ class PhotosLibrary
         
         switch categoryPrefix {
         case "General":
-            imageNames = Array(repeating: false, count: 11)
+            imageNames = Array(repeating: false, count: 23)
+        case "People":
+            imageNames = Array(repeating: false, count: 2)
+        case "Actions":
+            imageNames = Array(repeating: false, count: 12)
         case "Feelings":
-            imageNames = Array(repeating: false, count: 10)
+            imageNames = Array(repeating: false, count: 14)
         case "Colors":
             imageNames = Array(repeating: false, count: 9)
         case "Food":
-            imageNames = Array(repeating: false, count: 14)
+            imageNames = Array(repeating: false, count: 17)
         case "Drinks":
-            imageNames = Array(repeating: false, count: 5)
+            imageNames = Array(repeating: false, count: 7)
         case "Places":
             imageNames = Array(repeating: false, count: 8)
         case "Toys":
-            imageNames = Array(repeating: false, count: 7)
+            imageNames = Array(repeating: false, count: 6)
         case "Numbers":
             imageNames = Array(repeating: false, count: 10)
         case "Letters":

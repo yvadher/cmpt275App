@@ -21,10 +21,10 @@
 
  | Task        | Assignment Details                                                                      | File                                        | Submission Date |
  |-------------|-----------------------------------------------------------------------------------------|---------------------------------------------|-----------------|
- | Assignment1 | [Project Plan and Website](Documents/Assignment1_Instruction.pdf)                       |- [Submission Pdf](Documents/Assignment1.pdf) |                 |
- | Assignment2 | [Requirement, Design and Quality Assurance Plan](Documents/Assignment2_Instruction.pdf) |   - [Requirement Document](Documents/Assignment2_RequirmentDocument.pdf) <br> - [Design Document](Documents/Assignment2_Design.pdf)<br>- [QA Document](Documents/Assignment2_QA.pdf)   |                 |
- | Assignment3 |                                                                                         |                                             |                 |
- | Assignment4 |                                                                                         |                                             |                 |
+ | Assignment1 | [Project Plan and Website](Documents/Assignment1_Instruction.pdf)                       | [Submission Pdf](Documents/Assignment1.pdf) |                 |
+ | Assignment2 | [Requirement, Design and Quality Assurance Plan](Documents/Assignment2_Instruction.pdf) | [Requirement Document](Documents/Assignment2_RequirmentDocument.pdf) <br> [Design Document](Documents/Assignment2_Design.pdf)<br> [QA Document](Documents/Assignment2_QA.pdf)   |                 |
+ | Assignment3 | [Requirement, Design and Quality Assurance Plan Version 1](Documents/Assignment3_Instruction.pdf) | [Requirement Document](Documents/Assignment3_RequirmentDocument.pdf) <br> [Design Document](Documents/Assignment3_Design.pdf)<br> [QA Document](Documents/Assignment3_QA.pdf)   |                 |
+ | Assignment4 | [Requirement, Design and Quality Assurance Plan Version 2](Documents/Assignment4_Instruction.pdf) | [Requirement Document](Documents/Assignment4_RequirmentDocument.pdf) <br> [Design Document](Documents/Assignment4_Design.pdf)<br> [QA Document](Documents/Assignment4_QA.pdf)   |                 |
  | Assignment5 |                                                                                         |                                             |                 |
  
 ## Team Members
@@ -65,5 +65,6 @@
 -  [Meeting 6](https://drive.google.com/open?id=0B7aK5G9fAl8yYU9kTzlnTUt1SW8) Monday, October 2, 2017
 -  [Meeting 7](https://drive.google.com/open?id=0B7aK5G9fAl8yaTJuTmtIN3kweU0) Wednesday, October 4, 2017
 -  [Meeting 8](https://drive.google.com/open?id=0B7aK5G9fAl8ySVpEUzJVNGg0ZzQ) Monday, October 9, 2017
+-  [Meeting 8](https://drive.google.com/open?id=1jzroicQt_E8PDQl4fb0Y8KVhrGyrf_VB) Wednesday, November 8, 2017
 
 

@@ -46,6 +46,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     @IBOutlet weak var pictographCollection: UICollectionView!
     @IBOutlet weak var favoriteButtonOutlet: UIButton!
     @IBOutlet weak var favoriteLableOutlet: UILabel!
+    @IBOutlet weak var sideMenuButtonOutlet: UIBarButtonItem!
     
     
     // Favorite button category action
@@ -82,6 +83,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         pictographCollection.delegate = self
         pictographCollection.dataSource = self
+        
+        // Initiate Side Menu function
+        sideMenu()
     }
     
     //Return the number of section for each collection view (We have 3 collection view on main page)
@@ -265,6 +269,19 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
             alpha: CGFloat(1.0)
         )
+    }
+    
+    // Side Menu Button
+    func sideMenu() {
+        if revealViewController() != nil {
+            
+            sideMenuButtonOutlet.target = revealViewController()
+            sideMenuButtonOutlet.action = #selector(SWRevealViewController.revealToggle(_:))
+            revealViewController().rearViewRevealWidth = 245
+            
+            view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+            
+        }
     }
     
 }
