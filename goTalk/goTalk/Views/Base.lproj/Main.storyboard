@@ -826,9 +826,12 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+<<<<<<< HEAD
+=======
                                         <connections>
                                             <segue destination="kMa-nJ-TOa" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="P22-Bn-nKy"/>
                                         </connections>
+>>>>>>> origin/devYagnik
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="IeR-s2-Jcj">
                                         <rect key="frame" x="0.0" y="176" width="414" height="44"/>
@@ -883,6 +886,8 @@
             </objects>
             <point key="canvasLocation" x="1547.8260869565217" y="-687.22826086956525"/>
         </scene>
+<<<<<<< HEAD
+=======
         <!--Web View Controller-->
         <scene sceneID="Tdu-HK-Zeq">
             <objects>
@@ -946,6 +951,7 @@
             </objects>
             <point key="canvasLocation" x="2253" y="-689"/>
         </scene>
+>>>>>>> origin/devYagnik
         <!--About Page Controller-->
         <scene sceneID="FKf-ec-a8l">
             <objects>
@@ -1335,7 +1341,11 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="5HL-Ya-hxW"/>
+<<<<<<< HEAD
+        <segue reference="ENz-mb-5gP"/>
+=======
         <segue reference="d9g-dv-m9X"/>
+>>>>>>> origin/devYagnik
         <segue reference="abb-o9-yP5"/>
     </inferredMetricsTieBreakers>
 </document>
