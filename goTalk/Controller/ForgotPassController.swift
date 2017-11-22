@@ -42,7 +42,7 @@ class ForgotPassController: UIViewController {
                     return
             }
             request.httpBody = httpBody
-            print ("JSON being send : \(sendJSON) ")
+            print ("JSON being sent: \(sendJSON) ")
             let session = URLSession.shared
             session.dataTask(with: request) { (data, response, error) in
                 if let data = data {
@@ -68,9 +68,9 @@ class ForgotPassController: UIViewController {
                                 self.displayAlertMessage(messageToDisplay: displayString)
                             }
                         }else {
-                            print ("Something wrong happend!! \(result)")
+                            print ("Something wrong happened! \(result)")
                             OperationQueue.main.addOperation {
-                                let displayString = "Something wrond happend!!"
+                                let displayString = "Something wrong happened!"
                                 self.displayAlertMessage(messageToDisplay: displayString)
                             }
                         }
@@ -87,7 +87,7 @@ class ForgotPassController: UIViewController {
             
         }else {
             OperationQueue.main.addOperation {
-                self.displayAlertMessage(messageToDisplay: "Email is Invalid!! Please try again :)")
+                self.displayAlertMessage(messageToDisplay: "Email is Invalid! Please try again.")
             }
         }
     }
@@ -109,7 +109,7 @@ class ForgotPassController: UIViewController {
                 returnValue = false
             }
         } catch let error as NSError {
-            print("invalid regex: \(error.localizedDescription)")
+            print("Invalid regex: \(error.localizedDescription)")
             returnValue = false
         }
         
