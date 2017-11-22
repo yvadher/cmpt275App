@@ -1,0 +1,759 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0738BB631FAC4E9900ACFF8D /* displayBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0738BB621FAC4E9900ACFF8D /* displayBar.swift */; };
+		0738BB671FAC872000ACFF8D /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0738BB661FAC872000ACFF8D /* LoginController.swift */; };
+		073CE3091FAC0B19000B3759 /* photoCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073CE3081FAC0B19000B3759 /* photoCollection.swift */; };
+		073CE30C1FAC15C8000B3759 /* categoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073CE30B1FAC15C8000B3759 /* categoryCell.swift */; };
+		073CE3121FAC1C94000B3759 /* pictographDisplayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073CE3111FAC1C94000B3759 /* pictographDisplayCell.swift */; };
+		073CE3161FAC228E000B3759 /* displayBarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073CE3151FAC228E000B3759 /* displayBarCell.swift */; };
+		075DCB291FAFE91E0007517D /* registerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075DCB281FAFE91E0007517D /* registerController.swift */; };
+		075ECDA11FC276A600642843 /* registerationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075ECDA01FC276A600642843 /* registerationTest.swift */; };
+		07C3759E1FC6257100591A0E /* webViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C3759D1FC6257100591A0E /* webViewController.swift */; };
+		07D94D6F1FB684D9003E5BF7 /* ForgotPassController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D94D6D1FB684D9003E5BF7 /* ForgotPassController.swift */; };
+		07E057B61FBFB59E00305119 /* PictocellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E057B51FBFB59E00305119 /* PictocellDelegate.swift */; };
+		07E057B81FBFB6E300305119 /* speakWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E057B71FBFB6E300305119 /* speakWords.swift */; };
+		07FB5B9B1FC2752600DC69A4 /* EmailValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FB5B9A1FC2752600DC69A4 /* EmailValidation.swift */; };
+		5EDD72651FC2E36800388E36 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EDD72631FC2E36800388E36 /* SWRevealViewController.m */; };
+		BDAD10A41FB02CA400D0366D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDAD10A31FB02CA400D0366D /* Info.plist */; };
+		CAB3A97F1FA53A700036147C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB3A97E1FA53A700036147C /* AppDelegate.swift */; };
+		CAB3A9811FA53A700036147C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB3A9801FA53A700036147C /* ViewController.swift */; };
+		CAB3A9841FA53A700036147C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAB3A9821FA53A700036147C /* Main.storyboard */; };
+		CAB3A9861FA53A700036147C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAB3A9851FA53A700036147C /* Assets.xcassets */; };
+		CAB3A9891FA53A700036147C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAB3A9871FA53A700036147C /* LaunchScreen.storyboard */; };
+		CAD89FDA1FB122800062DB03 /* goTalkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD89FD91FB122800062DB03 /* goTalkTests.swift */; };
+		CAD89FF61FB129A60062DB03 /* goTalkTestsTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD89FF51FB129A60062DB03 /* goTalkTestsTwo.swift */; };
+		CAD89FFE1FB12AAF0062DB03 /* LoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD89FFD1FB12AAF0062DB03 /* LoginTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CAD89FDC1FB122800062DB03 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CAB3A9731FA53A700036147C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CAB3A97A1FA53A700036147C;
+			remoteInfo = goTalk;
+		};
+		CAD89FEA1FB1232E0062DB03 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CAB3A9731FA53A700036147C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CAB3A97A1FA53A700036147C;
+			remoteInfo = goTalk;
+		};
+		CAD89FF81FB129A60062DB03 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CAB3A9731FA53A700036147C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CAB3A97A1FA53A700036147C;
+			remoteInfo = goTalk;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0738BB621FAC4E9900ACFF8D /* displayBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = displayBar.swift; sourceTree = "<group>"; };
+		0738BB661FAC872000ACFF8D /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		073CE3081FAC0B19000B3759 /* photoCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = photoCollection.swift; sourceTree = "<group>"; };
+		073CE30B1FAC15C8000B3759 /* categoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = categoryCell.swift; sourceTree = "<group>"; };
+		073CE3111FAC1C94000B3759 /* pictographDisplayCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pictographDisplayCell.swift; sourceTree = "<group>"; };
+		073CE3151FAC228E000B3759 /* displayBarCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = displayBarCell.swift; sourceTree = "<group>"; };
+		075DCB281FAFE91E0007517D /* registerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registerController.swift; sourceTree = "<group>"; };
+		075ECDA01FC276A600642843 /* registerationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registerationTest.swift; sourceTree = "<group>"; };
+		07C3759D1FC6257100591A0E /* webViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = webViewController.swift; path = goTalk/Controller/webViewController.swift; sourceTree = SOURCE_ROOT; };
+		07D94D6D1FB684D9003E5BF7 /* ForgotPassController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPassController.swift; sourceTree = "<group>"; };
+		07E057B51FBFB59E00305119 /* PictocellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictocellDelegate.swift; sourceTree = "<group>"; };
+		07E057B71FBFB6E300305119 /* speakWords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = speakWords.swift; sourceTree = "<group>"; };
+		07FB5B9A1FC2752600DC69A4 /* EmailValidation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidation.swift; sourceTree = "<group>"; };
+		5EDD72621FC2E36700388E36 /* goTalk-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "goTalk-Bridging-Header.h"; sourceTree = "<group>"; };
+		5EDD72631FC2E36800388E36 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		5EDD72641FC2E36800388E36 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		BDAD10A31FB02CA400D0366D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CAB3A97B1FA53A700036147C /* goTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = goTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAB3A97E1FA53A700036147C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CAB3A9801FA53A700036147C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CAB3A9831FA53A700036147C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CAB3A9851FA53A700036147C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CAB3A9881FA53A700036147C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CAD89FD71FB122800062DB03 /* goTalkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = goTalkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAD89FD91FB122800062DB03 /* goTalkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goTalkTests.swift; sourceTree = "<group>"; };
+		CAD89FDB1FB122800062DB03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CAD89FE51FB1232E0062DB03 /* testisValidEmail().xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "testisValidEmail().xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAD89FF31FB129A60062DB03 /* goTalkTestsTwo.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = goTalkTestsTwo.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAD89FF51FB129A60062DB03 /* goTalkTestsTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goTalkTestsTwo.swift; sourceTree = "<group>"; };
+		CAD89FF71FB129A60062DB03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CAD89FFD1FB12AAF0062DB03 /* LoginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CAB3A9781FA53A700036147C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAD89FD41FB122800062DB03 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAD89FE21FB1232E0062DB03 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAD89FF01FB129A60062DB03 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		073CE3051FAC0AB7000B3759 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				07C3759D1FC6257100591A0E /* webViewController.swift */,
+				5EDD72641FC2E36800388E36 /* SWRevealViewController.h */,
+				5EDD72631FC2E36800388E36 /* SWRevealViewController.m */,
+				07FB5B9A1FC2752600DC69A4 /* EmailValidation.swift */,
+				07D94D6D1FB684D9003E5BF7 /* ForgotPassController.swift */,
+				CAB3A9801FA53A700036147C /* ViewController.swift */,
+				07E057B71FBFB6E300305119 /* speakWords.swift */,
+				075DCB281FAFE91E0007517D /* registerController.swift */,
+				0738BB661FAC872000ACFF8D /* LoginController.swift */,
+				07E057B51FBFB59E00305119 /* PictocellDelegate.swift */,
+				5EDD72621FC2E36700388E36 /* goTalk-Bridging-Header.h */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		073CE3061FAC0ACB000B3759 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				CAB3A9871FA53A700036147C /* LaunchScreen.storyboard */,
+				CAB3A97E1FA53A700036147C /* AppDelegate.swift */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		073CE3071FAC0AEC000B3759 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				073CE3151FAC228E000B3759 /* displayBarCell.swift */,
+				073CE3081FAC0B19000B3759 /* photoCollection.swift */,
+				0738BB621FAC4E9900ACFF8D /* displayBar.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		073CE30A1FAC1573000B3759 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				073CE3111FAC1C94000B3759 /* pictographDisplayCell.swift */,
+				CAB3A9821FA53A700036147C /* Main.storyboard */,
+				073CE30B1FAC15C8000B3759 /* categoryCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CAB3A9721FA53A700036147C = {
+			isa = PBXGroup;
+			children = (
+				CAB3A97D1FA53A700036147C /* goTalk */,
+				CAD89FD81FB122800062DB03 /* goTalkTests */,
+				CAD89FF41FB129A60062DB03 /* goTalkTestsTwo */,
+				CAB3A97C1FA53A700036147C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CAB3A97C1FA53A700036147C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CAB3A97B1FA53A700036147C /* goTalk.app */,
+				CAD89FD71FB122800062DB03 /* goTalkTests.xctest */,
+				CAD89FE51FB1232E0062DB03 /* testisValidEmail().xctest */,
+				CAD89FF31FB129A60062DB03 /* goTalkTestsTwo.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CAB3A97D1FA53A700036147C /* goTalk */ = {
+			isa = PBXGroup;
+			children = (
+				BDAD10A31FB02CA400D0366D /* Info.plist */,
+				073CE3071FAC0AEC000B3759 /* Model */,
+				073CE30A1FAC1573000B3759 /* Views */,
+				073CE3051FAC0AB7000B3759 /* Controller */,
+				073CE3061FAC0ACB000B3759 /* SupportingFiles */,
+				CAB3A9851FA53A700036147C /* Assets.xcassets */,
+			);
+			path = goTalk;
+			sourceTree = "<group>";
+		};
+		CAD89FD81FB122800062DB03 /* goTalkTests */ = {
+			isa = PBXGroup;
+			children = (
+				CAD89FD91FB122800062DB03 /* goTalkTests.swift */,
+				CAD89FDB1FB122800062DB03 /* Info.plist */,
+			);
+			path = goTalkTests;
+			sourceTree = "<group>";
+		};
+		CAD89FF41FB129A60062DB03 /* goTalkTestsTwo */ = {
+			isa = PBXGroup;
+			children = (
+				CAD89FF51FB129A60062DB03 /* goTalkTestsTwo.swift */,
+				CAD89FFD1FB12AAF0062DB03 /* LoginTests.swift */,
+				CAD89FF71FB129A60062DB03 /* Info.plist */,
+				075ECDA01FC276A600642843 /* registerationTest.swift */,
+			);
+			path = goTalkTestsTwo;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CAB3A97A1FA53A700036147C /* goTalk */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CAB3A98D1FA53A700036147C /* Build configuration list for PBXNativeTarget "goTalk" */;
+			buildPhases = (
+				CAB3A9771FA53A700036147C /* Sources */,
+				CAB3A9781FA53A700036147C /* Frameworks */,
+				CAB3A9791FA53A700036147C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = goTalk;
+			productName = test;
+			productReference = CAB3A97B1FA53A700036147C /* goTalk.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CAD89FD61FB122800062DB03 /* goTalkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CAD89FDE1FB122800062DB03 /* Build configuration list for PBXNativeTarget "goTalkTests" */;
+			buildPhases = (
+				CAD89FD31FB122800062DB03 /* Sources */,
+				CAD89FD41FB122800062DB03 /* Frameworks */,
+				CAD89FD51FB122800062DB03 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CAD89FDD1FB122800062DB03 /* PBXTargetDependency */,
+			);
+			name = goTalkTests;
+			productName = goTalkTests;
+			productReference = CAD89FD71FB122800062DB03 /* goTalkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CAD89FE41FB1232E0062DB03 /* testisValidEmail() */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CAD89FEC1FB1232E0062DB03 /* Build configuration list for PBXNativeTarget "testisValidEmail()" */;
+			buildPhases = (
+				CAD89FE11FB1232E0062DB03 /* Sources */,
+				CAD89FE21FB1232E0062DB03 /* Frameworks */,
+				CAD89FE31FB1232E0062DB03 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CAD89FEB1FB1232E0062DB03 /* PBXTargetDependency */,
+			);
+			name = "testisValidEmail()";
+			productName = "testisValidEmail()";
+			productReference = CAD89FE51FB1232E0062DB03 /* testisValidEmail().xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		CAD89FF21FB129A60062DB03 /* goTalkTestsTwo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CAD89FFA1FB129A60062DB03 /* Build configuration list for PBXNativeTarget "goTalkTestsTwo" */;
+			buildPhases = (
+				CAD89FEF1FB129A60062DB03 /* Sources */,
+				CAD89FF01FB129A60062DB03 /* Frameworks */,
+				CAD89FF11FB129A60062DB03 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CAD89FF91FB129A60062DB03 /* PBXTargetDependency */,
+			);
+			name = goTalkTestsTwo;
+			productName = goTalkTestsTwo;
+			productReference = CAD89FF31FB129A60062DB03 /* goTalkTestsTwo.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CAB3A9731FA53A700036147C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "The Night Owls";
+				TargetAttributes = {
+					CAB3A97A1FA53A700036147C = {
+						CreatedOnToolsVersion = 9.0.1;
+						LastSwiftMigration = 0900;
+						ProvisioningStyle = Automatic;
+					};
+					CAD89FD61FB122800062DB03 = {
+						CreatedOnToolsVersion = 9.0.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = CAB3A97A1FA53A700036147C;
+					};
+					CAD89FE41FB1232E0062DB03 = {
+						CreatedOnToolsVersion = 9.0.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = CAB3A97A1FA53A700036147C;
+					};
+					CAD89FF21FB129A60062DB03 = {
+						CreatedOnToolsVersion = 9.0.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = CAB3A97A1FA53A700036147C;
+					};
+				};
+			};
+			buildConfigurationList = CAB3A9761FA53A700036147C /* Build configuration list for PBXProject "goTalk" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CAB3A9721FA53A700036147C;
+			productRefGroup = CAB3A97C1FA53A700036147C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CAB3A97A1FA53A700036147C /* goTalk */,
+				CAD89FD61FB122800062DB03 /* goTalkTests */,
+				CAD89FE41FB1232E0062DB03 /* testisValidEmail() */,
+				CAD89FF21FB129A60062DB03 /* goTalkTestsTwo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CAB3A9791FA53A700036147C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDAD10A41FB02CA400D0366D /* Info.plist in Resources */,
+				CAB3A9891FA53A700036147C /* LaunchScreen.storyboard in Resources */,
+				CAB3A9861FA53A700036147C /* Assets.xcassets in Resources */,
+				CAB3A9841FA53A700036147C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAD89FD51FB122800062DB03 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAD89FE31FB1232E0062DB03 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAD89FF11FB129A60062DB03 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CAB3A9771FA53A700036147C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07D94D6F1FB684D9003E5BF7 /* ForgotPassController.swift in Sources */,
+				07E057B61FBFB59E00305119 /* PictocellDelegate.swift in Sources */,
+				073CE3161FAC228E000B3759 /* displayBarCell.swift in Sources */,
+				073CE3121FAC1C94000B3759 /* pictographDisplayCell.swift in Sources */,
+				CAB3A9811FA53A700036147C /* ViewController.swift in Sources */,
+				07C3759E1FC6257100591A0E /* webViewController.swift in Sources */,
+				073CE30C1FAC15C8000B3759 /* categoryCell.swift in Sources */,
+				07E057B81FBFB6E300305119 /* speakWords.swift in Sources */,
+				5EDD72651FC2E36800388E36 /* SWRevealViewController.m in Sources */,
+				075DCB291FAFE91E0007517D /* registerController.swift in Sources */,
+				0738BB631FAC4E9900ACFF8D /* displayBar.swift in Sources */,
+				07FB5B9B1FC2752600DC69A4 /* EmailValidation.swift in Sources */,
+				0738BB671FAC872000ACFF8D /* LoginController.swift in Sources */,
+				073CE3091FAC0B19000B3759 /* photoCollection.swift in Sources */,
+				CAB3A97F1FA53A700036147C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAD89FD31FB122800062DB03 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAD89FDA1FB122800062DB03 /* goTalkTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAD89FE11FB1232E0062DB03 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAD89FEF1FB129A60062DB03 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				075ECDA11FC276A600642843 /* registerationTest.swift in Sources */,
+				CAD89FF61FB129A60062DB03 /* goTalkTestsTwo.swift in Sources */,
+				CAD89FFE1FB12AAF0062DB03 /* LoginTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CAD89FDD1FB122800062DB03 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CAB3A97A1FA53A700036147C /* goTalk */;
+			targetProxy = CAD89FDC1FB122800062DB03 /* PBXContainerItemProxy */;
+		};
+		CAD89FEB1FB1232E0062DB03 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CAB3A97A1FA53A700036147C /* goTalk */;
+			targetProxy = CAD89FEA1FB1232E0062DB03 /* PBXContainerItemProxy */;
+		};
+		CAD89FF91FB129A60062DB03 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CAB3A97A1FA53A700036147C /* goTalk */;
+			targetProxy = CAD89FF81FB129A60062DB03 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CAB3A9821FA53A700036147C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CAB3A9831FA53A700036147C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CAB3A9871FA53A700036147C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CAB3A9881FA53A700036147C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CAB3A98B1FA53A700036147C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CAB3A98C1FA53A700036147C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CAB3A98E1FA53A700036147C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "$(SRCROOT)/goTalk/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ghj.test;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "goTalk/Controller/goTalk-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CAB3A98F1FA53A700036147C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "$(SRCROOT)/goTalk/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ghj.test;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "goTalk/Controller/goTalk-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CAD89FDF1FB122800062DB03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = goTalkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ghj.goTalkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/goTalk.app/goTalk";
+			};
+			name = Debug;
+		};
+		CAD89FE01FB122800062DB03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = goTalkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ghj.goTalkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/goTalk.app/goTalk";
+			};
+			name = Release;
+		};
+		CAD89FED1FB1232E0062DB03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "testisValidEmail()/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ghj.testisValidEmail--";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = goTalk;
+			};
+			name = Debug;
+		};
+		CAD89FEE1FB1232E0062DB03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "testisValidEmail()/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ghj.testisValidEmail--";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = goTalk;
+			};
+			name = Release;
+		};
+		CAD89FFB1FB129A60062DB03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = goTalkTestsTwo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ghj.goTalkTestsTwo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/goTalk.app/goTalk";
+			};
+			name = Debug;
+		};
+		CAD89FFC1FB129A60062DB03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_TESTABILITY = YES;
+				INFOPLIST_FILE = goTalkTestsTwo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ghj.goTalkTestsTwo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/goTalk.app/goTalk";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CAB3A9761FA53A700036147C /* Build configuration list for PBXProject "goTalk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAB3A98B1FA53A700036147C /* Debug */,
+				CAB3A98C1FA53A700036147C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CAB3A98D1FA53A700036147C /* Build configuration list for PBXNativeTarget "goTalk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAB3A98E1FA53A700036147C /* Debug */,
+				CAB3A98F1FA53A700036147C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CAD89FDE1FB122800062DB03 /* Build configuration list for PBXNativeTarget "goTalkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAD89FDF1FB122800062DB03 /* Debug */,
+				CAD89FE01FB122800062DB03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CAD89FEC1FB1232E0062DB03 /* Build configuration list for PBXNativeTarget "testisValidEmail()" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAD89FED1FB1232E0062DB03 /* Debug */,
+				CAD89FEE1FB1232E0062DB03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CAD89FFA1FB129A60062DB03 /* Build configuration list for PBXNativeTarget "goTalkTestsTwo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAD89FFB1FB129A60062DB03 /* Debug */,
+				CAD89FFC1FB129A60062DB03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CAB3A9731FA53A700036147C /* Project object */;
+}
