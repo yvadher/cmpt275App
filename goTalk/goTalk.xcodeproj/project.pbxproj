@@ -15,6 +15,7 @@
 		073CE3161FAC228E000B3759 /* displayBarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073CE3151FAC228E000B3759 /* displayBarCell.swift */; };
 		075DCB291FAFE91E0007517D /* registerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075DCB281FAFE91E0007517D /* registerController.swift */; };
 		075ECDA11FC276A600642843 /* registerationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075ECDA01FC276A600642843 /* registerationTest.swift */; };
+		07C3759E1FC6257100591A0E /* webViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C3759D1FC6257100591A0E /* webViewController.swift */; };
 		07D94D6F1FB684D9003E5BF7 /* ForgotPassController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D94D6D1FB684D9003E5BF7 /* ForgotPassController.swift */; };
 		07E057B61FBFB59E00305119 /* PictocellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E057B51FBFB59E00305119 /* PictocellDelegate.swift */; };
 		07E057B81FBFB6E300305119 /* speakWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E057B71FBFB6E300305119 /* speakWords.swift */; };
@@ -64,6 +65,7 @@
 		073CE3151FAC228E000B3759 /* displayBarCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = displayBarCell.swift; sourceTree = "<group>"; };
 		075DCB281FAFE91E0007517D /* registerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registerController.swift; sourceTree = "<group>"; };
 		075ECDA01FC276A600642843 /* registerationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registerationTest.swift; sourceTree = "<group>"; };
+		07C3759D1FC6257100591A0E /* webViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = webViewController.swift; path = goTalk/Controller/webViewController.swift; sourceTree = SOURCE_ROOT; };
 		07D94D6D1FB684D9003E5BF7 /* ForgotPassController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPassController.swift; sourceTree = "<group>"; };
 		07E057B51FBFB59E00305119 /* PictocellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictocellDelegate.swift; sourceTree = "<group>"; };
 		07E057B71FBFB6E300305119 /* speakWords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = speakWords.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 		073CE3051FAC0AB7000B3759 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				07C3759D1FC6257100591A0E /* webViewController.swift */,
 				5EDD72641FC2E36800388E36 /* SWRevealViewController.h */,
 				5EDD72631FC2E36800388E36 /* SWRevealViewController.m */,
 				07FB5B9A1FC2752600DC69A4 /* EmailValidation.swift */,
@@ -392,6 +395,7 @@
 				073CE3161FAC228E000B3759 /* displayBarCell.swift in Sources */,
 				073CE3121FAC1C94000B3759 /* pictographDisplayCell.swift in Sources */,
 				CAB3A9811FA53A700036147C /* ViewController.swift in Sources */,
+				07C3759E1FC6257100591A0E /* webViewController.swift in Sources */,
 				073CE30C1FAC15C8000B3759 /* categoryCell.swift in Sources */,
 				07E057B81FBFB6E300305119 /* speakWords.swift in Sources */,
 				5EDD72651FC2E36800388E36 /* SWRevealViewController.m in Sources */,
