@@ -32,8 +32,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     // call Photocategory model function to get the data of categories with its photos
     var photoCategory: [PhotoCategory] = PhotoCategory.fetchPhotos()
-    
     var favoritesButtons : [String] = []
+
     
     //varibles that tracks the display bar images (ClickedPhotos) and the currentCategory
     var clickedPhotos: [String] = []
@@ -75,6 +75,18 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     //Initial setup function that asigns the collection view to delegates and dataSource
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Check if the data is saved in phone
+        // If data saved then override with our current data
+        if let data = UserDefaults.standard.value(forKey:"mainData") as? Data {
+            let savedData = try? PropertyListDecoder().decode(Array<PhotoCategory>.self, from: data)
+            photoCategory = savedData!
+        }
+        
+        //Fetch the favorites button from the data
+        favoritesButtons  =  PhotoCategory.fetchFavButtons(photoCat: photoCategory)
+        
+        
         displayCollection.delegate = self
         displayCollection.dataSource = self
         
@@ -231,8 +243,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 let category = self.photoCategory[currentCategory]
                 imgName = category.imageNames[indexPath.item]
             }
-            
-            
+        
             clickedPhotos.append(imgName)
             speakLine(line: imgName)
             displayCollection.reloadData()
@@ -284,13 +295,46 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
     }
     
+//    public func saveJSON(j: JSON) {
+//        let defaults = UserDefaults.standardUserDefaults()
+//        defaults.setValue(j.rawString()!, forKey: "json")
+//        // here I save my JSON as a string
+//    }
+    
+    public func encoderJson(photoCategory : [PhotoCategory]){
+        let encoder = JSONEncoder()
+        let data = try! encoder.encode(photoCategory)
+        //print(String(data: data, encoding: .utf8)!)
+        print (data)
+        do {
+            var json = try JSONSerialization.jsonObject(with: data)
+            print(json)
+        } catch {
+            print(error)
+        }
+        
+//        let jsonData = jsonString.data(encoding: .utf8)!
+//        let decoder = JSONDecoder()
+//        let photoCategory : [PhotoCategory] = try! decoder.decode(data.self, for: jsonData)
+
+    }
 }
 
 
 
-
-
-
+//
+//
+//public func fetchFavorites(photoCategory: [PhotoCategory]) -> [String]{
+//    var favButtons : [String] = []
+//    for i in 0...(photoCategory.count){
+//        for j in 0...(photoCategory[i].likedButtons.count){
+//            if (photoCategory[i].likedButtons[j]){
+//                favButtons.append(photoCategory[i].imageNames[j])
+//            }
+//        }
+//    }
+//    return favButtons
+//}
 
 
 

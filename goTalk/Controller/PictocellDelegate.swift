@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import Foundation
 
 extension ViewController: pictographicCellDelegate{
+    
+    
     
     //MARK: Helper function
     // Function that keep tracks of the heart button being liked or not according to there image names
@@ -57,5 +60,12 @@ extension ViewController: pictographicCellDelegate{
                 cell.isLiked = true
             }
         }
+        //save json
+        //encoderJson(photoCategory: photoCategory)
+        //Save user logged in(true) information to the userDefaults
+        UserDefaults.standard.set(try? PropertyListEncoder().encode(photoCategory), forKey:"mainData")
+        //UserDefaults.standard.set( encodedData , forKey: "mainData")
+        //UserDefaults.standard.synchronize()
+        
     }
 }

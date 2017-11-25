@@ -17,7 +17,7 @@
 
 import Foundation
 
-struct PhotoCategory {
+struct PhotoCategory : Codable{
     var categoryName: String
     var title: String
     var imageNames: [String]
@@ -35,6 +35,20 @@ struct PhotoCategory {
             }
         }
         return categories
+    }
+    
+    //Function that returns the array of favorites buttons
+    static func fetchFavButtons(photoCat : [PhotoCategory] ) -> [String]{
+        var favButtons : [String] = []
+        for i in 0...(photoCat.count - 1 ){
+            
+            for j in 0...(photoCat[i].likedButtons.count - 1){
+                if (photoCat[i].likedButtons[j]){
+                    favButtons.append(photoCat[i].imageNames[j])
+                }
+            }
+        }
+        return favButtons
     }
 }
 
@@ -118,7 +132,7 @@ class PhotosLibrary
         case "General":
             imageNames = Array(repeating: false, count: 23)
         case "People":
-            imageNames = Array(repeating: false, count: 2)
+            imageNames = Array(repeating: true, count: 2)
         case "Actions":
             imageNames = Array(repeating: false, count: 12)
         case "Feelings":
