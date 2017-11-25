@@ -132,7 +132,7 @@ class PhotosLibrary
         case "General":
             imageNames = Array(repeating: false, count: 23)
         case "People":
-            imageNames = Array(repeating: true, count: 2)
+            imageNames = Array(repeating: false, count: 2)
         case "Actions":
             imageNames = Array(repeating: false, count: 12)
         case "Feelings":
