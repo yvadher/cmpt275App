@@ -208,14 +208,26 @@ app.post('/api/saveConfig', cors(), function(req,res){
 
 });
 
+app.post('/api/getConfig', cors(), function(req,res){
+	var data = req.body;
+	var userEmail = "";
+	if (data.userEmail){
+ 		console.log("Data userName: "+ data.userEmail)
+		userEmail = data.userEmail;
+	}
+	console.log(userEmail);
+	Model.findOne({ 'userEmail': userEmail }, 'userConfig' ,function (err, config) {
+  		if (err) return handleError(err);
+	  	//console.log(config);
+	  	console.log(config["_id"]);
+	  	config = config.toObject(); 
+	  	delete config._id;
 
+	  	console.log(config);
+	  	res.json(config.userConfig);
+	 });
 
-
-app.get('/api/config', function(req,res){
-	var obj = { 'name' : 'yagnik'};
-	res.status(200).json(obj);
 });
-
 
 app.get('*', function(req, res) {
 	console.log("Sending the index.html");
