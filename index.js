@@ -172,7 +172,8 @@ function sendEmail(email, stringToPass){
 	// https://github.com/sendgrid/sendgrid-nodejs
 	console.log("@@@@@@ email: "+email+" pwd: "+ stringToPass);
 	const sgMail = require('@sendgrid/mail');
-	sgMail.setApiKey("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");
+	//Chage key to enviroment varible
+	sgMail.setApiKey("key is with me");
 	var msg = {
 	  to: email,
 	  from: 'noreply@gotalk.com',
@@ -181,6 +182,17 @@ function sendEmail(email, stringToPass){
 	};
 	sgMail.send(msg);
 }
+
+app.post('/api/saveConfig', cors(), function(req,res){
+	console.log("Came to the saveconfig : ");
+	console.log("Data recived : ");
+	console.log(req.body);
+	console.log("---------");
+	console.log( JSON.stringify(req.body));
+
+
+});
+
 
 app.get('/api/config', function(req,res){
 	var obj = { 'name' : 'yagnik'};
