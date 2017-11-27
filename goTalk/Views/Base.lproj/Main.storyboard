@@ -917,10 +917,10 @@
             </objects>
             <point key="canvasLocation" x="2659" y="-739"/>
         </scene>
-        <!--About Page Controller-->
+        <!--About Page Test Sync Controller-->
         <scene sceneID="FKf-ec-a8l">
             <objects>
-                <viewController id="5r7-SJ-GPZ" customClass="AboutPageController" sceneMemberID="viewController">
+                <viewController id="5r7-SJ-GPZ" customClass="aboutPageTestSyncController" customModule="goTalk" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jxb-Cn-wFx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1013,6 +1013,15 @@
                                     <constraint firstItem="v7M-wT-7zp" firstAttribute="leading" secondItem="ocn-Pu-IC5" secondAttribute="leading" id="X1R-CI-tuO"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qto-Fr-rlS">
+                                <rect key="frame" x="111" y="617" width="163" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Sync for test"/>
+                                <connections>
+                                    <action selector="syncBtn:" destination="5r7-SJ-GPZ" eventType="touchUpInside" id="kRi-P5-1Zv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.96056312322616577" green="0.96470874547958374" blue="0.96871882677078247" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -1025,6 +1034,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="z9h-wK-xyz"/>
                     </view>
+                    <connections>
+                        <outlet property="testBtn" destination="Qto-Fr-rlS" id="LqD-St-iDI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bQ4-Ok-JpZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1288,6 +1300,7 @@
         <image name="logo" width="200" height="109"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="U0b-E4-sjN"/>
         <segue reference="5HL-Ya-hxW"/>
         <segue reference="FWx-dj-vKk"/>
         <segue reference="abb-o9-yP5"/>

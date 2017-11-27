@@ -27,13 +27,10 @@ class pictographDisplayCell: UICollectionViewCell
     
     
     var isLiked: Bool = false
-    // For border colors
-    var borderColor = UIColor(red: 100.0/255.0, green: 130.0/255.0, blue: 230.0/255.0, alpha: 1.0)    
     
     var imageName: String! {
         didSet {
             pictographImg.image = UIImage(named: imageName)
-            pictographImg.layer.borderColor = borderColor.cgColor
             pictographImg.layer.borderWidth = 0.5
             pictographImg.layer.masksToBounds = true
             pictographImg.layer.cornerRadius = 10

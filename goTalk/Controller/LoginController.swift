@@ -98,6 +98,7 @@ class LoginController: UIViewController{
                         
                         //Save user logged in(true) information to the userDefaults
                         UserDefaults.standard.set(true, forKey: "isLoggedIn")
+                        UserDefaults.standard.set(userNameData, forKey: "userEmail")
                         UserDefaults.standard.synchronize()
                         
                         // Perform segue to go to main page

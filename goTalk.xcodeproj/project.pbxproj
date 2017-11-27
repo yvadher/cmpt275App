@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0731853C1FCB80AC005E0232 /* aboutPageTestSyncController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0731853B1FCB80AC005E0232 /* aboutPageTestSyncController.swift */; };
+		0731853E1FCBB471005E0232 /* fetchDataFromDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0731853D1FCBB471005E0232 /* fetchDataFromDatabase.swift */; };
 		0738BB631FAC4E9900ACFF8D /* displayBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0738BB621FAC4E9900ACFF8D /* displayBar.swift */; };
 		0738BB671FAC872000ACFF8D /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0738BB661FAC872000ACFF8D /* LoginController.swift */; };
 		073CE3091FAC0B19000B3759 /* photoCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073CE3081FAC0B19000B3759 /* photoCollection.swift */; };
@@ -57,6 +59,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0731853B1FCB80AC005E0232 /* aboutPageTestSyncController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aboutPageTestSyncController.swift; sourceTree = "<group>"; };
+		0731853D1FCBB471005E0232 /* fetchDataFromDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fetchDataFromDatabase.swift; sourceTree = "<group>"; };
 		0738BB621FAC4E9900ACFF8D /* displayBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = displayBar.swift; sourceTree = "<group>"; };
 		0738BB661FAC872000ACFF8D /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		073CE3081FAC0B19000B3759 /* photoCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = photoCollection.swift; sourceTree = "<group>"; };
@@ -136,6 +140,8 @@
 				0738BB661FAC872000ACFF8D /* LoginController.swift */,
 				07E057B51FBFB59E00305119 /* PictocellDelegate.swift */,
 				5EDD72621FC2E36700388E36 /* goTalk-Bridging-Header.h */,
+				0731853B1FCB80AC005E0232 /* aboutPageTestSyncController.swift */,
+				0731853D1FCBB471005E0232 /* fetchDataFromDatabase.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -391,6 +397,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07D94D6F1FB684D9003E5BF7 /* ForgotPassController.swift in Sources */,
+				0731853E1FCBB471005E0232 /* fetchDataFromDatabase.swift in Sources */,
 				07E057B61FBFB59E00305119 /* PictocellDelegate.swift in Sources */,
 				073CE3161FAC228E000B3759 /* displayBarCell.swift in Sources */,
 				073CE3121FAC1C94000B3759 /* pictographDisplayCell.swift in Sources */,
@@ -405,6 +412,7 @@
 				0738BB671FAC872000ACFF8D /* LoginController.swift in Sources */,
 				073CE3091FAC0B19000B3759 /* photoCollection.swift in Sources */,
 				CAB3A97F1FA53A700036147C /* AppDelegate.swift in Sources */,
+				0731853C1FCB80AC005E0232 /* aboutPageTestSyncController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

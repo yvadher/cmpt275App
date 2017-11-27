@@ -17,7 +17,8 @@
 
 import Foundation
 
-struct PhotoCategory : Codable{
+struct PhotoCategory : Codable {
+    var userEmail : String
     var categoryName: String
     var title: String
     var imageNames: [String]
@@ -30,7 +31,7 @@ struct PhotoCategory : Codable{
         for i in 0...(photosData.count-1) {
             let categoryImageName = photosData[i].caetegoryName
             if let imageNames = photosData[i].imagesNames as? [String] {
-                let newCategory = PhotoCategory(categoryName: categoryImageName, title: categoryImageName, imageNames: imageNames, likedButtons : photosData[i].liked)
+                let newCategory = PhotoCategory(userEmail: "" ,categoryName: categoryImageName, title: categoryImageName, imageNames: imageNames, likedButtons : photosData[i].liked)
                 categories.append(newCategory)
             }
         }
@@ -54,7 +55,7 @@ struct PhotoCategory : Codable{
 
 class PhotosLibrary
 {
-    struct categoryUnit{
+    struct categoryUnit: Codable {
         let caetegoryName: String
         let imagesNames : [String]
         let liked : [Bool]
