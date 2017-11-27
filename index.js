@@ -6,6 +6,7 @@ var path = require('path');
 var async = require('async');
 var colors  = require('colors');
 var mongoose = require('mongoose');
+var timestamps = require('mongoose-timestamp');
 var cors = require('cors');
 
 var Schema = mongoose.Schema;
@@ -16,11 +17,19 @@ const MONGO_URL = 'mongodb://admin:admin@ds121535.mlab.com:21535/gotalkdev';
 var users = new Schema({
 		userName : String,
 		userEmail : String,
-		userPassword : String
+		userPassword : String,
+		userConfig : {
+			likedButtons : [Boolean],
+			title : String,
+			userEmail: String,
+			categoryName: String,
+			imageNames: [String]
+		}
 	},
 	{
 		collection: 'users'
 	});
+users.plugin(timestamps);
 
 var Model = mongoose.model('Model', users);
 
@@ -172,8 +181,7 @@ function sendEmail(email, stringToPass){
 	// https://github.com/sendgrid/sendgrid-nodejs
 	console.log("@@@@@@ email: "+email+" pwd: "+ stringToPass);
 	const sgMail = require('@sendgrid/mail');
-	//Chage key to enviroment varible
-	sgMail.setApiKey("key is with me");
+	sgMail.setApiKey("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");
 	var msg = {
 	  to: email,
 	  from: 'noreply@gotalk.com',
@@ -184,14 +192,23 @@ function sendEmail(email, stringToPass){
 }
 
 app.post('/api/saveConfig', cors(), function(req,res){
-	console.log("Came to the saveconfig : ");
-	console.log("Data recived : ");
-	console.log(req.body);
-	console.log("---------");
-	console.log( JSON.stringify(req.body));
+	var data = req.body;
+	var userEmail = "";
+	if (data[0].userEmail){
+ 		console.log("Data userName: "+ data[0].userEmail)
+		userEmail = data[0].userEmail;
+	}
 
+	Model.update( { userEmail : userEmail } , {$set : { userConfig: data} }, {upsert: true}, function(err){
+		console.log("this should not happen");
+		var jsonObj = {"result" : "Done"};
+		console.log("Sending : "+ JSON.stringify(jsonObj));
+		res.json(jsonObj);
+	});
 
 });
+
+
 
 
 app.get('/api/config', function(req,res){
