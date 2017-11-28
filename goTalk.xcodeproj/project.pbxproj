@@ -22,7 +22,6 @@
 		07E057B61FBFB59E00305119 /* PictocellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E057B51FBFB59E00305119 /* PictocellDelegate.swift */; };
 		07E057B81FBFB6E300305119 /* speakWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E057B71FBFB6E300305119 /* speakWords.swift */; };
 		07FB5B9B1FC2752600DC69A4 /* EmailValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FB5B9A1FC2752600DC69A4 /* EmailValidation.swift */; };
-		5E2D55AA1FCD37A200D9B543 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2D55A91FCD37A200D9B543 /* SideMenuViewController.swift */; };
 		5EDD72651FC2E36800388E36 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EDD72631FC2E36800388E36 /* SWRevealViewController.m */; };
 		BDAD10A41FB02CA400D0366D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDAD10A31FB02CA400D0366D /* Info.plist */; };
 		CAB3A97F1FA53A700036147C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB3A97E1FA53A700036147C /* AppDelegate.swift */; };
@@ -75,7 +74,6 @@
 		07E057B51FBFB59E00305119 /* PictocellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictocellDelegate.swift; sourceTree = "<group>"; };
 		07E057B71FBFB6E300305119 /* speakWords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = speakWords.swift; sourceTree = "<group>"; };
 		07FB5B9A1FC2752600DC69A4 /* EmailValidation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidation.swift; sourceTree = "<group>"; };
-		5E2D55A91FCD37A200D9B543 /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		5EDD72621FC2E36700388E36 /* goTalk-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "goTalk-Bridging-Header.h"; sourceTree = "<group>"; };
 		5EDD72631FC2E36800388E36 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		5EDD72641FC2E36800388E36 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
@@ -133,9 +131,6 @@
 			children = (
 				5EDD72641FC2E36800388E36 /* SWRevealViewController.h */,
 				5EDD72631FC2E36800388E36 /* SWRevealViewController.m */,
-<<<<<<< HEAD
-				5E2D55A91FCD37A200D9B543 /* SideMenuViewController.swift */,
-=======
 			);
 			path = Libraries;
 			sourceTree = "<group>";
@@ -145,7 +140,6 @@
 			children = (
 				070D18111FCD17A90022536A /* Libraries */,
 				07C3759D1FC6257100591A0E /* webViewController.swift */,
->>>>>>> 7ee494372a814ea0f00af7b5420f9eb563207fca
 				07FB5B9A1FC2752600DC69A4 /* EmailValidation.swift */,
 				07D94D6D1FB684D9003E5BF7 /* ForgotPassController.swift */,
 				CAB3A9801FA53A700036147C /* ViewController.swift */,
@@ -426,7 +420,6 @@
 				0738BB671FAC872000ACFF8D /* LoginController.swift in Sources */,
 				073CE3091FAC0B19000B3759 /* photoCollection.swift in Sources */,
 				CAB3A97F1FA53A700036147C /* AppDelegate.swift in Sources */,
-				5E2D55AA1FCD37A200D9B543 /* SideMenuViewController.swift in Sources */,
 				0731853C1FCB80AC005E0232 /* aboutPageTestSyncController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

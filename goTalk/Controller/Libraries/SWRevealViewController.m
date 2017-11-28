@@ -1561,10 +1561,10 @@ const int FrontViewPositionNone = 0xff;
     
     _rearViewPosition = newPosition;
     
-    void (^deploymentCompletion)(void) =
+    void (^deploymentCompletion)() =
         [self _deploymentForViewController:_rearViewController inView:_contentView.rearView appear:appear disappear:disappear];
     
-    void (^completion)(void) = ^()
+    void (^completion)() = ^()
     {
         deploymentCompletion();
         if ( disappear )
@@ -1589,10 +1589,10 @@ const int FrontViewPositionNone = 0xff;
     
     _rightViewPosition = newPosition;
     
-    void (^deploymentCompletion)(void) =
+    void (^deploymentCompletion)() =
         [self _deploymentForViewController:_rightViewController inView:_contentView.rightView appear:appear disappear:disappear];
     
-    void (^completion)(void) = ^()
+    void (^completion)() = ^()
     {
         deploymentCompletion();
         if ( disappear )
@@ -1672,11 +1672,11 @@ const int FrontViewPositionNone = 0xff;
     
     if ( toController ) [self addChildViewController:toController];
     
-    void (^deployCompletion)(void) = [self _deployForViewController:toController inView:view];
+    void (^deployCompletion)() = [self _deployForViewController:toController inView:view];
     
     [fromController willMoveToParentViewController:nil];
     
-    void (^undeployCompletion)(void) = [self _undeployForViewController:fromController];
+    void (^undeployCompletion)() = [self _undeployForViewController:fromController];
     
     void (^completionBlock)(void) = ^(void)
     {
