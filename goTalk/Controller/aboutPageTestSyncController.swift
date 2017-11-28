@@ -18,61 +18,6 @@ class aboutPageTestSyncController: UIViewController{
         syncWithCloud()
     }
     
-    //---------------------------------------------------------------------------------------------------
-    
-    func fetchDataFromDatabase(){
-        
-        
-        let sendJSON : [String :String] = ["userEmail" : UserDefaults.standard.string(forKey: "userEmail")!]
-        //URL for the server API
-        guard let url = URL(string: "http://gotalkapp.herokuapp.com/api/getConfig")
-            else {
-                print("Error: URL not found.")
-                return
-        }
-        print ("Send json: \(sendJSON)")
-        var request = URLRequest(url: url)
-        
-        //Make a post request object
-        request.httpMethod = "POST"
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        
-        //Conver dictonory to JSON
-        guard let httpBody = try? JSONSerialization.data(withJSONObject: sendJSON, options: [])
-            else {
-                print("Error: Problem with JSON data.")
-                return
-        }
-        request.httpBody = httpBody
-        
-        let session = URLSession.shared
-        
-        //Start session to send post request
-        session.dataTask(with: request) { (data, response, error) in
-            
-            if let data = data {
-                do {
-                    //let json = try JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
-                    print(data)
-                    
-                    let decoder = JSONDecoder();
-                    let testObj: [PhotoCategory] = try! decoder.decode([PhotoCategory].self, from: data)
-                    
-                    //self.photoCategory = try! decoder.decode([PhotoCategory].self, from: data)
-                    
-                    print (testObj)
-                } catch {
-                    print(error)
-                    //testFlag = false
-                }
-            }
-        }.resume()
-        
-        //MARK: -------------------------Send request END-----------------------------------------------
-    }
-    
-    
-    
     //--------------------------------------------------------------------------------------------------
     
     func syncWithCloud(){
