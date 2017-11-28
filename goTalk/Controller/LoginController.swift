@@ -29,6 +29,7 @@ class LoginController: UIViewController{
                 self.performSegue(withIdentifier: "mainPageSegue", sender: self)
             }
         }
+        
     }
     
     @IBOutlet weak var _userName: UITextField!
@@ -155,5 +156,13 @@ class LoginController: UIViewController{
         }
         alertController.addAction(OKAction)
         self.present(alertController, animated: true, completion:nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "mainPageSegue" {
+            if let viewCtr: ViewController = segue.destination as? ViewController {
+                viewCtr.loginData = true
+            }
+        }
     }
 }

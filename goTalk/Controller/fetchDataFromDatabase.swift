@@ -42,8 +42,6 @@ extension ViewController {
             
             if let data = data {
                 do {
-                    let json = try JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
-                    print(json)
                     
                     let decoder = JSONDecoder();
                     self.photoCategory = try! decoder.decode([PhotoCategory].self, from: data)

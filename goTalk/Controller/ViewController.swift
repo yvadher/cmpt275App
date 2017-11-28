@@ -40,6 +40,8 @@ import AVFoundation
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
+    //Login segue data
+    var loginData : Bool = false
     
     // call Photocategory model function to get the data of categories with its photos
     var photoCategory: [PhotoCategory] = PhotoCategory.fetchPhotos()
@@ -86,7 +88,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     //Initial setup function that asigns the collection view to delegates and dataSource
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         //Check if the data is saved in phone
         // If data saved then override with our current data
         if let data = UserDefaults.standard.value(forKey:"mainData") as? Data {
@@ -94,7 +95,15 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             photoCategory = savedData!
         }else {
             //Fetch data from server first time login
-            //fetchData()
+            print ("Fethcing from db")
+            loginData = false
+            fetchDataFromDatabase()
+        }
+        
+        if (loginData){
+            print ("Fethcing from db")
+            fetchDataFromDatabase()
+            loginData = false
         }
         
         if let userEmail = UserDefaults.standard.string(forKey: "userEmail"){
