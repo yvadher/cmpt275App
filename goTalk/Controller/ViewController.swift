@@ -308,8 +308,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     //go button for the playing the message
     @IBAction func goButton(_ sender: Any) {
-        let lineToSpeak: String = clickedPhotos.joined(separator: " ")
-        speakLine(line: lineToSpeak)    //Speak the passed arugument
+        
+        correctGrammer(clickedPhotos.joined(separator:" ")) {(lineToSpeak) in
+            self.speakLine(line: lineToSpeak as! String)
+        }
+        //speakLine(line: lineToSpeak)    //Speak the passed arugument
     }
     
     //Function to convert rgb color to the UIcolor object
@@ -349,7 +352,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 
     }
 }
-
 
 
 //
