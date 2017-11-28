@@ -715,7 +715,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Abl-7B-WlR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.96056312320000004" green="0.96470874549999996" blue="0.96871882679999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <sections>
                             <tableViewSection id="p86-ys-fHZ">
                                 <cells>
@@ -733,6 +733,7 @@
                                             </subviews>
                                             <color key="backgroundColor" red="0.96056312320000004" green="0.96470874549999996" blue="0.96871882679999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.96056312320000004" green="0.96470874549999996" blue="0.96871882679999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="UAh-Jd-SYc">
                                         <rect key="frame" x="0.0" y="120" width="414" height="44"/>
@@ -755,6 +756,7 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.96056312320000004" green="0.96470874549999996" blue="0.96871882679999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="nE1-Hj-m7o">
                                         <rect key="frame" x="0.0" y="164" width="414" height="44"/>
@@ -777,6 +779,7 @@
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.96056312320000004" green="0.96470874549999996" blue="0.96871882679999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <segue destination="udx-dJ-SFB" kind="show" id="9CE-qU-syg"/>
                                         </connections>
@@ -802,6 +805,7 @@
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.96056312320000004" green="0.96470874549999996" blue="0.96871882679999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <segue destination="kMa-nJ-TOa" kind="show" id="xdK-pM-5z2"/>
                                         </connections>
@@ -827,6 +831,7 @@
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.96056312320000004" green="0.96470874549999996" blue="0.96871882679999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <segue destination="5r7-SJ-GPZ" kind="show" id="4TD-hq-yyC"/>
                                         </connections>
@@ -852,6 +857,7 @@
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.96056312320000004" green="0.96470874549999996" blue="0.96871882679999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -1028,15 +1034,6 @@
                                     <constraint firstItem="v7M-wT-7zp" firstAttribute="leading" secondItem="ocn-Pu-IC5" secondAttribute="leading" id="X1R-CI-tuO"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qto-Fr-rlS">
-                                <rect key="frame" x="111" y="617" width="163" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Sync for test"/>
-                                <connections>
-                                    <action selector="syncBtn:" destination="5r7-SJ-GPZ" eventType="touchUpInside" id="kRi-P5-1Zv"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.96056312322616577" green="0.96470874547958374" blue="0.96871882677078247" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -1049,9 +1046,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="z9h-wK-xyz"/>
                     </view>
-                    <connections>
-                        <outlet property="testBtn" destination="Qto-Fr-rlS" id="LqD-St-iDI"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bQ4-Ok-JpZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1320,8 +1314,9 @@
         <image name="logo" width="200" height="109"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="4TD-hq-yyC"/>
         <segue reference="5HL-Ya-hxW"/>
-        <segue reference="d9g-dv-m9X"/>
+        <segue reference="FWx-dj-vKk"/>
         <segue reference="doN-0x-nBi"/>
     </inferredMetricsTieBreakers>
 </document>
