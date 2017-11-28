@@ -131,7 +131,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         //Fetch the favorites button from the data
         favoritesButtons  =  PhotoCategory.fetchFavButtons(photoCat: photoCategory)
         
-        
+        UserDefaults.standard.set(try? PropertyListEncoder().encode(photoCategory), forKey:"mainData")
+        UserDefaults.standard.synchronize()
         displayCollection.delegate = self
         displayCollection.dataSource = self
         
