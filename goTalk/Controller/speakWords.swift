@@ -59,10 +59,17 @@ extension ViewController {
                     print(json)
                     
                     
+                    if ((json["score"] == nil) ){
+                        print (json["score"])
+                        completion(inputSentence)
+                        return
+                    }
+                    
                     let result = json["score"] as! Int
                     if(result == 100){
                         testFlag = false;
                         print("RESULT LESS THAN 100")
+                        completion(inputSentence)
                         return
                     }
                     
