@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "goTalk/Controller/registerController.swift"
-            timestampString = "533446663.559256"
+            timestampString = "533536082.984415"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "158"
-            endingLineNumber = "158"
+            startingLineNumber = "173"
+            endingLineNumber = "173"
             landmarkName = "sendToServer(_:)"
             landmarkType = "7">
          </BreakpointContent>

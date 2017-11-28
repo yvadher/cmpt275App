@@ -47,6 +47,10 @@ extension ViewController {
                     self.photoCategory = try! decoder.decode([PhotoCategory].self, from: data)
                     
                     print (self.photoCategory)
+                    self.favoritesButtons  =  PhotoCategory.fetchFavButtons(photoCat: self.photoCategory)
+                    self.pictographCollection.reloadData()
+                    self.pictographCollection.layoutIfNeeded()
+                    
                 } catch {
                     print(error)
                     //testFlag = false
