@@ -27,7 +27,7 @@ class LoginController: UIViewController{
         if (UserDefaults.standard.bool(forKey: "isLoggedIn")){
             // Perform segue to go to main page
             OperationQueue.main.addOperation {
-                self.performSegue(withIdentifier: "mainPageSegue", sender: self)
+                self.performSegue(withIdentifier: "mainPageSegue", sender: Any?.self)
             }
         }
         
@@ -103,9 +103,13 @@ class LoginController: UIViewController{
                     print("Here is json: \(json)")
                     let item = json["result"] as! String
                     print (item)
+                    
                     //Stop speen wheel
-                    self.speenWheel.stopAnimating()
-                    UIApplication.shared.endIgnoringInteractionEvents()
+                    DispatchQueue.main.async {
+                        self.speenWheel.stopAnimating()
+                        UIApplication.shared.endIgnoringInteractionEvents()
+                    }
+                   
                     
                     if (item == "true"){
                         print ("Came here! Matching JSON data has been found.")
@@ -117,7 +121,7 @@ class LoginController: UIViewController{
                         
                         // Perform segue to go to main page
                         OperationQueue.main.addOperation {
-                            self.performSegue(withIdentifier: "mainPageSegue", sender: self)
+                            self.performSegue(withIdentifier: "mainPageSegue", sender: Any?.self)
                         }
                     }else {
                         OperationQueue.main.addOperation {
@@ -172,10 +176,10 @@ class LoginController: UIViewController{
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "mainPageSegue" {
-            if let viewCtr: ViewController = segue.destination as? ViewController {
-                viewCtr.loginData = true
-            }
+        
+        if let viewCtr: ViewController = segue.destination as? ViewController {
+            viewCtr.loginData = true
         }
+        
     }
 }

@@ -1320,9 +1320,8 @@
         <image name="logo" width="200" height="109"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="4TD-hq-yyC"/>
         <segue reference="5HL-Ya-hxW"/>
-        <segue reference="FWx-dj-vKk"/>
+        <segue reference="d9g-dv-m9X"/>
         <segue reference="doN-0x-nBi"/>
     </inferredMetricsTieBreakers>
 </document>
