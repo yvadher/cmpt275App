@@ -76,6 +76,7 @@ extension ViewController {
                     print("Print 3")
                     
                     let errors = json["errors"] as! [[String: Any]]
+                    
                     for error in errors{
                         offset = error["offset"] as! Int
                         badLength = error["length"] as! Int
@@ -97,8 +98,9 @@ extension ViewController {
                             indexCount += 1
                             
                         }
+                        break
                         print("Input Sentence is:",inputSentence)
-                        completion(inputSentence)
+                        
                     }
                     
                 } //end of do block
@@ -106,8 +108,11 @@ extension ViewController {
                     print(error)
                     testFlag = false
                 }
+                
+                completion(inputSentence)
+                
             } // end of if let data = data
-            }.resume() //end of session.dataTask
+        }.resume() //end of session.dataTask
         print(inputSentence)
         let tempString = inputSentence
         return tempString
