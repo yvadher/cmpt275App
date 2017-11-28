@@ -142,8 +142,12 @@ class registerController: UIViewController {
                     
                     let item = json["result"] as! String
                     
-                    self.speenWheel.stopAnimating()
-                    UIApplication.shared.endIgnoringInteractionEvents()
+                    DispatchQueue.main.async {
+                        self.speenWheel.stopAnimating()
+                        UIApplication.shared.endIgnoringInteractionEvents()
+                    }
+                    
+                    
                     
                     if (item == "exist"){
                         
