@@ -178,7 +178,7 @@
                                     </stackView>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="syN-ZM-abO" userLabel="ButtonCollection">
                                         <rect key="frame" x="0.0" y="230" width="404" height="437"/>
-                                        <color key="backgroundColor" red="0.95283776521682739" green="0.95300072431564331" blue="0.95282751321792603" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="kN0-51-c0R">
                                             <size key="itemSize" width="88" height="120"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>

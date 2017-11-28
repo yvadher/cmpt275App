@@ -18,6 +18,7 @@ import UIKit
 
 
 class LoginController: UIViewController{
+        
     
     override func viewDidLoad() {
         
@@ -29,7 +30,9 @@ class LoginController: UIViewController{
                 self.performSegue(withIdentifier: "mainPageSegue", sender: self)
             }
         }
+        
     }
+    let speenWheel : UIActivityIndicatorView = UIActivityIndicatorView()
     
     @IBOutlet weak var _userName: UITextField!
     @IBOutlet weak var _userPwd: UITextField!
@@ -49,7 +52,6 @@ class LoginController: UIViewController{
     @IBAction func LogIn(_ sender: Any) {
         let userNameData: String = _userName.text!
         let userPwdData: String = _userPwd.text!
-        
         // Check if empty
         if (userNameData == "" || userPwdData == ""){
             print("Error: All fields required.")
@@ -63,7 +65,16 @@ class LoginController: UIViewController{
         } else {
             print("Error: Invalid email address.")
             displayAlertMessage(messageToDisplay: "Email address is not valid.")
+            return
         }
+        
+        //Start spinning wheel after all check
+        speenWheel.center = self.view.center
+        speenWheel.hidesWhenStopped = true
+        speenWheel.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+        view.addSubview(speenWheel)
+        speenWheel.startAnimating()
+        UIApplication.shared.beginIgnoringInteractionEvents()
         
         let sendJSON = ["userEmail": userNameData , "userPassword" : userPwdData]
         
@@ -92,6 +103,9 @@ class LoginController: UIViewController{
                     print("Here is json: \(json)")
                     let item = json["result"] as! String
                     print (item)
+                    //Stop speen wheel
+                    self.speenWheel.stopAnimating()
+                    UIApplication.shared.endIgnoringInteractionEvents()
                     
                     if (item == "true"){
                         print ("Came here! Matching JSON data has been found.")
@@ -155,5 +169,13 @@ class LoginController: UIViewController{
         }
         alertController.addAction(OKAction)
         self.present(alertController, animated: true, completion:nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "mainPageSegue" {
+            if let viewCtr: ViewController = segue.destination as? ViewController {
+                viewCtr.loginData = true
+            }
+        }
     }
 }

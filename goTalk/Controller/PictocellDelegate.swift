@@ -65,7 +65,7 @@ extension ViewController: pictographicCellDelegate{
         //Save user logged in(true) information to the userDefaults
         UserDefaults.standard.set(try? PropertyListEncoder().encode(photoCategory), forKey:"mainData")
         //UserDefaults.standard.set( encodedData , forKey: "mainData")
-        //UserDefaults.standard.synchronize()
+        UserDefaults.standard.synchronize()
         
     }
 }

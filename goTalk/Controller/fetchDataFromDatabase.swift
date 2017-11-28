@@ -10,7 +10,7 @@ import UIKit
 
 extension ViewController {
     
-    func fetchDataFromDatabase(){
+    func fetchDataFromDatabase(completion: @escaping () -> Void){
      
         //MARK: ------------------------Send a request STARTS ------------------------------------------
         
@@ -42,13 +42,14 @@ extension ViewController {
             
             if let data = data {
                 do {
-                    let json = try JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
-                    print(json)
                     
                     let decoder = JSONDecoder();
                     self.photoCategory = try! decoder.decode([PhotoCategory].self, from: data)
                     
                     print (self.photoCategory)
+                    self.favoritesButtons  =  PhotoCategory.fetchFavButtons(photoCat: self.photoCategory)
+                    completion()
+                    
                 } catch {
                     print(error)
                     //testFlag = false

@@ -128,13 +128,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		070D18111FCD17A90022536A /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				5EDD72641FC2E36800388E36 /* SWRevealViewController.h */,
+				5EDD72631FC2E36800388E36 /* SWRevealViewController.m */,
+<<<<<<< HEAD
+				5E2D55A91FCD37A200D9B543 /* SideMenuViewController.swift */,
+=======
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
 		073CE3051FAC0AB7000B3759 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				070D18111FCD17A90022536A /* Libraries */,
 				07C3759D1FC6257100591A0E /* webViewController.swift */,
-				5EDD72641FC2E36800388E36 /* SWRevealViewController.h */,
-				5EDD72631FC2E36800388E36 /* SWRevealViewController.m */,
-				5E2D55A91FCD37A200D9B543 /* SideMenuViewController.swift */,
+>>>>>>> 7ee494372a814ea0f00af7b5420f9eb563207fca
 				07FB5B9A1FC2752600DC69A4 /* EmailValidation.swift */,
 				07D94D6D1FB684D9003E5BF7 /* ForgotPassController.swift */,
 				CAB3A9801FA53A700036147C /* ViewController.swift */,

@@ -32,10 +32,14 @@ class registerController: UIViewController {
         performSegue(withIdentifier: "toLoginRegisterSegue", sender: self)
     }
     
+    let speenWheel : UIActivityIndicatorView = UIActivityIndicatorView()
     
     // Takes in user data, which is sent to the database for user registration.
     // Makes a request at database URL and adds the new JSON data.
     @IBAction func signUp(_ sender: Any) {
+        
+       
+        
         
         let _userNameData: String = _userName.text!
         let _userEmailData: String = _userEmail.text!
@@ -86,12 +90,21 @@ class registerController: UIViewController {
         } else {
             print("Email address is not valid.")
             displayAlertMessage(messageToDisplay: "Email address is not valid.")
+            return
         }
         
         //Prepare JSON data to post the request
         let inputJSON = ["userName": _userNameData , "userEmail" : _userEmailData, "userPassword" : _userPasswordData]
         
         sendToServer(inputJSON)
+        
+        //Start spinning wheel
+        speenWheel.center = self.view.center
+        speenWheel.hidesWhenStopped = true
+        speenWheel.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+        view.addSubview(speenWheel)
+        speenWheel.startAnimating()
+        UIApplication.shared.beginIgnoringInteractionEvents()
         
     }
     
@@ -129,6 +142,10 @@ class registerController: UIViewController {
                     
                     let item = json["result"] as! String
                     
+                    DispatchQueue.main.async {
+                        self.speenWheel.stopAnimating()
+                        UIApplication.shared.endIgnoringInteractionEvents()
+                    }
                     
                     if (item == "exist"){
                         
@@ -153,6 +170,7 @@ class registerController: UIViewController {
                     
                 } catch {
                     print(error)
+                    print ("Error")
                     testFlag = false
                 }
             }

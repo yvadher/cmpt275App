@@ -40,6 +40,8 @@ import AVFoundation
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
+    //Login segue data
+    var loginData : Bool = false
     
     // call Photocategory model function to get the data of categories with its photos
     var photoCategory: [PhotoCategory] = PhotoCategory.fetchPhotos()
@@ -82,10 +84,18 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         static let pictographCell = "pictographDisplayCell"
     }
     
+    //Function to relode pictographic colleciton
+    func relode(){
+        DispatchQueue.main.async {
+            //Update colelction….
+            self.pictographCollection.reloadData()
+            self.pictographCollection.layoutIfNeeded()
+        }
+    }
+    
     //Initial setup function that asigns the collection view to delegates and dataSource
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         //Check if the data is saved in phone
         // If data saved then override with our current data
         if let data = UserDefaults.standard.value(forKey:"mainData") as? Data {
@@ -93,7 +103,24 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             photoCategory = savedData!
         }else {
             //Fetch data from server first time login
-            //fetchData()
+            print ("Fethcing from db")
+            loginData = false
+            if ((UserDefaults.standard.string(forKey: "userEmail")) != nil){
+                fetchDataFromDatabase{
+                    self.relode()
+                }
+            }
+            
+        }
+        
+        if (loginData){
+            print ("Fethcing from db")
+            if ((UserDefaults.standard.string(forKey: "userEmail")) != nil){
+                fetchDataFromDatabase{
+                    self.relode()
+                }
+            }
+            loginData = false
         }
         
         if let userEmail = UserDefaults.standard.string(forKey: "userEmail"){
@@ -103,7 +130,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         //Fetch the favorites button from the data
         favoritesButtons  =  PhotoCategory.fetchFavButtons(photoCat: photoCategory)
         
-        
+        UserDefaults.standard.set(try? PropertyListEncoder().encode(photoCategory), forKey:"mainData")
+        UserDefaults.standard.synchronize()
         displayCollection.delegate = self
         displayCollection.dataSource = self
         
@@ -285,8 +313,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     //go button for the playing the message
     @IBAction func goButton(_ sender: Any) {
-        let lineToSpeak: String = clickedPhotos.joined(separator: " ")
-        speakLine(line: lineToSpeak)    //Speak the passed arugument
+        
+        correctGrammer(clickedPhotos.joined(separator:" ")) {(lineToSpeak) in
+            self.speakLine(line: lineToSpeak as! String)
+        }
+        //speakLine(line: lineToSpeak)    //Speak the passed arugument
     }
     
     //Function to convert rgb color to the UIcolor object
@@ -326,7 +357,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 
     }
 }
-
 
 
 //
