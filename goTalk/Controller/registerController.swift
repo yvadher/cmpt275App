@@ -147,8 +147,6 @@ class registerController: UIViewController {
                         UIApplication.shared.endIgnoringInteractionEvents()
                     }
                     
-                    
-                    
                     if (item == "exist"){
                         
                         // json file with user name exits on server than display message
@@ -172,6 +170,7 @@ class registerController: UIViewController {
                     
                 } catch {
                     print(error)
+                    print ("Error")
                     testFlag = false
                 }
             }

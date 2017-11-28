@@ -106,15 +106,20 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             //Fetch data from server first time login
             print ("Fethcing from db")
             loginData = false
-            fetchDataFromDatabase{
-                self.relode()
+            if ((UserDefaults.standard.string(forKey: "userEmail")) != nil){
+                fetchDataFromDatabase{
+                    self.relode()
+                }
             }
+            
         }
         
         if (loginData){
             print ("Fethcing from db")
-            fetchDataFromDatabase {
-                self.relode()
+            if ((UserDefaults.standard.string(forKey: "userEmail")) != nil){
+                fetchDataFromDatabase{
+                    self.relode()
+                }
             }
             loginData = false
         }
