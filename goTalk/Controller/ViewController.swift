@@ -85,6 +85,15 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         static let pictographCell = "pictographDisplayCell"
     }
     
+    //Function to relode pictographic colleciton
+    func relode(){
+        DispatchQueue.main.async {
+            //Update colelction….
+            self.pictographCollection.reloadData()
+            self.pictographCollection.layoutIfNeeded()
+        }
+    }
+    
     //Initial setup function that asigns the collection view to delegates and dataSource
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -97,12 +106,16 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             //Fetch data from server first time login
             print ("Fethcing from db")
             loginData = false
-            fetchDataFromDatabase()
+            fetchDataFromDatabase{
+                self.relode()
+            }
         }
         
         if (loginData){
             print ("Fethcing from db")
-            fetchDataFromDatabase()
+            fetchDataFromDatabase {
+                self.relode()
+            }
             loginData = false
         }
         

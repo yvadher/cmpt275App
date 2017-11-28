@@ -10,7 +10,7 @@ import UIKit
 
 extension ViewController {
     
-    func fetchDataFromDatabase(){
+    func fetchDataFromDatabase(completion: @escaping () -> Void){
      
         //MARK: ------------------------Send a request STARTS ------------------------------------------
         
@@ -48,8 +48,7 @@ extension ViewController {
                     
                     print (self.photoCategory)
                     self.favoritesButtons  =  PhotoCategory.fetchFavButtons(photoCat: self.photoCategory)
-                    self.pictographCollection.reloadData()
-                    self.pictographCollection.layoutIfNeeded()
+                    completion()
                     
                 } catch {
                     print(error)
