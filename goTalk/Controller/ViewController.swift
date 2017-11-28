@@ -59,7 +59,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     @IBOutlet weak var favoriteLableOutlet: UILabel!
     @IBOutlet weak var sideMenuButtonOutlet: UIBarButtonItem!
     
-    
     // Favorite button category action
     //1. change the picture collection view with favorites buttons
 

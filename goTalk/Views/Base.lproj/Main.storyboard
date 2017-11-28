@@ -706,12 +706,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XEe-Op-iN7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="642" y="-739"/>
+            <point key="canvasLocation" x="641" y="-774"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Side Menu View Controller-->
         <scene sceneID="RIL-Gd-DdF">
             <objects>
-                <tableViewController id="Rww-4R-3aP" sceneMemberID="viewController">
+                <tableViewController id="Rww-4R-3aP" customClass="SideMenuViewController" customModule="goTalk" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Abl-7B-WlR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -781,11 +781,11 @@
                                             <segue destination="udx-dJ-SFB" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="KjA-GE-ygq"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="LZ9-pI-I7u">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="LZ9-pI-I7u">
                                         <rect key="frame" x="0.0" y="208" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LZ9-pI-I7u" id="qBL-TB-ZBe">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="381" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Help" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5b1-Is-uoy">
@@ -803,7 +803,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="kMa-nJ-TOa" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="P22-Bn-nKy"/>
+                                            <segue destination="kMa-nJ-TOa" kind="show" customClass="SWRevealViewControllerSeguePushController" id="P22-Bn-nKy"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="IeR-s2-Jcj">
@@ -852,22 +852,22 @@
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="Db4-hd-Jvp" kind="show" id="abb-o9-yP5"/>
-                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="Rww-4R-3aP" id="pVX-zk-stE"/>
-                            <outlet property="delegate" destination="Rww-4R-3aP" id="HdL-gG-Yce"/>
+                            <outlet property="delegate" destination="Rww-4R-3aP" id="aF7-rH-elF"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="sideMenu" destination="Abl-7B-WlR" id="G0z-WX-Kdq"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Yd-Kp-ONj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1631.8840579710147" y="-739.4021739130435"/>
+            <point key="canvasLocation" x="1632" y="-1439"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="Tdu-HK-Zeq">
@@ -924,6 +924,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="biN-zs-8nI"/>
                     </view>
+                    <navigationItem key="navigationItem" id="laJ-XU-jWM"/>
                     <connections>
                         <outlet property="webView" destination="rtV-2X-mKH" id="RWf-bS-tNl"/>
                     </connections>
@@ -1320,9 +1321,8 @@
         <image name="logo" width="200" height="109"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="P22-Bn-nKy"/>
         <segue reference="5HL-Ya-hxW"/>
-        <segue reference="d9g-dv-m9X"/>
-        <segue reference="abb-o9-yP5"/>
+        <segue reference="RAr-sE-ysi"/>
+        <segue reference="hL1-Xj-1oU"/>
     </inferredMetricsTieBreakers>
 </document>
