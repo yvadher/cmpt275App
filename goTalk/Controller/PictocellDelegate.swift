@@ -2,6 +2,7 @@
 //  PictocellDelegate.swift
 //  goTalk
 //
+//  CMPT 275 Fall 2017 - Group 02: The Night Owls
 //  Created by Yagnik Vadher on 2017-11-17.
 //  Copyright © 2017 The Night Owls. All rights reserved.
 //
@@ -10,7 +11,6 @@ import UIKit
 import Foundation
 
 extension ViewController: pictographicCellDelegate{
-    
     
     
     //MARK: Helper function

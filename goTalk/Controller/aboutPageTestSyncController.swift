@@ -2,6 +2,7 @@
 //  aboutPageTestSyncController.swift
 //  goTalk
 //
+//  CMPT 275 Fall 2017 - Group 02: The Night Owls
 //  Created by Yagnik Vadher on 11/26/17.
 //  Copyright © 2017 The Night Owls. All rights reserved.
 //
