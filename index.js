@@ -8,9 +8,13 @@ var colors  = require('colors');
 var mongoose = require('mongoose');
 var timestamps = require('mongoose-timestamp');
 var cors = require('cors');
+var fs = require('fs');
 
 var Schema = mongoose.Schema;
 const MONGO_URL = 'mongodb://admin:admin@ds121535.mlab.com:21535/gotalkdev';
+
+let rawDataUserConfig = fs.readFileSync('userConfigDefault.json');
+let defaultConfigJson = JSON.parse(rawDataUserConfig);
 
 //To - do : Move all the data mongoose to differnet file.
 
@@ -18,13 +22,13 @@ var users = new Schema({
 		userName : String,
 		userEmail : String,
 		userPassword : String,
-		userConfig : {
+		userConfig : [{
 			likedButtons : [Boolean],
 			title : String,
 			userEmail: String,
 			categoryName: String,
 			imageNames: [String]
-		}
+		}]
 	},
 	{
 		collection: 'users'
@@ -45,6 +49,7 @@ app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 app.use(express.static(__dirname + '/public'));
 
 app.post('/save/', cors(), function(req, res) {
+	console.log("Came to save!!!!!!!!!!!!");
 	var data = req.body;
 
 	var userName = null;
@@ -72,10 +77,15 @@ app.post('/save/', cors(), function(req, res) {
 			console.log("Sending : "+ JSON.stringify(jsonObj));
 			res.json(jsonObj);
 		} else {
+			let rawDataUserConfig = fs.readFileSync('userConfigDefault.json');
+			let tempJson = JSON.parse(rawDataUserConfig);
+			tempJson[0].userEmail = userEmail
+
 			var saveUserData = new Model({
 				'userName': userName,
 				'userEmail': userEmail,
-				'userPassword': userPassword
+				'userPassword': userPassword,
+				'userConfig' : tempJson
 			}).save(function(err, result) {
 				if (err) throw err;
 				if(result) {
@@ -181,7 +191,7 @@ function sendEmail(email, stringToPass){
 	// https://github.com/sendgrid/sendgrid-nodejs
 	console.log("@@@@@@ email: "+email+" pwd: "+ stringToPass);
 	const sgMail = require('@sendgrid/mail');
-	sgMail.setApiKey("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");
+	sgMail.setApiKey("YOUR API key");
 	var msg = {
 	  to: email,
 	  from: 'noreply@gotalk.com',
@@ -199,7 +209,7 @@ app.post('/api/saveConfig', cors(), function(req,res){
 		userEmail = data[0].userEmail;
 	}
 
-	Model.update( { userEmail : userEmail } , {$set : { userConfig: data} }, {upsert: true}, function(err){
+	Model.update( { userEmail : userEmail } , { userConfig: data}, function(err){
 		console.log("this should not happen");
 		var jsonObj = {"result" : "Done"};
 		console.log("Sending : "+ JSON.stringify(jsonObj));
@@ -223,6 +233,9 @@ app.post('/api/getConfig', cors(), function(req,res){
 	  	config = config.toObject(); 
 	  	delete config._id;
 
+	  	for (let i =0 ;i<config['userConfig'].length; i++){
+	  		delete config['userConfig'][i]._id;
+	  	}
 	  	console.log(config);
 	  	res.json(config.userConfig);
 	 });
