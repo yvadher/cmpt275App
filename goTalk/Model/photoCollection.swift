@@ -7,10 +7,12 @@
 //  Created by Yagnik Vadher on 11/2/17.
 //  Worked on by Yagnik Vadher, Karamveer Dhillon, Fahd Chaudhry, and Shawn Thai.
 //
-//  11/02/2017: Added dynamic category changing. (Yagnik Vadher)
+//  11/02/2017: Added dynamic category changing.    (Yagnik Vadher)
 //              Category objects changed from dictionary -> array objects to maintain order of elements. (Yagnik Vadher)
-//  11/05/2017: Added Categories: Actions, Letters. Capitalized image names (Fahd Chaudhry, Shawn Thai).
-//  11/19/2017: Added more buttons (Shawn Thai).
+//  11/05/2017: Added Categories: Actions, Letters. Capitalized image names.    (Fahd Chaudhry, Shawn Thai)
+//  11/17/2017: Favouriting functionality.  (Yagnik Vadher)
+//  11/19/2017: Added more buttons.  (Shawn Thai)
+//  12/1/2017:  Added more buttons. Bug found {new buttons not seen; buttons cannot be rearranged}. (Shawn Thai)
 //
 //  Copyright © 2017 ksd8. All rights reserved.
 //
@@ -29,7 +31,7 @@ struct PhotoCategory : Codable {
         let photosData = PhotosLibrary.downloadPhotosData()
         
         for i in 0...(photosData.count-1) {
-            let categoryImageName = photosData[i].caetegoryName
+            let categoryImageName = photosData[i].categoryName
             if let imageNames = photosData[i].imagesNames as? [String] {
                 let newCategory = PhotoCategory(userEmail: "" ,categoryName: categoryImageName, title: categoryImageName, imageNames: imageNames, likedButtons : photosData[i].liked)
                 categories.append(newCategory)
@@ -38,7 +40,7 @@ struct PhotoCategory : Codable {
         return categories
     }
     
-    //Function that returns the array of favorites buttons
+    // Function that returns the array of favorites buttons
     static func fetchFavButtons(photoCat : [PhotoCategory] ) -> [String]{
         var favButtons : [String] = []
         for i in 0...(photoCat.count - 1 ){
@@ -56,24 +58,24 @@ struct PhotoCategory : Codable {
 class PhotosLibrary
 {
     struct categoryUnit: Codable {
-        let caetegoryName: String
+        let categoryName: String
         let imagesNames : [String]
         let liked : [Bool]
     }
     class func downloadPhotosData() -> [categoryUnit]
     {
         let object = [
-            categoryUnit(caetegoryName: "General", imagesNames: PhotosLibrary.generateImage(categoryPrefix: "General"), liked: PhotosLibrary.generateImageLiked(categoryPrefix: "General")),
-            categoryUnit(caetegoryName: "People", imagesNames: PhotosLibrary.generateImage(categoryPrefix: "People"), liked: PhotosLibrary.generateImageLiked(categoryPrefix: "People")),
-            categoryUnit(caetegoryName: "Actions", imagesNames: PhotosLibrary.generateImage(categoryPrefix: "Actions"), liked: PhotosLibrary.generateImageLiked(categoryPrefix: "Actions")),
-            categoryUnit(caetegoryName: "Feelings", imagesNames: PhotosLibrary.generateImage(categoryPrefix: "Feelings"), liked: PhotosLibrary.generateImageLiked(categoryPrefix: "Feelings")),
-            categoryUnit(caetegoryName: "Food", imagesNames: PhotosLibrary.generateImage(categoryPrefix: "Food"), liked: PhotosLibrary.generateImageLiked(categoryPrefix: "Food")),
-            categoryUnit(caetegoryName: "Drinks", imagesNames: PhotosLibrary.generateImage(categoryPrefix: "Drinks"), liked: PhotosLibrary.generateImageLiked(categoryPrefix: "Drinks")),
-            categoryUnit(caetegoryName: "Toys", imagesNames: PhotosLibrary.generateImage(categoryPrefix: "Toys"), liked: PhotosLibrary.generateImageLiked(categoryPrefix: "Toys")),
-            categoryUnit(caetegoryName: "Places", imagesNames: PhotosLibrary.generateImage(categoryPrefix: "Places"), liked: PhotosLibrary.generateImageLiked(categoryPrefix: "Places")),
-            categoryUnit(caetegoryName: "Colors", imagesNames: PhotosLibrary.generateImage(categoryPrefix: "Colors"), liked: PhotosLibrary.generateImageLiked(categoryPrefix: "Colors")),
-            categoryUnit(caetegoryName: "Numbers", imagesNames: PhotosLibrary.generateImage(categoryPrefix: "Numbers"), liked: PhotosLibrary.generateImageLiked(categoryPrefix: "Numbers")),
-            categoryUnit(caetegoryName: "Letters", imagesNames: PhotosLibrary.generateImage(categoryPrefix: "Letters"), liked: PhotosLibrary.generateImageLiked(categoryPrefix: "Letters")),
+            categoryUnit(categoryName: "General", imagesNames: PhotosLibrary.generateImage(categoryPrefix: "General"), liked: PhotosLibrary.generateImageLiked(categoryPrefix: "General")),
+            categoryUnit(categoryName: "People", imagesNames: PhotosLibrary.generateImage(categoryPrefix: "People"), liked: PhotosLibrary.generateImageLiked(categoryPrefix: "People")),
+            categoryUnit(categoryName: "Actions", imagesNames: PhotosLibrary.generateImage(categoryPrefix: "Actions"), liked: PhotosLibrary.generateImageLiked(categoryPrefix: "Actions")),
+            categoryUnit(categoryName: "Feelings", imagesNames: PhotosLibrary.generateImage(categoryPrefix: "Feelings"), liked: PhotosLibrary.generateImageLiked(categoryPrefix: "Feelings")),
+            categoryUnit(categoryName: "Food", imagesNames: PhotosLibrary.generateImage(categoryPrefix: "Food"), liked: PhotosLibrary.generateImageLiked(categoryPrefix: "Food")),
+            categoryUnit(categoryName: "Drinks", imagesNames: PhotosLibrary.generateImage(categoryPrefix: "Drinks"), liked: PhotosLibrary.generateImageLiked(categoryPrefix: "Drinks")),
+            categoryUnit(categoryName: "Toys", imagesNames: PhotosLibrary.generateImage(categoryPrefix: "Toys"), liked: PhotosLibrary.generateImageLiked(categoryPrefix: "Toys")),
+            categoryUnit(categoryName: "Places", imagesNames: PhotosLibrary.generateImage(categoryPrefix: "Places"), liked: PhotosLibrary.generateImageLiked(categoryPrefix: "Places")),
+            categoryUnit(categoryName: "Colors", imagesNames: PhotosLibrary.generateImage(categoryPrefix: "Colors"), liked: PhotosLibrary.generateImageLiked(categoryPrefix: "Colors")),
+            categoryUnit(categoryName: "Numbers", imagesNames: PhotosLibrary.generateImage(categoryPrefix: "Numbers"), liked: PhotosLibrary.generateImageLiked(categoryPrefix: "Numbers")),
+            categoryUnit(categoryName: "Letters", imagesNames: PhotosLibrary.generateImage(categoryPrefix: "Letters"), liked: PhotosLibrary.generateImageLiked(categoryPrefix: "Letters")),
             ]
         
         
@@ -86,10 +88,10 @@ class PhotosLibrary
         
         switch categoryPrefix {
         case "General":
-            imageNames = ["i", "You", "Okay", "Yes", "No", "Do", "Not", "What", "Where", "Why", "Who", "Help", "Now", "Later", "And", "Or", "Am", "Because", "But", "To", "On", "It", "Is"]
+            imageNames = ["i", "You", "Thank You", "Okay", "Yes", "No", "What", "Where", "Why", "Who", "Help", "Is", "It", "Do", "Not", "Now", "Later", "And", "Or", "Am", "Because", "But", "To", "On", "Up", "Down", "Left", "Right", "Big", "Small", "Tall"]
             
         case "People":
-            imageNames = ["He", "She"]
+            imageNames = ["We", "They", "He", "She", "Family", "Mom", "Dad", "Sister", "Brother", "Teacher", "Doctor"]
             
         case "Actions":
             imageNames = ["Like", "Dislike", "See", "Look", "Hear", "Play", "Make", "Come", "Eat", "Think", "Give", "Sleep"]
@@ -131,9 +133,9 @@ class PhotosLibrary
         
         switch categoryPrefix {
         case "General":
-            imageNames = Array(repeating: false, count: 23)
+            imageNames = Array(repeating: false, count: 31)
         case "People":
-            imageNames = Array(repeating: false, count: 2)
+            imageNames = Array(repeating: false, count: 11)
         case "Actions":
             imageNames = Array(repeating: false, count: 12)
         case "Feelings":

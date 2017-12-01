@@ -25,7 +25,6 @@
 		07E057B81FBFB6E300305119 /* speakWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E057B71FBFB6E300305119 /* speakWords.swift */; };
 		07FB5B9B1FC2752600DC69A4 /* EmailValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FB5B9A1FC2752600DC69A4 /* EmailValidation.swift */; };
 		5EDD72651FC2E36800388E36 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EDD72631FC2E36800388E36 /* SWRevealViewController.m */; };
-		BDAD10A41FB02CA400D0366D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDAD10A31FB02CA400D0366D /* Info.plist */; };
 		CAB3A97F1FA53A700036147C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB3A97E1FA53A700036147C /* AppDelegate.swift */; };
 		CAB3A9811FA53A700036147C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB3A9801FA53A700036147C /* ViewController.swift */; };
 		CAB3A9841FA53A700036147C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAB3A9821FA53A700036147C /* Main.storyboard */; };
@@ -324,7 +323,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0900;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = "The Night Owls";
 				TargetAttributes = {
 					CAB3A97A1FA53A700036147C = {
@@ -375,7 +374,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDAD10A41FB02CA400D0366D /* Info.plist in Resources */,
 				CAB3A9891FA53A700036147C /* LaunchScreen.storyboard in Resources */,
 				CAB3A9861FA53A700036147C /* Assets.xcassets in Resources */,
 				CAB3A9841FA53A700036147C /* Main.storyboard in Resources */,
