@@ -32,7 +32,9 @@ class LoginController: UIViewController{
         }
         
     }
-    let speenWheel : UIActivityIndicatorView = UIActivityIndicatorView()
+    
+    // Initialize spinning wheel animation for loading times
+    let spinWheel : UIActivityIndicatorView = UIActivityIndicatorView()
     
     @IBOutlet weak var _userName: UITextField!
     @IBOutlet weak var _userPwd: UITextField!
@@ -69,11 +71,11 @@ class LoginController: UIViewController{
         }
         
         //Start spinning wheel after all check
-        speenWheel.center = self.view.center
-        speenWheel.hidesWhenStopped = true
-        speenWheel.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
-        view.addSubview(speenWheel)
-        speenWheel.startAnimating()
+        spinWheel.center = self.view.center
+        spinWheel.hidesWhenStopped = true
+        spinWheel.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+        view.addSubview(spinWheel)
+        spinWheel.startAnimating()
         UIApplication.shared.beginIgnoringInteractionEvents()
         
         let sendJSON = ["userEmail": userNameData , "userPassword" : userPwdData]
@@ -104,9 +106,9 @@ class LoginController: UIViewController{
                     let item = json["result"] as! String
                     print (item)
                     
-                    //Stop speen wheel
+                    //Stop spin wheel
                     DispatchQueue.main.async {
-                        self.speenWheel.stopAnimating()
+                        self.spinWheel.stopAnimating()
                         UIApplication.shared.endIgnoringInteractionEvents()
                     }
                    
@@ -168,6 +170,7 @@ class LoginController: UIViewController{
     func displayAlertMessage(messageToDisplay: String) {
         let alertController = UIAlertController(title: "Alert", message: messageToDisplay, preferredStyle: .alert)
         let OKAction = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction!) in
+            
             // Code in this block will trigger when OK button tapped.
             print("Ok button tapped.");
         }

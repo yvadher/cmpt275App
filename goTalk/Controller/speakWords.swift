@@ -2,14 +2,17 @@
 //  speakWords.swift
 //  goTalk
 //
+//  CMPT 275 Fall 2017 - Group 02: The Night Owls
 //  Created by Yagnik Vadher on 2017-11-17.
+//
+//  12/01/2017: Comments and formatting.    (Shawn Thai)
 //  Copyright © 2017 The Night Owls. All rights reserved.
 //
 
 import UIKit
 import AVFoundation
 
-//Speak function that speaks out string that is being passed as argument
+// Speak function that speaks out string that is being passed as argument
 extension ViewController {
     func speakLine(line: String){
         let speechSynthesizer = AVSpeechSynthesizer()
@@ -19,12 +22,15 @@ extension ViewController {
         speechSynthesizer.speak(speechUtterance)
     }
     
-    // this is how you can join the string
-    //let lineToSpeak: String = clickedPhotos.joined(separator: " ")
+    // This is how you can join the string:
+    // let lineToSpeak: String = clickedPhotos.joined(separator: " ")
     
     
+    // correctGrammar takes in the string data from the displayBar and sends it to a grammar-correcting api.
+    // The api gives the phrase a grammar score of 0-100, where 100 is identified as "good grammar."
+    // If score < 100, then the api suggests grammar corrections to the phrase, which replaces the original string data.
     func correctGrammer(_ sendJSON: String, completion: @escaping (Any?) -> Void ) -> String{
-        var inputSentencePlus = self.clickedPhotos.joined(separator: "+")
+        let inputSentencePlus = self.clickedPhotos.joined(separator: "+")
         var inputSentence = self.clickedPhotos.joined(separator: " ")
         print("Print 1")
         //URL for the server API
@@ -33,7 +39,6 @@ extension ViewController {
         print(sendJSON)
         let joinedURL = apiURL + inputSentencePlus + apiKey
         print(joinedURL)
-        var testFlag = true
         guard let url = URL(string: joinedURL)
             else {
                 print("Error: URL not found.")
@@ -67,7 +72,6 @@ extension ViewController {
                     
                     let result = json["score"] as! Int
                     if(result == 100){
-                        testFlag = false;
                         print("RESULT LESS THAN 100")
                         completion(inputSentence)
                         return
@@ -104,10 +108,11 @@ extension ViewController {
                 } //end of do block
                 catch{
                     print(error)
-                    testFlag = false
                 }
             } // end of if let data = data
+            
             }.resume() //end of session.dataTask
+        
         print(inputSentence)
         let tempString = inputSentence
         return tempString
