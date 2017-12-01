@@ -7,20 +7,31 @@
 //  Created by yvadher on 10/28/17.
 //  Worked on by Yagnik Vadher, Karamveer Dhillon, Fahd Chaudhry, Shawn Thai, and Ryan Serkouh.
 //
-//  11/02/2017: Added images to render on screen. (Yagnik Vadher)
-//              Fixed image glitch when pictographic button is tapped. (Yagnik Vadher)
-//              Added text-to-speech functionality. (Yagnik Vadher)
-//              Configured scrolling for pictograph buttons. (Karamveer Dhillon)
-//  11/10/2017 : Added forget email functionality class (Yagnik Vadher)
-//  11/15/2017 : Synced up with server functionality (Yagnik Vadher)
-//  11/16/2017 : Added a favorites buttons (Yagnik Vadher)
-//  11/17/2017 : Changed the data model (Yagnik Vadher)
-//             : Chnaged the liked buttons (Yagnik Vadher)
+//  11/02/2017: Added images to render on screen.                       (Yagnik Vadher)
+//              Fixed image glitch when pictographic button is tapped.  (Yagnik Vadher)
+//              Added text-to-speech functionality.                     (Yagnik Vadher)
+//              Configured scrolling for pictograph buttons.            (Karamveer Dhillon)
+//  11/10/2017 : Added forget email functionality class.                (Yagnik Vadher)
+//  11/15/2017 : Synced up with server functionality.                   (Yagnik Vadher)
+//  11/16/2017 : Added a favorites buttons.                             (Yagnik Vadher)
+//  11/17/2017 : Changed the data model.                                (Yagnik Vadher)
+//             : Chnaged the liked buttons.                             (Yagnik Vadher)
 //             : Added category selection lable highlight
 //             : Added like button in favorites category
-//  11/06/2017: Code formatting and removed comments used for debugging. (Shawn Thai)
-//  11/10/2017: Code formatting. (Shawn Thai)
-//
+//  11/06/2017: Code formatting and removed comments used for debugging.    (Shawn Thai)
+//  11/10/2017: Code formatting.                                            (Shawn Thai)
+//  11/21/2017: Added syncing funcitonality (Yagnik Vadher)
+//            : Code formatting and removed comments used for debugging.    (Yagnik Vadher)
+//            : Code formatting.                                            (Yagnik Vadher)
+//            : Debuging compatbility with backend                          (Yagnik Vadher)
+//            : Added userEmail as main key in databse                      (Yagnik Vadher)
+//            : Changed the model for photoLibrary                          (Yagnik Vadher)
+//  11/26/2017: Added favorites button to get stored on user defults            (Yagnik Vadher)
+//            : Userdefults changed to store the data object for photolibrary   (Yagnik Vadher)
+//            : Added useremail to store in user defults to recognize user      (Yagnik Vadher)
+//            : Added test bench set up for userdefults memory                  (Yagnik Vadher)
+//            : Added a display message when user is synced                     (Yagnik Vadher)
+//            : Added errors checking for display message                       (Yagnik Vadher)
 //  Copyright © 2017 yvadher. All rights reserved.
 //
 
@@ -29,11 +40,13 @@ import AVFoundation
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
+    //Login segue data
+    var loginData : Bool = true
     
     // call Photocategory model function to get the data of categories with its photos
     var photoCategory: [PhotoCategory] = PhotoCategory.fetchPhotos()
-    
     var favoritesButtons : [String] = []
+
     
     //varibles that tracks the display bar images (ClickedPhotos) and the currentCategory
     var clickedPhotos: [String] = []
@@ -72,9 +85,56 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         static let pictographCell = "pictographDisplayCell"
     }
     
+    //Function to relode pictographic colleciton
+    func relode(){
+        DispatchQueue.main.async {
+            //Update colelction….
+            self.pictographCollection.reloadData()
+            self.pictographCollection.layoutIfNeeded()
+        }
+    }
+    
     //Initial setup function that asigns the collection view to delegates and dataSource
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print ("loginData: \(loginData)")
+        //Check if the data is saved in phone
+        // If data saved then override with our current data
+        if let data = UserDefaults.standard.value(forKey:"mainData") as? Data {
+            let savedData = try? PropertyListDecoder().decode(Array<PhotoCategory>.self, from: data)
+            photoCategory = savedData!
+        }else {
+            //Fetch data from server first time login
+            print ("Fethcing from db")
+            loginData = false
+            if ((UserDefaults.standard.string(forKey: "userEmail")) != nil){
+                fetchDataFromDatabase{
+                    self.relode()
+                }
+            }
+            
+        }
+        
+        if (loginData){
+            print ("Fethcing from db : \(loginData)")
+            if ((UserDefaults.standard.string(forKey: "userEmail")) != nil){
+                fetchDataFromDatabase{
+                    self.relode()
+                }
+            }
+            loginData = false
+        }
+        
+        if let userEmail = UserDefaults.standard.string(forKey: "userEmail"){
+            photoCategory[0].userEmail = userEmail
+        }
+        
+        //Fetch the favorites button from the data
+        favoritesButtons  =  PhotoCategory.fetchFavButtons(photoCat: photoCategory)
+        
+        UserDefaults.standard.set(try? PropertyListEncoder().encode(photoCategory), forKey:"mainData")
+        UserDefaults.standard.synchronize()
         displayCollection.delegate = self
         displayCollection.dataSource = self
         
@@ -234,7 +294,16 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             
             
             clickedPhotos.append(imgName)
-            speakLine(line: imgName)
+            
+            //Speak only if settings has been set too sepakSelected wotd
+            if (settings.speakSelectedWord){
+                speakLine(line: imgName)
+            }
+            
+            if (settings.scrollBack){
+                currentCategory = 0
+            }
+            
             displayCollection.reloadData()
             displayCollection.layoutIfNeeded()
         
@@ -257,8 +326,17 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     //go button for the playing the message
     @IBAction func goButton(_ sender: Any) {
-        let lineToSpeak: String = clickedPhotos.joined(separator: " ")
-        speakLine(line: lineToSpeak)    //Speak the passed arugument
+        if ( settings.grammerCorrectionOn ){
+            print ("Grammer is onn")
+            correctGrammer(clickedPhotos.joined(separator:" ")) {(lineToSpeak) in
+                self.speakLine(line: lineToSpeak as! String)
+            }
+        }else {
+            print ("Grammer is off")
+            speakLine(line: clickedPhotos.joined(separator:" "))
+        }
+        
+        //speakLine(line: lineToSpeak)    //Speak the passed arugument
     }
     
     //Function to convert rgb color to the UIcolor object
@@ -284,14 +362,18 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
     }
     
+    public func encoderJson(photoCategory : [PhotoCategory]){
+        let encoder = JSONEncoder()
+        let data = try! encoder.encode(photoCategory)
+        //print(String(data: data, encoding: .utf8)!)
+        print (data)
+        do {
+            let json = try JSONSerialization.jsonObject(with: data)
+            print(json)
+        } catch {
+            print(error)
+        }
+
+    }
 }
-
-
-
-
-
-
-
-
-
 

@@ -17,7 +17,8 @@
 
 import Foundation
 
-struct PhotoCategory {
+struct PhotoCategory : Codable {
+    var userEmail : String
     var categoryName: String
     var title: String
     var imageNames: [String]
@@ -30,17 +31,31 @@ struct PhotoCategory {
         for i in 0...(photosData.count-1) {
             let categoryImageName = photosData[i].caetegoryName
             if let imageNames = photosData[i].imagesNames as? [String] {
-                let newCategory = PhotoCategory(categoryName: categoryImageName, title: categoryImageName, imageNames: imageNames, likedButtons : photosData[i].liked)
+                let newCategory = PhotoCategory(userEmail: "" ,categoryName: categoryImageName, title: categoryImageName, imageNames: imageNames, likedButtons : photosData[i].liked)
                 categories.append(newCategory)
             }
         }
         return categories
     }
+    
+    //Function that returns the array of favorites buttons
+    static func fetchFavButtons(photoCat : [PhotoCategory] ) -> [String]{
+        var favButtons : [String] = []
+        for i in 0...(photoCat.count - 1 ){
+            
+            for j in 0...(photoCat[i].likedButtons.count - 1){
+                if (photoCat[i].likedButtons[j]){
+                    favButtons.append(photoCat[i].imageNames[j])
+                }
+            }
+        }
+        return favButtons
+    }
 }
 
 class PhotosLibrary
 {
-    struct categoryUnit{
+    struct categoryUnit: Codable {
         let caetegoryName: String
         let imagesNames : [String]
         let liked : [Bool]

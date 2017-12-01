@@ -18,6 +18,7 @@ import UIKit
 
 
 class LoginController: UIViewController{
+        
     
     override func viewDidLoad() {
         
@@ -26,10 +27,12 @@ class LoginController: UIViewController{
         if (UserDefaults.standard.bool(forKey: "isLoggedIn")){
             // Perform segue to go to main page
             OperationQueue.main.addOperation {
-                self.performSegue(withIdentifier: "mainPageSegue", sender: self)
+                self.performSegue(withIdentifier: "mainPageSegue", sender: Any?.self)
             }
         }
+        
     }
+    let speenWheel : UIActivityIndicatorView = UIActivityIndicatorView()
     
     @IBOutlet weak var _userName: UITextField!
     @IBOutlet weak var _userPwd: UITextField!
@@ -49,7 +52,6 @@ class LoginController: UIViewController{
     @IBAction func LogIn(_ sender: Any) {
         let userNameData: String = _userName.text!
         let userPwdData: String = _userPwd.text!
-        
         // Check if empty
         if (userNameData == "" || userPwdData == ""){
             print("Error: All fields required.")
@@ -63,7 +65,16 @@ class LoginController: UIViewController{
         } else {
             print("Error: Invalid email address.")
             displayAlertMessage(messageToDisplay: "Email address is not valid.")
+            return
         }
+        
+        //Start spinning wheel after all check
+        speenWheel.center = self.view.center
+        speenWheel.hidesWhenStopped = true
+        speenWheel.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+        view.addSubview(speenWheel)
+        speenWheel.startAnimating()
+        UIApplication.shared.beginIgnoringInteractionEvents()
         
         let sendJSON = ["userEmail": userNameData , "userPassword" : userPwdData]
         
@@ -93,16 +104,24 @@ class LoginController: UIViewController{
                     let item = json["result"] as! String
                     print (item)
                     
+                    //Stop speen wheel
+                    DispatchQueue.main.async {
+                        self.speenWheel.stopAnimating()
+                        UIApplication.shared.endIgnoringInteractionEvents()
+                    }
+                   
+                    
                     if (item == "true"){
                         print ("Came here! Matching JSON data has been found.")
                         
                         //Save user logged in(true) information to the userDefaults
                         UserDefaults.standard.set(true, forKey: "isLoggedIn")
+                        UserDefaults.standard.set(userNameData, forKey: "userEmail")
                         UserDefaults.standard.synchronize()
                         
                         // Perform segue to go to main page
                         OperationQueue.main.addOperation {
-                            self.performSegue(withIdentifier: "mainPageSegue", sender: self)
+                            self.performSegue(withIdentifier: "mainPageSegue", sender: Any?.self)
                         }
                     }else {
                         OperationQueue.main.addOperation {
@@ -154,5 +173,13 @@ class LoginController: UIViewController{
         }
         alertController.addAction(OKAction)
         self.present(alertController, animated: true, completion:nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let viewCtr: ViewController = segue.destination as? ViewController {
+            viewCtr.loginData = true
+        }
+        
     }
 }
