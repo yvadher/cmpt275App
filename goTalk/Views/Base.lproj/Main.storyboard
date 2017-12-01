@@ -781,7 +781,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.96056312320000004" green="0.96470874549999996" blue="0.96871882679999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <segue destination="udx-dJ-SFB" kind="show" id="9CE-qU-syg"/>
+                                            <segue destination="udx-dJ-SFB" kind="show" id="d25-92-Jdr"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="YdE-W7-wRK">
@@ -1053,7 +1053,7 @@
         <!--Settings Page Controller-->
         <scene sceneID="9tg-RI-dWJ">
             <objects>
-                <viewController id="udx-dJ-SFB" customClass="SettingsPageController" sceneMemberID="viewController">
+                <viewController id="udx-dJ-SFB" customClass="SettingsPageController" customModule="goTalk" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rJG-C3-hJM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1191,6 +1191,9 @@
                                                             </label>
                                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5lD-z3-nDd">
                                                                 <rect key="frame" x="265" y="18.333333333333314" width="51" height="31"/>
+                                                                <connections>
+                                                                    <action selector="grammerCorrectionChanged:" destination="udx-dJ-SFB" eventType="valueChanged" id="USQ-D6-DtM"/>
+                                                                </connections>
                                                             </switch>
                                                         </subviews>
                                                     </stackView>
@@ -1217,6 +1220,9 @@
                                                             </label>
                                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="myF-Ee-Q8q">
                                                                 <rect key="frame" x="265" y="18.333333333333371" width="51" height="31"/>
+                                                                <connections>
+                                                                    <action selector="speakSelectedWord:" destination="udx-dJ-SFB" eventType="valueChanged" id="tkc-ty-nc4"/>
+                                                                </connections>
                                                             </switch>
                                                         </subviews>
                                                     </stackView>
@@ -1243,6 +1249,9 @@
                                                             </label>
                                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p23-9B-z4v">
                                                                 <rect key="frame" x="265" y="18.333333333333258" width="51" height="31"/>
+                                                                <connections>
+                                                                    <action selector="scrollBack:" destination="udx-dJ-SFB" eventType="valueChanged" id="elk-h5-6yH"/>
+                                                                </connections>
                                                             </switch>
                                                         </subviews>
                                                     </stackView>
@@ -1272,6 +1281,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BH2-P7-1SY"/>
                     </view>
+                    <connections>
+                        <outlet property="grammerCorrectionOutlet" destination="5lD-z3-nDd" id="WIl-is-KDi"/>
+                        <outlet property="scrollBackOutlet" destination="p23-9B-z4v" id="zIt-dy-zpX"/>
+                        <outlet property="speakSelectedWordOutlet" destination="myF-Ee-Q8q" id="LXa-8l-mxl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bSI-PU-oEI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

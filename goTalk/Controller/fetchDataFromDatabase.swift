@@ -47,7 +47,6 @@ extension ViewController {
                     let decoder = JSONDecoder();
                     self.photoCategory = try! decoder.decode([PhotoCategory].self, from: data)
                     
-                    print (self.photoCategory)
                     self.favoritesButtons  =  PhotoCategory.fetchFavButtons(photoCat: self.photoCategory)
                     completion()
                     

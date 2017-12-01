@@ -291,9 +291,19 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 let category = self.photoCategory[currentCategory]
                 imgName = category.imageNames[indexPath.item]
             }
-        
+            
+            
             clickedPhotos.append(imgName)
-            speakLine(line: imgName)
+            
+            //Speak only if settings has been set too sepakSelected wotd
+            if (settings.speakSelectedWord){
+                speakLine(line: imgName)
+            }
+            
+            if (settings.scrollBack){
+                currentCategory = 0
+            }
+            
             displayCollection.reloadData()
             displayCollection.layoutIfNeeded()
         
@@ -316,10 +326,16 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     //go button for the playing the message
     @IBAction func goButton(_ sender: Any) {
-        
-        correctGrammer(clickedPhotos.joined(separator:" ")) {(lineToSpeak) in
-            self.speakLine(line: lineToSpeak as! String)
+        if ( settings.grammerCorrectionOn ){
+            print ("Grammer is onn")
+            correctGrammer(clickedPhotos.joined(separator:" ")) {(lineToSpeak) in
+                self.speakLine(line: lineToSpeak as! String)
+            }
+        }else {
+            print ("Grammer is off")
+            speakLine(line: clickedPhotos.joined(separator:" "))
         }
+        
         //speakLine(line: lineToSpeak)    //Speak the passed arugument
     }
     
@@ -360,22 +376,4 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 
     }
 }
-
-
-//
-//
-//public func fetchFavorites(photoCategory: [PhotoCategory]) -> [String]{
-//    var favButtons : [String] = []
-//    for i in 0...(photoCategory.count){
-//        for j in 0...(photoCategory[i].likedButtons.count){
-//            if (photoCategory[i].likedButtons[j]){
-//                favButtons.append(photoCategory[i].imageNames[j])
-//            }
-//        }
-//    }
-//    return favButtons
-//}
-
-
-
 
