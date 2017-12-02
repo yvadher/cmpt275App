@@ -16,8 +16,10 @@ class TutRootPageViewController: UIPageViewController, UIPageViewControllerDataS
         let vc1 = sb.instantiateViewController(withIdentifier: "TutOne")
         let vc2 = sb.instantiateViewController(withIdentifier: "TutTwo")
         let vc3 = sb.instantiateViewController(withIdentifier: "TutThree")
+        let vc4 = sb.instantiateViewController(withIdentifier: "TutFour")
+        let vc5 = sb.instantiateViewController(withIdentifier: "TutFive")
         
-        return [vc1, vc2, vc3]
+        return [vc1, vc2, vc3, vc4, vc5]
     }()
     
     override func viewDidLoad() {
