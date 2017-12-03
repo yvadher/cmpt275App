@@ -23,9 +23,6 @@ class webViewController: UIViewController {
        // webView.navigationDelegate = (self as! WKNavigationDelegate)
         webView.load(myRequest)
         
-        
-        
-        
     }
     
     // here show your indicator
