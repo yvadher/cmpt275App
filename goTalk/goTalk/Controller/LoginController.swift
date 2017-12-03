@@ -32,7 +32,6 @@ class LoginController: UIViewController{
         }
         
     }
-    let speenWheel : UIActivityIndicatorView = UIActivityIndicatorView()
     
     // Initialize spinning wheel animation for loading times
     let spinWheel : UIActivityIndicatorView = UIActivityIndicatorView()
@@ -72,19 +71,11 @@ class LoginController: UIViewController{
         }
         
         //Start spinning wheel after all check
-<<<<<<< HEAD
         spinWheel.center = self.view.center
         spinWheel.hidesWhenStopped = true
         spinWheel.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
         view.addSubview(spinWheel)
         spinWheel.startAnimating()
-=======
-        speenWheel.center = self.view.center
-        speenWheel.hidesWhenStopped = true
-        speenWheel.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
-        view.addSubview(speenWheel)
-        speenWheel.startAnimating()
->>>>>>> master
         UIApplication.shared.beginIgnoringInteractionEvents()
         
         let sendJSON = ["userEmail": userNameData , "userPassword" : userPwdData]
@@ -115,15 +106,9 @@ class LoginController: UIViewController{
                     let item = json["result"] as! String
                     print (item)
                     
-<<<<<<< HEAD
                     //Stop spin wheel
                     DispatchQueue.main.async {
                         self.spinWheel.stopAnimating()
-=======
-                    //Stop speen wheel
-                    DispatchQueue.main.async {
-                        self.speenWheel.stopAnimating()
->>>>>>> master
                         UIApplication.shared.endIgnoringInteractionEvents()
                     }
                    

@@ -2,10 +2,7 @@
 //  SettingsPageController.swift
 //  goTalk
 //
-<<<<<<< HEAD
 //  CMPT 275 Fall 2017 - Group 02: The Night Owls
-=======
->>>>>>> master
 //  Created by Yagnik Vadher on 11/30/17.
 //  Copyright © 2017 The Night Owls. All rights reserved.
 //
@@ -21,23 +18,16 @@ struct settings {
 class SettingsPageController : UIViewController{
     
     override func viewDidLoad() {
-<<<<<<< HEAD
-=======
-        
->>>>>>> master
         grammerCorrectionOutlet.setOn(UserDefaults.standard.bool(forKey: "grammer"), animated: true)
         speakSelectedWordOutlet.setOn(UserDefaults.standard.bool(forKey: "speakSelected"), animated: true)
         scrollBackOutlet.setOn(UserDefaults.standard.bool(forKey: "scrollBack"), animated: true)
     }
     
-<<<<<<< HEAD
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     
-=======
->>>>>>> master
     @IBOutlet weak var grammerCorrectionOutlet: UISwitch!
     @IBOutlet weak var scrollBackOutlet: UISwitch!
     @IBOutlet weak var speakSelectedWordOutlet: UISwitch!

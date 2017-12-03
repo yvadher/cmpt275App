@@ -16,11 +16,7 @@ extension ViewController {
         //MARK: ------------------------Send a request STARTS ------------------------------------------
         
         let sendJSON : [String :String] = ["userEmail" : UserDefaults.standard.string(forKey: "userEmail")!]
-<<<<<<< HEAD
         // URL for the server API
-=======
-        //URL for the server API
->>>>>>> master
         guard let url = URL(string: "http://gotalkapp.herokuapp.com/api/getConfig")
             else {
                 print("Error: URL not found.")
@@ -28,19 +24,11 @@ extension ViewController {
         }
         var request = URLRequest(url: url)
         
-<<<<<<< HEAD
         // Make a post request object
         request.httpMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         
         // Conver dictonory to JSON
-=======
-        //Make a post request object
-        request.httpMethod = "POST"
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        
-        //Conver dictonory to JSON
->>>>>>> master
         guard let httpBody = try? JSONSerialization.data(withJSONObject: sendJSON, options: [])
             else {
                 print("Error: Problem with JSON data.")
@@ -50,11 +38,7 @@ extension ViewController {
         
         let session = URLSession.shared
         
-<<<<<<< HEAD
         // Start session to send post request
-=======
-        //Start session to send post request
->>>>>>> master
         session.dataTask(with: request) { (data, response, error) in
             
             if let data = data {
@@ -68,10 +52,6 @@ extension ViewController {
                     
                 } catch {
                     print(error)
-<<<<<<< HEAD
-=======
-                    //testFlag = false
->>>>>>> master
                 }
             }
             }.resume()

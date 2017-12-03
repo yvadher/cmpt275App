@@ -2,11 +2,7 @@
 //  PictocellDelegate.swift
 //  goTalk
 //
-<<<<<<< HEAD
     //--------------------------------------------------------------------------------------------------
-=======
-//  CMPT 275 Fall 2017 - Group 02: The Night Owls
->>>>>>> master
 //  Created by Yagnik Vadher on 2017-11-17.
 //  Copyright © 2017 The Night Owls. All rights reserved.
 //
@@ -17,11 +13,7 @@ import Foundation
 extension ViewController: pictographicCellDelegate{
     
     
-<<<<<<< HEAD
     // MARK: Helper function
-=======
-    //MARK: Helper function
->>>>>>> master
     // Function that keep tracks of the heart button being liked or not according to there image names
     func changeLikedButton(str : String){
         for i in 0...(photoCategory.count-1){
@@ -68,19 +60,11 @@ extension ViewController: pictographicCellDelegate{
                 cell.isLiked = true
             }
         }
-<<<<<<< HEAD
         // Save json data.
         // encoderJson(photoCategory: photoCategory)
         // Save user logged in (true) information to the userDefaults.
         UserDefaults.standard.set(try? PropertyListEncoder().encode(photoCategory), forKey:"mainData")
         // UserDefaults.standard.set( encodedData , forKey: "mainData")
-=======
-        //save json
-        //encoderJson(photoCategory: photoCategory)
-        //Save user logged in(true) information to the userDefaults
-        UserDefaults.standard.set(try? PropertyListEncoder().encode(photoCategory), forKey:"mainData")
-        //UserDefaults.standard.set( encodedData , forKey: "mainData")
->>>>>>> master
         UserDefaults.standard.synchronize()
         
     }

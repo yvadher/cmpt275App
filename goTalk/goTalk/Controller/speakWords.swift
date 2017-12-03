@@ -22,7 +22,6 @@ extension ViewController {
         speechSynthesizer.speak(speechUtterance)
     }
     
-<<<<<<< HEAD
     // This is how you can join the string:
     // let lineToSpeak: String = clickedPhotos.joined(separator: " ")
     
@@ -32,14 +31,6 @@ extension ViewController {
     // If score < 100, then the api suggests grammar corrections to the phrase, which replaces the original string data.
     func correctGrammer(_ sendJSON: String, completion: @escaping (Any?) -> Void ) -> String{
         let inputSentencePlus = self.clickedPhotos.joined(separator: "+")
-=======
-    // this is how you can join the string
-    //let lineToSpeak: String = clickedPhotos.joined(separator: " ")
-    
-    
-    func correctGrammer(_ sendJSON: String, completion: @escaping (Any?) -> Void ) -> String{
-        var inputSentencePlus = self.clickedPhotos.joined(separator: "+")
->>>>>>> master
         var inputSentence = self.clickedPhotos.joined(separator: " ")
         print("Print 1")
         //URL for the server API
@@ -48,10 +39,6 @@ extension ViewController {
         print(sendJSON)
         let joinedURL = apiURL + inputSentencePlus + apiKey
         print(joinedURL)
-<<<<<<< HEAD
-=======
-        var testFlag = true
->>>>>>> master
         guard let url = URL(string: joinedURL)
             else {
                 print("Error: URL not found.")
@@ -85,10 +72,6 @@ extension ViewController {
                     
                     let result = json["score"] as! Int
                     if(result == 100){
-<<<<<<< HEAD
-=======
-                        testFlag = false;
->>>>>>> master
                         print("RESULT LESS THAN 100")
                         completion(inputSentence)
                         return
@@ -125,18 +108,11 @@ extension ViewController {
                 } //end of do block
                 catch{
                     print(error)
-<<<<<<< HEAD
                 }
             } // end of if let data = data
             
             }.resume() //end of session.dataTask
         
-=======
-                    testFlag = false
-                }
-            } // end of if let data = data
-            }.resume() //end of session.dataTask
->>>>>>> master
         print(inputSentence)
         let tempString = inputSentence
         return tempString
