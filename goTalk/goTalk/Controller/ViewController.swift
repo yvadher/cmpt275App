@@ -16,11 +16,19 @@
 //  11/16/2017 : Added a favorites buttons.                             (Yagnik Vadher)
 //  11/17/2017 : Changed the data model.                                (Yagnik Vadher)
 //             : Chnaged the liked buttons.                             (Yagnik Vadher)
+<<<<<<< HEAD
 //             : Added category selection lable highlight               (Yagnik Vadher)
 //             : Added like button in favorites category                (Yagnik Vadher)
 //  11/06/2017: Code formatting and removed comments used for debugging.    (Shawn Thai)
 //  11/10/2017: Code formatting.                                            (Shawn Thai)
 //  11/21/2017: Added syncing funcitonality                                 (Yagnik Vadher)
+=======
+//             : Added category selection lable highlight
+//             : Added like button in favorites category
+//  11/06/2017: Code formatting and removed comments used for debugging.    (Shawn Thai)
+//  11/10/2017: Code formatting.                                            (Shawn Thai)
+//  11/21/2017: Added syncing funcitonality (Yagnik Vadher)
+>>>>>>> master
 //            : Code formatting and removed comments used for debugging.    (Yagnik Vadher)
 //            : Code formatting.                                            (Yagnik Vadher)
 //            : Debuging compatbility with backend                          (Yagnik Vadher)
@@ -32,10 +40,13 @@
 //            : Added test bench set up for userdefults memory                  (Yagnik Vadher)
 //            : Added a display message when user is synced                     (Yagnik Vadher)
 //            : Added errors checking for display message                       (Yagnik Vadher)
+<<<<<<< HEAD
 //  11/30/2017: Fixed settings to false in begining
 //            : Added setting buttons functionality
 //            : Added user defults to save settings
 
+=======
+>>>>>>> master
 //  Copyright © 2017 yvadher. All rights reserved.
 //
 

@@ -2,7 +2,10 @@
 //  SideMenuViewController.swift
 //  goTalk
 //
+<<<<<<< HEAD
 //  CMPT 275 Fall 2017 - Group 02: The Night Owls
+=======
+>>>>>>> master
 //  Created by Fahd CHAUDHRY on 2017-11-27.
 //  Copyright © 2017 The Night Owls. All rights reserved.
 //

@@ -40,7 +40,11 @@ struct PhotoCategory : Codable {
         return categories
     }
     
+<<<<<<< HEAD
     // Function that returns the array of favorites buttons
+=======
+    //Function that returns the array of favorites buttons
+>>>>>>> master
     static func fetchFavButtons(photoCat : [PhotoCategory] ) -> [String]{
         var favButtons : [String] = []
         for i in 0...(photoCat.count - 1 ){
@@ -58,7 +62,11 @@ struct PhotoCategory : Codable {
 class PhotosLibrary
 {
     struct categoryUnit: Codable {
+<<<<<<< HEAD
         let categoryName: String
+=======
+        let caetegoryName: String
+>>>>>>> master
         let imagesNames : [String]
         let liked : [Bool]
     }
