@@ -16,6 +16,7 @@
     "node": "^6.2.2"
   },
   "dependencies": {
+    "@sendgrid/mail": "^6.1.4",
     "colors": "^1.1.2",
     "cors": "^2.8.4",
     "express": "^4.16.2",
