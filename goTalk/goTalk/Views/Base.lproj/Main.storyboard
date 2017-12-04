@@ -683,6 +683,7 @@
                         <outlet property="_userPassword" destination="3qn-W2-fLJ" id="ubb-lw-zC5"/>
                         <segue destination="MxL-Kc-YeK" kind="show" identifier="mainSegueRegister" id="Z8b-44-tY5"/>
                         <segue destination="Db4-hd-Jvp" kind="show" identifier="toLoginRegisterSegue" id="XNJ-hQ-gfi"/>
+                        <segue destination="iO8-K6-kAY" kind="show" identifier="mainPageRegistration" id="RTB-cx-MQK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bZF-ho-PG4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1334,10 +1335,9 @@
         <image name="logo" width="200" height="109"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="4TD-hq-yyC"/>
-        <segue reference="5HL-Ya-hxW"/>
+        <segue reference="Z8b-44-tY5"/>
         <segue reference="xdK-pM-5z2"/>
-        <segue reference="FWx-dj-vKk"/>
-        <segue reference="doN-0x-nBi"/>
+        <segue reference="RTB-cx-MQK"/>
+        <segue reference="XNJ-hQ-gfi"/>
     </inferredMetricsTieBreakers>
 </document>

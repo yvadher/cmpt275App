@@ -38,9 +38,6 @@ class registerController: UIViewController {
     // Makes a request at database URL and adds the new JSON data.
     @IBAction func signUp(_ sender: Any) {
         
-       
-        
-        
         let _userNameData: String = _userName.text!
         let _userEmailData: String = _userEmail.text!
         let _userPasswordData: String = _userPassword.text!
@@ -163,7 +160,7 @@ class registerController: UIViewController {
                         
                         //Perform segue to go to the main page
                         OperationQueue.main.addOperation {
-                            self.performSegue(withIdentifier: "mainSegueRegister", sender: self)
+                            self.performSegue(withIdentifier: "mainPageRegistration", sender: self)
                         }
                         
                     }
