@@ -403,9 +403,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             sideMenuButtonOutlet.target = revealViewController()
             sideMenuButtonOutlet.action = #selector(SWRevealViewController.revealToggle(_:))
             revealViewController().rearViewRevealWidth = 245
-            
             view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-            
         }
     }
     

@@ -2,17 +2,15 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Big.png",
+      "filename" : "tut3_cut.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Big@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Big@3x.png",
       "scale" : "3x"
     }
   ],
