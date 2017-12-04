@@ -7,7 +7,6 @@
 //
 //  12/01/2017: Comments and formatting.    (Shawn Thai)
 //  Copyright © 2017 The Night Owls. All rights reserved.
-//
 
 import UIKit
 import AVFoundation
@@ -18,15 +17,24 @@ extension ViewController {
     func speakLine(line: String){
         
         let speechSynthesizer = AVSpeechSynthesizer()
-        let speechUtterance = AVSpeechUtterance(string: line)
+        var lineToSpeak :String = line
+        
+        if (UserDefaults.standard.string(forKey: "UserLang") == "fr-CA"){
+            lineToSpeak = getInFrench(stringToSpeak: line)
+        }else {
+            lineToSpeak = line
+        }
+        
+        let speechUtterance = AVSpeechUtterance(string: lineToSpeak)
         
         if (UserDefaults.standard.string(forKey: "UserLang") != nil){
             speechUtterance.voice = AVSpeechSynthesisVoice(language: UserDefaults.standard.string(forKey: "UserLang") )
         }
         
-        
         speechUtterance.rate = 0.45
         speechSynthesizer.speak(speechUtterance)
+        
+        
     }
     
     // This is how you can join the string:
@@ -131,334 +139,290 @@ extension ViewController {
         
         switch str {
             case "Actions":
-                str = " "
+                str = "Actes"
             case "Afraid":
-                str = ""
+                str = "Peur"
             case "Am":
-                str = ""
+                str = "Suis"
             case "Angry":
-                str = ""
+                str = "Furieux"
             case "Apple":
-                str = ""
+                str = "Pomme"
             case "Ball":
-                str = ""
+                str = "Ballon"
             case "Banana":
-                str = ""
+                str = "Banane"
             case "Bathroom":
-                str = ""
+                str = "Salle de bains"
             case "Because":
-                str = ""
+                str = "Car"
             case "Bedroom":
-                str = ""
+                str = "Chambre"
             case "Big":
-                str = ""
+                str = "Gros"
             case "Black":
-                str = ""
+                str = "Noir"
             case "Blue":
-                str = ""
+                str = "Bleu"
             case "Book":
-                str = ""
+                str = "Livre"
             case "Bread":
-                str = ""
+                str = "Pain"
             case "Breakfast":
-                str = ""
+                str = "Déjeuner"
             case "Brother":
-                str = ""
+                str = "Frère"
             case "Brown":
-                str = ""
+                str = "marron"
             case "Burger":
-                str = ""
+                str = "Burger"
             case "But":
-                str = ""
+                str = "Mais"
             case "Butter":
-                str = ""
+                str = "Beurre"
             case "Car":
-                str = ""
+                str = "Voiture"
             case "Cereal":
-                str = ""
+                str = "Céréale"
             case "Chocolate":
-                str = ""
+                str = "Chocolat"
             case "Classroom":
-                str = ""
+                str = "Salle de classe"
             case "Clinic":
-                str = ""
+                str = "Clinique"
             case "Coffee":
-                str = ""
+                str = "café"
             case "Cold":
-                str = ""
+                str = "Du froid"
             case "Colors":
-                str = ""
+                str = "Couleurs"
             case "Come":
-                str = ""
+                str = "Viens"
             case "Confused":
-                str = ""
+                str = "Confus"
             case "Dad":
-                str = ""
+                str = "Papa"
             case "Dinner":
-                str = ""
+                str = "Dîner"
             case "Dislike":
-                str = ""
+                str = "Ne pas aimer"
             case "Do":
-                str = ""
+                str = "Faire"
             case "Doctor":
-                str = ""
+                str = "Docteur"
             case "Down":
-                str = ""
+                str = "Vers le bas"
             case "Drinks":
-                str = ""
+                str = "Boissons"
             case "Eat":
-                str = ""
+                str = "Manger"
             case "Eight":
-                str = ""
+                str = "Huit"
             case "Family":
-                str = ""
+                str = "Famille"
             case "Favourites":
-                str = ""
+                str = "Favoris"
             case "Feelings":
-                str = ""
+                str = "Sentiments"
             case "Five":
-                str = ""
+                str = "Cinq"
             case "Food":
-                str = ""
+                str = "Aliments"
             case "Four":
-                str = ""
+                str = "Quatre"
             case "Fruit":
-                str = ""
+                str = "Fruit"
             case "General":
-                str = ""
+                str = "Général"
             case "Give":
-                str = ""
+                str = "Donner"
             case "Go":
-                str = ""
+                str = "Aller"
             case "Grapes":
-                str = ""
+                str = "les raisins"
             case "Green":
-                str = ""
+                str = "vert"
             case "Grey":
-                str = ""
+                str = "Gris"
             case "Happy":
-                str = ""
+                str = "Content"
             case "He":
-                str = ""
+                str = "Il"
             case "Hear":
-                str = ""
+                str = "Entendre"
             case "Help":
-                str = ""
+                str = "Aidez"
             case "Home":
-                str = ""
+                str = "Accueil"
             case "Hot":
-                str = ""
+                str = "Chaud"
             case "i":
-                str = ""
+                str = "Je"
             case "IceCream":
-                str = ""
+                str = "Crème glacée"
             case "In":
-                str = ""
+                str = "Dans"
             case "Is":
-                str = ""
+                str = "Est"
             case "It":
-                str = ""
+                str = "Il"
             case "Juice":
-                str = ""
+                str = "jus"
             case "Kitchen":
-                str = ""
+                str = "Cuisine"
             case "Later":
-                str = ""
+                str = "Plus tard"
             case "Left":
-                str = ""
+                str = "La gauche"
             case "Lego":
-                str = ""
+                str = "Lego"
             case "Lemonade":
-                str = ""
+                str = "limonade"
             case "Letters":
-                str = ""
+                str = "Des lettres"
             case "Like":
-                str = ""
+                str = "Comme"
             case "Look":
-                str = ""
+                str = "Regardez"
             case "Lunch":
-                str = ""
+                str = "Le déjeuner"
             case "Make":
-                str = ""
+                str = "Faire"
             case "Milk":
-                str = ""
+                str = "Lait"
             case "Mom":
-                str = ""
+                str = "Maman"
             case "Nervous":
-                str = ""
+                str = "Nerveux"
             case "Nine":
-                str = ""
+                str = "Neuf"
             case "No":
-                str = ""
+                str = "Non"
             case "Noodles":
-                str = ""
+                str = "Nouilles"
             case "Not":
-                str = ""
+                str = "ne pas"
             case "Now":
-                str = ""
+                str = "présent"
             case "Numbers":
-                str = ""
+                str = "Nombres"
             case "Okay":
-                str = ""
+                str = "d'accord"
             case "On":
-                str = ""
+                str = "Sur"
             case "One":
-                str = ""
+                str = "Un"
             case "Or":
-                str = ""
+                str = "Ou"
             case "Orange":
-                str = ""
+                str = "Orange"
             case "Pencils":
-                str = ""
+                str = "Des crayons"
             case "People":
-                str = ""
+                str = "Gens"
             case "Pink":
-                str = ""
+                str = "Rose"
             case "Pizza":
-                str = ""
+                str = "Pizza"
             case "Places":
-                str = ""
+                str = "Des endroits"
             case "Play":
-                str = ""
+                str = "Jouer"
             case "Playground":
-                str = ""
+                str = "Cour de récréation"
             case "Purple":
-                str = ""
+                str = "Violet"
             case "Questions":
-                str = ""
+                str = "Des questions"
             case "Red":
-                str = ""
+                str = "rouge"
             case "Right":
-                str = ""
+                str = "Droite"
             case "Sad":
-                str = ""
+                str = "Triste"
             case "Sandwich":
-                str = ""
+                str = "Sandwich"
             case "School":
-                str = ""
+                str = "École"
             case "See":
-                str = ""
+                str = "Voir"
             case "Seven":
-                str = ""
+                str = "Sept"
             case "She":
-                str = ""
+                str = "Elle"
             case "Shy":
-                str = ""
+                str = "Timide"
             case "Sick":
-                str = ""
+                str = "Malade"
             case "Sister":
-                str = ""
+                str = "Sœur"
             case "Six":
-                str = ""
+                str = "Six"
             case "Sleep":
-                str = ""
+                str = "Dormir"
             case "Sleepy":
-                str = ""
+                str = "Somnolent"
             case "Small":
-                str = ""
+                str = "Petit"
             case "Snacks":
-                str = ""
+                str = "Collations"
             case "Soda":
-                str = ""
+                str = "Un soda"
             case "Sorry":
-                str = ""
+                str = "Pardon"
             case "Store":
-                str = ""
+                str = "le magasin"
             case "Surprised":
-                str = ""
+                str = "Surpris"
             case "Swing":
-                str = ""
+                str = "Balançoire"
             case "Tall":
-                str = ""
+                str = "Grand"
             case "Tea":
-                str = ""
+                str = "thé"
             case "Teacher":
-                str = ""
+                str = "Prof"
             case "Thank You":
-                str = ""
+                str = "Je vous remercie"
             case "They":
-                str = ""
+                str = "Ils"
             case "Think":
-                str = ""
+                str = "Pense"
             case "Three":
-                str = ""
+                str = "Trois"
             case "Tired":
-                str = ""
+                str = "Fatigué"
             case "To":
-                str = ""
+                str = "À"
             case "Toys":
-                str = ""
+                str = "Jouets"
             case "Two":
-                str = ""
+                str = "Deux"
             case "Up":
-                str = ""
+                str = "Up"
             case "Vegetables":
-                str = ""
+                str = "Des légumes"
             case "Warm":
-                str = ""
+                str = "Chaud"
             case "Water":
-                str = ""
+                str = "Eau"
             case "We":
-                str = ""
+                str = "nous"
             case "What":
-                str = ""
+                str = "Quelle"
             case "Where":
-                str = ""
+                str = "Où"
             case "Who":
-                str = ""
+                str = "Qui"
             case "Why":
-                str = ""
+                str = "Pourquoi"
             case "Yes":
-                str = ""
+                str = "Oui"
             case "You":
-                str = ""
+                str = "Toi"
             case "Zero":
-                str = ""
-            case "":
-                str = ""
-            case "":
-                str = ""
-            case "":
-                str = ""
-            case "":
-                str = ""
-            case "":
-                str = ""
-            case "":
-                str = ""
-            case "":
-                str = ""
-            case "":
-                str = ""
-            case "":
-                str = ""
-            case "":
-                str = ""
-            case "":
-                str = ""
-            case "":
-                str = ""
-            case "":
-                str = ""
-            case "":
-                str = ""
-            case "":
-                str = ""
-            case "":
-                str = ""
-            case "":
-                str = ""
-            case "":
-                str = ""
-            case "":
-                str = ""
-            case "":
-                str = ""
-            case "":
-                str = ""
-            case "":
-                str = ""
-
+                str = "Zéro"
+           
             default: break
         }
         
