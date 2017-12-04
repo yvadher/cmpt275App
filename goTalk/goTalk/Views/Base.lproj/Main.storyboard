@@ -276,6 +276,223 @@
             </objects>
             <point key="canvasLocation" x="641" y="126"/>
         </scene>
+        <!--Tut Page View Controller-->
+        <scene sceneID="3ix-iR-UfQ">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="6lq-WU-AfO" customClass="TutPageViewController" customModule="goTalk" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aY2-io-rS6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4729" y="126"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="b4m-F0-JlR">
+            <objects>
+                <viewController storyboardIdentifier="TutOne" id="ibJ-lw-Ri4" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CFy-ex-h7X">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tut1_cut" translatesAutoresizingMaskIntoConstraints="NO" id="95c-LR-gPe">
+                                <rect key="frame" x="0.0" y="20" width="414" height="566"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SFq-5n-sOu">
+                                <rect key="frame" x="359" y="0.0" width="55" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="1Pq-g5-DEk"/>
+                                    <constraint firstAttribute="width" constant="55" id="bE8-Hk-mEM"/>
+                                </constraints>
+                                <state key="normal" title="Skip"/>
+                                <connections>
+                                    <segue destination="iO8-K6-kAY" kind="show" id="nqY-9O-eB0"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ow9-8p-j1V">
+                                <rect key="frame" x="0.0" y="586" width="414" height="150"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="vbU-d2-FO6"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="95c-LR-gPe" firstAttribute="leading" secondItem="nup-Qp-Uq6" secondAttribute="leading" id="1h4-1W-Dph"/>
+                            <constraint firstItem="ow9-8p-j1V" firstAttribute="bottom" secondItem="nup-Qp-Uq6" secondAttribute="bottom" id="765-Pf-ON7"/>
+                            <constraint firstItem="95c-LR-gPe" firstAttribute="trailing" secondItem="nup-Qp-Uq6" secondAttribute="trailing" id="Dse-3D-49a"/>
+                            <constraint firstItem="ow9-8p-j1V" firstAttribute="top" secondItem="95c-LR-gPe" secondAttribute="bottom" id="PLh-Jl-Kky"/>
+                            <constraint firstItem="ow9-8p-j1V" firstAttribute="leading" secondItem="nup-Qp-Uq6" secondAttribute="leading" id="azh-su-sbh"/>
+                            <constraint firstItem="95c-LR-gPe" firstAttribute="top" secondItem="nup-Qp-Uq6" secondAttribute="top" id="byt-NW-U07"/>
+                            <constraint firstItem="SFq-5n-sOu" firstAttribute="top" secondItem="CFy-ex-h7X" secondAttribute="top" id="hhJ-RJ-v3N"/>
+                            <constraint firstItem="nup-Qp-Uq6" firstAttribute="trailing" secondItem="ow9-8p-j1V" secondAttribute="trailing" id="msG-Sm-Szc"/>
+                            <constraint firstItem="SFq-5n-sOu" firstAttribute="trailing" secondItem="nup-Qp-Uq6" secondAttribute="trailing" id="yiE-mb-Fta"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nup-Qp-Uq6"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CUJ-ON-Iui" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-6142.0289855072469" y="844.56521739130437"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="xjG-qi-JgV">
+            <objects>
+                <viewController storyboardIdentifier="TutTwo" id="x1V-1h-Sai" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WMh-3f-F3y">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tut2_cut" translatesAutoresizingMaskIntoConstraints="NO" id="5v6-2n-2Le">
+                                <rect key="frame" x="0.0" y="20" width="414" height="566"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hDs-Qq-cpS">
+                                <rect key="frame" x="359" y="0.0" width="55" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="4pH-Y1-Vaq"/>
+                                    <constraint firstAttribute="width" constant="55" id="vm1-4D-G1f"/>
+                                </constraints>
+                                <state key="normal" title="Skip"/>
+                                <connections>
+                                    <segue destination="iO8-K6-kAY" kind="show" id="sLm-dO-b1a"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="t9d-CF-AhT">
+                                <rect key="frame" x="0.0" y="586" width="414" height="150"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="8wa-LK-e3F"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5v6-2n-2Le" firstAttribute="top" secondItem="O9F-f6-hDk" secondAttribute="top" id="1Cs-gH-jzT"/>
+                            <constraint firstItem="t9d-CF-AhT" firstAttribute="leading" secondItem="O9F-f6-hDk" secondAttribute="leading" id="1Up-Eh-QD3"/>
+                            <constraint firstItem="O9F-f6-hDk" firstAttribute="trailing" secondItem="t9d-CF-AhT" secondAttribute="trailing" id="HvB-Wn-JWP"/>
+                            <constraint firstItem="O9F-f6-hDk" firstAttribute="bottom" secondItem="t9d-CF-AhT" secondAttribute="bottom" id="LMl-dd-lbn"/>
+                            <constraint firstItem="t9d-CF-AhT" firstAttribute="top" secondItem="5v6-2n-2Le" secondAttribute="bottom" id="hzL-xD-uBZ"/>
+                            <constraint firstItem="hDs-Qq-cpS" firstAttribute="top" secondItem="WMh-3f-F3y" secondAttribute="top" id="ktI-HH-7vq"/>
+                            <constraint firstItem="5v6-2n-2Le" firstAttribute="leading" secondItem="O9F-f6-hDk" secondAttribute="leading" id="sOp-Oi-VkZ"/>
+                            <constraint firstItem="hDs-Qq-cpS" firstAttribute="trailing" secondItem="O9F-f6-hDk" secondAttribute="trailing" id="tBz-lu-rMP"/>
+                            <constraint firstItem="5v6-2n-2Le" firstAttribute="trailing" secondItem="O9F-f6-hDk" secondAttribute="trailing" id="tal-OF-b4L"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="O9F-f6-hDk"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VvV-Fa-uvk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5430" y="845"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="SQ8-fR-Dha">
+            <objects>
+                <viewController storyboardIdentifier="TutThree" id="KNv-nr-6dU" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vh9-1W-5KD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tut3_cut" translatesAutoresizingMaskIntoConstraints="NO" id="3HB-sJ-L4k">
+                                <rect key="frame" x="0.0" y="20" width="414" height="566"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lpv-CT-qFY">
+                                <rect key="frame" x="359" y="0.0" width="55" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="6nx-RG-Sds"/>
+                                    <constraint firstAttribute="width" constant="55" id="yZh-Ne-Vpd"/>
+                                </constraints>
+                                <state key="normal" title="Skip"/>
+                                <connections>
+                                    <segue destination="iO8-K6-kAY" kind="show" id="R9v-uN-sZ9"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mmP-mv-Jfg">
+                                <rect key="frame" x="0.0" y="586" width="414" height="150"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="FeH-bT-0qh"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lpv-CT-qFY" firstAttribute="top" secondItem="vh9-1W-5KD" secondAttribute="top" id="3So-tW-lq6"/>
+                            <constraint firstItem="3HB-sJ-L4k" firstAttribute="top" secondItem="zJf-SB-DpK" secondAttribute="top" id="CLR-vV-uJS"/>
+                            <constraint firstItem="3HB-sJ-L4k" firstAttribute="leading" secondItem="zJf-SB-DpK" secondAttribute="leading" id="Hl3-aw-VuS"/>
+                            <constraint firstItem="mmP-mv-Jfg" firstAttribute="bottom" secondItem="zJf-SB-DpK" secondAttribute="bottom" id="XFY-I9-g9V"/>
+                            <constraint firstItem="3HB-sJ-L4k" firstAttribute="trailing" secondItem="zJf-SB-DpK" secondAttribute="trailing" id="g8M-ck-hes"/>
+                            <constraint firstItem="mmP-mv-Jfg" firstAttribute="leading" secondItem="zJf-SB-DpK" secondAttribute="leading" id="gX0-ln-KFl"/>
+                            <constraint firstItem="mmP-mv-Jfg" firstAttribute="top" secondItem="3HB-sJ-L4k" secondAttribute="bottom" id="hav-cv-zV7"/>
+                            <constraint firstItem="zJf-SB-DpK" firstAttribute="trailing" secondItem="mmP-mv-Jfg" secondAttribute="trailing" id="kPO-S7-hH4"/>
+                            <constraint firstItem="lpv-CT-qFY" firstAttribute="trailing" secondItem="zJf-SB-DpK" secondAttribute="trailing" id="s4f-uE-ZQa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="zJf-SB-DpK"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3vH-I3-wzo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4728" y="845"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="U5U-eZ-Eh8">
+            <objects>
+                <viewController storyboardIdentifier="TutFour" id="F05-cZ-jsl" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sGS-j7-JnD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="zVz-ii-toj">
+                                <rect key="frame" x="0.0" y="20" width="414" height="566"/>
+                                <color key="backgroundColor" red="0.96056312322616577" green="0.96470874547958374" blue="0.96871882677078247" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="muh-d8-bMY">
+                                <rect key="frame" x="0.0" y="586" width="414" height="150"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="F6r-df-2GR"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cbG-uZ-azY">
+                                <rect key="frame" x="359" y="0.0" width="55" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="SsW-79-nbH"/>
+                                    <constraint firstAttribute="width" constant="55" id="cK6-N8-cnm"/>
+                                </constraints>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <segue destination="iO8-K6-kAY" kind="show" id="CN8-g7-VuA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="muh-d8-bMY" firstAttribute="leading" secondItem="RGq-D4-ThH" secondAttribute="leading" id="09N-3C-dTg"/>
+                            <constraint firstItem="zVz-ii-toj" firstAttribute="leading" secondItem="RGq-D4-ThH" secondAttribute="leading" id="2vU-7W-0z8"/>
+                            <constraint firstItem="muh-d8-bMY" firstAttribute="top" secondItem="zVz-ii-toj" secondAttribute="bottom" id="DGb-Rh-JBT"/>
+                            <constraint firstItem="zVz-ii-toj" firstAttribute="trailing" secondItem="RGq-D4-ThH" secondAttribute="trailing" id="JH6-mH-1qA"/>
+                            <constraint firstAttribute="trailing" secondItem="cbG-uZ-azY" secondAttribute="trailing" id="NQ9-4a-HMZ"/>
+                            <constraint firstItem="RGq-D4-ThH" firstAttribute="trailing" secondItem="muh-d8-bMY" secondAttribute="trailing" id="asl-xP-qAP"/>
+                            <constraint firstItem="zVz-ii-toj" firstAttribute="top" secondItem="RGq-D4-ThH" secondAttribute="top" id="dwW-bL-BqH"/>
+                            <constraint firstItem="RGq-D4-ThH" firstAttribute="bottom" secondItem="muh-d8-bMY" secondAttribute="bottom" id="mYV-73-351"/>
+                            <constraint firstItem="cbG-uZ-azY" firstAttribute="top" secondItem="sGS-j7-JnD" secondAttribute="top" id="pdU-v7-5CU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="RGq-D4-ThH"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7a3-uQ-VTE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3986.9565217391309" y="844.56521739130437"/>
+        </scene>
         <!--Login Controller-->
         <scene sceneID="u3J-NW-Z52">
             <objects>
@@ -647,6 +864,7 @@
                                                 <state key="normal" title="Sign Up"/>
                                                 <connections>
                                                     <action selector="signUp:" destination="vAG-Fc-IcV" eventType="touchUpInside" id="x47-aa-yFg"/>
+                                                    <segue destination="6lq-WU-AfO" kind="show" identifier="mainPageRegistration" id="a4b-9x-dSW"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -683,7 +901,6 @@
                         <outlet property="_userPassword" destination="3qn-W2-fLJ" id="ubb-lw-zC5"/>
                         <segue destination="MxL-Kc-YeK" kind="show" identifier="mainSegueRegister" id="Z8b-44-tY5"/>
                         <segue destination="Db4-hd-Jvp" kind="show" identifier="toLoginRegisterSegue" id="XNJ-hQ-gfi"/>
-                        <segue destination="iO8-K6-kAY" kind="show" identifier="mainPageRegistration" id="RTB-cx-MQK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bZF-ho-PG4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1330,11 +1547,14 @@
         <image name="deleteB" width="100" height="100"/>
         <image name="emptyHeart" width="25" height="25"/>
         <image name="logo" width="200" height="109"/>
+        <image name="tut1_cut" width="1008" height="1524"/>
+        <image name="tut2_cut" width="1005" height="1512"/>
+        <image name="tut3_cut" width="987" height="1521"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="5HL-Ya-hxW"/>
+        <segue reference="Z8b-44-tY5"/>
         <segue reference="xdK-pM-5z2"/>
-        <segue reference="lUW-RB-xSc"/>
+        <segue reference="CN8-g7-VuA"/>
         <segue reference="XNJ-hQ-gfi"/>
     </inferredMetricsTieBreakers>
 </document>

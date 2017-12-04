@@ -212,14 +212,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             cell.imageName = imageName
             cell.categoryLable.text = imageName
             
-            
-            var lableName = imageName
-            //Check the language
-            if (UserDefaults.standard.string(forKey: "UserLang") == "fr-CA"){
-                lableName = getInFrench(stringToSpeak: imageName)
-            }
-            cell.categoryLable.text = lableName
-            
             //If its Favorites category than change the bacground of button and layout for favorites and other category white backgroud
             if (currentCategory == -1 ){
                 favoriteLableOutlet.backgroundColor = UIColorFromRGB(rgbValue: 0xe3f2fd)
@@ -252,13 +244,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 let imageNames = photos.imageNames
                 let imageName = imageNames[indexPath.item]
                 cell.imageName = imageName
-                
-                var lableName = imageName
-                //Check the language
-                if (UserDefaults.standard.string(forKey: "UserLang") == "fr-CA"){
-                    lableName = getInFrench(stringToSpeak: imageName)
-                }
-                cell.pictographLable.text = lableName
                 
                 if (photoCategory[currentCategory].likedButtons[indexPath.item]){
                     cell.isLiked = true
@@ -357,24 +342,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     //go button for the playing the message
     @IBAction func goButton(_ sender: Any) {
-        
-        //If french language then no grammer support   - > Because we dont know french :p
-        //Check the language
-        if (UserDefaults.standard.string(forKey: "UserLang") == "fr-CA"){
-            //lableName = getInFrench(stringToSpeak: imageName)
-            var arr : [String] = []
-            for item in clickedPhotos {
-                arr.append(getInFrench(stringToSpeak: item))
-            }
-            
-            
-            self.speakLine(line: arr.joined(separator:" ") )
-            return
-        }
-        
-        
         if ( settings.grammerCorrectionOn ){
-            print ("Grammer is on")
+            print ("Grammer is onn")
             correctGrammer(clickedPhotos.joined(separator:" ")) {(lineToSpeak) in
                 self.speakLine(line: lineToSpeak as! String)
             }

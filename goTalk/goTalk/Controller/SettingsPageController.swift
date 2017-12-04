@@ -98,13 +98,5 @@ class SettingsPageController : UIViewController, UIPickerViewDelegate, UIPickerV
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        if (pickerData[row] == "English"){
-            UserDefaults.standard.set("en-US", forKey: "UserLang")
-        }else {
-            UserDefaults.standard.set("fr-CA", forKey: "UserLang")
-        }
-        
-    }
     
 }

@@ -34,6 +34,7 @@ class pictographDisplayCell: UICollectionViewCell
             pictographImg.layer.borderWidth = 0.5
             pictographImg.layer.masksToBounds = true
             pictographImg.layer.cornerRadius = 10
+            pictographLable.text = imageName
         }
     }
     
