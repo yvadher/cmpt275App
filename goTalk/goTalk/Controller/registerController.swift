@@ -93,7 +93,7 @@ class registerController: UIViewController {
         //Prepare JSON data to post the request
         let inputJSON = ["userName": _userNameData , "userEmail" : _userEmailData, "userPassword" : _userPasswordData]
         
-        sendToServer(inputJSON)
+        sendToServer(inputJSON, userName: _userNameData, userEmail: _userEmailData)
         
         //Start spinning wheel
         speenWheel.center = self.view.center
@@ -106,7 +106,7 @@ class registerController: UIViewController {
     }
     
     
-    func sendToServer(_ sendJSON: [String: String]) -> Bool{
+    func sendToServer(_ sendJSON: [String: String], userName: String, userEmail : String) -> Bool{
         //URL for the server API
         var testFlag = true
         guard let url = URL(string: "http://gotalkapp.herokuapp.com/save")
@@ -158,6 +158,8 @@ class registerController: UIViewController {
                         UserDefaults.standard.set(true, forKey: "isLoggedIn")
                         UserDefaults.standard.synchronize()
                         
+                        UserDefaults.standard.set( userName , forKey: "userName")
+                        UserDefaults.standard.set( userEmail , forKey: "userEmail")
                         //Perform segue to go to the main page
                         OperationQueue.main.addOperation {
                             self.performSegue(withIdentifier: "mainPageRegistration", sender: self)
