@@ -138,6 +138,8 @@ extension ViewController {
         var str : String = stringToSpeak
         
         switch str {
+            case "And":
+                str = "Et"
             case "Actions":
                 str = "Actes"
             case "Afraid":
