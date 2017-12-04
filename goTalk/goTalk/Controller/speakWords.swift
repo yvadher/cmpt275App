@@ -19,7 +19,12 @@ extension ViewController {
         
         let speechSynthesizer = AVSpeechSynthesizer()
         let speechUtterance = AVSpeechUtterance(string: line)
-        speechUtterance.voice = AVSpeechSynthesisVoice(language: "fr-CA")
+        
+        if (UserDefaults.standard.string(forKey: "UserLang") != nil){
+            speechUtterance.voice = AVSpeechSynthesisVoice(language: UserDefaults.standard.string(forKey: "UserLang") )
+        }
+        
+        
         speechUtterance.rate = 0.45
         speechSynthesizer.speak(speechUtterance)
     }
@@ -118,6 +123,346 @@ extension ViewController {
         print(inputSentence)
         let tempString = inputSentence
         return tempString
+    }
+    
+    
+    func getInFrench(stringToSpeak : String) -> String {
+        var str : String = stringToSpeak
+        
+        switch str {
+            case "Actions":
+                str = " "
+            case "Afraid":
+                str = ""
+            case "Am":
+                str = ""
+            case "Angry":
+                str = ""
+            case "Apple":
+                str = ""
+            case "Ball":
+                str = ""
+            case "Banana":
+                str = ""
+            case "Bathroom":
+                str = ""
+            case "Because":
+                str = ""
+            case "Bedroom":
+                str = ""
+            case "Big":
+                str = ""
+            case "Black":
+                str = ""
+            case "Blue":
+                str = ""
+            case "Book":
+                str = ""
+            case "Bread":
+                str = ""
+            case "Breakfast":
+                str = ""
+            case "Brother":
+                str = ""
+            case "Brown":
+                str = ""
+            case "Burger":
+                str = ""
+            case "But":
+                str = ""
+            case "Butter":
+                str = ""
+            case "Car":
+                str = ""
+            case "Cereal":
+                str = ""
+            case "Chocolate":
+                str = ""
+            case "Classroom":
+                str = ""
+            case "Clinic":
+                str = ""
+            case "Coffee":
+                str = ""
+            case "Cold":
+                str = ""
+            case "Colors":
+                str = ""
+            case "Come":
+                str = ""
+            case "Confused":
+                str = ""
+            case "Dad":
+                str = ""
+            case "Dinner":
+                str = ""
+            case "Dislike":
+                str = ""
+            case "Do":
+                str = ""
+            case "Doctor":
+                str = ""
+            case "Down":
+                str = ""
+            case "Drinks":
+                str = ""
+            case "Eat":
+                str = ""
+            case "Eight":
+                str = ""
+            case "Family":
+                str = ""
+            case "Favourites":
+                str = ""
+            case "Feelings":
+                str = ""
+            case "Five":
+                str = ""
+            case "Food":
+                str = ""
+            case "Four":
+                str = ""
+            case "Fruit":
+                str = ""
+            case "General":
+                str = ""
+            case "Give":
+                str = ""
+            case "Go":
+                str = ""
+            case "Grapes":
+                str = ""
+            case "Green":
+                str = ""
+            case "Grey":
+                str = ""
+            case "Happy":
+                str = ""
+            case "He":
+                str = ""
+            case "Hear":
+                str = ""
+            case "Help":
+                str = ""
+            case "Home":
+                str = ""
+            case "Hot":
+                str = ""
+            case "i":
+                str = ""
+            case "IceCream":
+                str = ""
+            case "In":
+                str = ""
+            case "Is":
+                str = ""
+            case "It":
+                str = ""
+            case "Juice":
+                str = ""
+            case "Kitchen":
+                str = ""
+            case "Later":
+                str = ""
+            case "Left":
+                str = ""
+            case "Lego":
+                str = ""
+            case "Lemonade":
+                str = ""
+            case "Letters":
+                str = ""
+            case "Like":
+                str = ""
+            case "Look":
+                str = ""
+            case "Lunch":
+                str = ""
+            case "Make":
+                str = ""
+            case "Milk":
+                str = ""
+            case "Mom":
+                str = ""
+            case "Nervous":
+                str = ""
+            case "Nine":
+                str = ""
+            case "No":
+                str = ""
+            case "Noodles":
+                str = ""
+            case "Not":
+                str = ""
+            case "Now":
+                str = ""
+            case "Numbers":
+                str = ""
+            case "Okay":
+                str = ""
+            case "On":
+                str = ""
+            case "One":
+                str = ""
+            case "Or":
+                str = ""
+            case "Orange":
+                str = ""
+            case "Pencils":
+                str = ""
+            case "People":
+                str = ""
+            case "Pink":
+                str = ""
+            case "Pizza":
+                str = ""
+            case "Places":
+                str = ""
+            case "Play":
+                str = ""
+            case "Playground":
+                str = ""
+            case "Purple":
+                str = ""
+            case "Questions":
+                str = ""
+            case "Red":
+                str = ""
+            case "Right":
+                str = ""
+            case "Sad":
+                str = ""
+            case "Sandwich":
+                str = ""
+            case "School":
+                str = ""
+            case "See":
+                str = ""
+            case "Seven":
+                str = ""
+            case "She":
+                str = ""
+            case "Shy":
+                str = ""
+            case "Sick":
+                str = ""
+            case "Sister":
+                str = ""
+            case "Six":
+                str = ""
+            case "Sleep":
+                str = ""
+            case "Sleepy":
+                str = ""
+            case "Small":
+                str = ""
+            case "Snacks":
+                str = ""
+            case "Soda":
+                str = ""
+            case "Sorry":
+                str = ""
+            case "Store":
+                str = ""
+            case "Surprised":
+                str = ""
+            case "Swing":
+                str = ""
+            case "Tall":
+                str = ""
+            case "Tea":
+                str = ""
+            case "Teacher":
+                str = ""
+            case "Thank You":
+                str = ""
+            case "They":
+                str = ""
+            case "Think":
+                str = ""
+            case "Three":
+                str = ""
+            case "Tired":
+                str = ""
+            case "To":
+                str = ""
+            case "Toys":
+                str = ""
+            case "Two":
+                str = ""
+            case "Up":
+                str = ""
+            case "Vegetables":
+                str = ""
+            case "Warm":
+                str = ""
+            case "Water":
+                str = ""
+            case "We":
+                str = ""
+            case "What":
+                str = ""
+            case "Where":
+                str = ""
+            case "Who":
+                str = ""
+            case "Why":
+                str = ""
+            case "Yes":
+                str = ""
+            case "You":
+                str = ""
+            case "Zero":
+                str = ""
+            case "":
+                str = ""
+            case "":
+                str = ""
+            case "":
+                str = ""
+            case "":
+                str = ""
+            case "":
+                str = ""
+            case "":
+                str = ""
+            case "":
+                str = ""
+            case "":
+                str = ""
+            case "":
+                str = ""
+            case "":
+                str = ""
+            case "":
+                str = ""
+            case "":
+                str = ""
+            case "":
+                str = ""
+            case "":
+                str = ""
+            case "":
+                str = ""
+            case "":
+                str = ""
+            case "":
+                str = ""
+            case "":
+                str = ""
+            case "":
+                str = ""
+            case "":
+                str = ""
+            case "":
+                str = ""
+            case "":
+                str = ""
+
+            default: break
+        }
+        
+        return str
     }
 }
 

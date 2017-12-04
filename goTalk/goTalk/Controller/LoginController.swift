@@ -26,8 +26,6 @@ class LoginController: UIViewController{
         print (UserDefaults.standard.bool(forKey: "isLoggedIn"))
         if (UserDefaults.standard.bool(forKey: "isLoggedIn")){
             
-            
-            //
             // Perform segue to go to main page
             OperationQueue.main.addOperation {
                 self.performSegue(withIdentifier: "mainPageSegue", sender: Any?.self)
@@ -36,6 +34,7 @@ class LoginController: UIViewController{
             if ((UserDefaults.standard.string(forKey: "userEmail")) != nil){
                fetchUserDetails()
             }
+            UserDefaults.standard.set("en-gb", forKey: "UserLang")
             
             UserDefaults.standard.set(true, forKey: "speakSelected")
             UserDefaults.standard.set(false, forKey: "grammer")
