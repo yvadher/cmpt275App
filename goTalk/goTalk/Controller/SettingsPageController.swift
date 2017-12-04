@@ -17,8 +17,6 @@ struct settings {
 }
 class SettingsPageController : UIViewController, UIPickerViewDelegate, UIPickerViewDataSource{
     
-    
-    
     override func viewDidLoad() {
         grammerCorrectionOutlet.setOn(UserDefaults.standard.bool(forKey: "grammer"), animated: true)
         speakSelectedWordOutlet.setOn(UserDefaults.standard.bool(forKey: "speakSelected"), animated: true)
@@ -100,12 +98,5 @@ class SettingsPageController : UIViewController, UIPickerViewDelegate, UIPickerV
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
-    
-    
-    
-   
-   
-  
-
     
 }

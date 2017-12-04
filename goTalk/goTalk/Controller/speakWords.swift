@@ -14,10 +14,12 @@ import AVFoundation
 
 // Speak function that speaks out string that is being passed as argument
 extension ViewController {
+    
     func speakLine(line: String){
+        
         let speechSynthesizer = AVSpeechSynthesizer()
         let speechUtterance = AVSpeechUtterance(string: line)
-        
+        speechUtterance.voice = AVSpeechSynthesisVoice(language: "fr-CA")
         speechUtterance.rate = 0.45
         speechSynthesizer.speak(speechUtterance)
     }
