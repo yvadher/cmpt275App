@@ -15,7 +15,9 @@ struct settings {
     static var speakSelectedWord : Bool = UserDefaults.standard.bool(forKey: "speakSelected")
     static var scrollBack : Bool = UserDefaults.standard.bool(forKey: "scrollBack")
 }
-class SettingsPageController : UIViewController{
+class SettingsPageController : UIViewController, UIPickerViewDelegate, UIPickerViewDataSource{
+    
+    
     
     override func viewDidLoad() {
         grammerCorrectionOutlet.setOn(UserDefaults.standard.bool(forKey: "grammer"), animated: true)
@@ -24,6 +26,9 @@ class SettingsPageController : UIViewController{
         
         usernameLabel.text = UserDefaults.standard.string(forKey: "userName")
         emailLabel.text = UserDefaults.standard.string(forKey: "userEmail")
+        
+        picker.delegate = self
+        pickerData = ["English" , "French"]
         
     }
     
@@ -81,5 +86,26 @@ class SettingsPageController : UIViewController{
         }
         
     }
+    
+    @IBOutlet weak var picker: UIPickerView!
+    var pickerData: [String] = [String]()
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return pickerData[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return pickerData.count
+    }
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    
+    
+   
+   
+  
+
     
 }
