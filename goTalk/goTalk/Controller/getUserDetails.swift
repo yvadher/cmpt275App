@@ -1,23 +1,29 @@
 //
-//  fetchDataFromDatabase.swift
+//  getUserDetails.swift
 //  goTalk
 //
-//  CMPT 275 Fall 2017 - Group 02: The Night Owls
-//  Created by Yagnik Vadher on 11/26/17.
+//  Created by Yagnik Vadher on 12/3/17.
 //  Copyright © 2017 The Night Owls. All rights reserved.
 //
 
 import UIKit
 
-extension ViewController {
+struct userDetails : Codable {
+    var userEmail : String?
+    var userName : String?
     
-    func fetchDataFromDatabase(completion: @escaping () -> Void){
-     
-        //MARK: ------------------------Send a request STARTS ------------------------------------------
+}
+
+extension LoginController {
+    
+    
+    
+    
+    func fetchUserDetails() {
         
-        let sendJSON : [String :String] = ["userEmail" : UserDefaults.standard.string(forKey: "userEmail")!]
+        let sendJSON : [String :String] = ["userEmail" : UserDefaults.standard.string(forKey: "userEmail")! ]
         // URL for the server API
-        guard let url = URL(string: "http://gotalkapp.herokuapp.com/api/getConfig")
+        guard let url = URL(string: "http://gotalkapp.herokuapp.com/api/getUser")
             else {
                 print("Error: URL not found.")
                 return
@@ -43,12 +49,11 @@ extension ViewController {
             
             if let data = data {
                 do {
+                    let json = try JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
+                    print(json)
                     
-                    let decoder = JSONDecoder();
-                    self.photoCategory = try! decoder.decode([PhotoCategory].self, from: data)
-                    
-                    self.favoritesButtons  =  PhotoCategory.fetchFavButtons(photoCat: self.photoCategory)
-                    completion()
+                    let item = json["userName"] as! String
+                    UserDefaults.standard.set(item, forKey: "userName")
                     
                 } catch {
                     print(error)
@@ -56,7 +61,9 @@ extension ViewController {
             }
         }.resume()
         
-        //MARK: -------------------------Send request END-----------------------------------------------
     }
     
+    
 }
+
+

@@ -21,12 +21,17 @@ class SettingsPageController : UIViewController{
         grammerCorrectionOutlet.setOn(UserDefaults.standard.bool(forKey: "grammer"), animated: true)
         speakSelectedWordOutlet.setOn(UserDefaults.standard.bool(forKey: "speakSelected"), animated: true)
         scrollBackOutlet.setOn(UserDefaults.standard.bool(forKey: "scrollBack"), animated: true)
+        
+        usernameLabel.text = UserDefaults.standard.string(forKey: "userName")
+        emailLabel.text = UserDefaults.standard.string(forKey: "userEmail")
+        
     }
     
     
-    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
+    
+    
     
     @IBOutlet weak var grammerCorrectionOutlet: UISwitch!
     @IBOutlet weak var scrollBackOutlet: UISwitch!

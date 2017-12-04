@@ -1079,54 +1079,25 @@
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="286"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ACCOUNT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="06m-Uu-Ejr">
-                                                <rect key="frame" x="0.0" y="0.0" width="354" height="67.666666666666671"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="354" height="92"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                 <color key="textColor" red="0.32129086010000002" green="0.36218468679999999" blue="0.40436771370000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rem-Gf-0Ja" userLabel="NameView">
-                                                <rect key="frame" x="0.0" y="72.666666666666657" width="354" height="68"/>
-                                                <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="0W8-tz-Btr">
-                                                        <rect key="frame" x="20" y="0.0" width="314" height="68"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="spG-rD-FNH">
-                                                                <rect key="frame" x="0.0" y="0.0" width="147" height="68"/>
-                                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                                                <color key="textColor" red="0.42966678740000003" green="0.48156386610000002" blue="0.53572773929999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Jg-oF-EAn">
-                                                                <rect key="frame" x="167" y="0.0" width="147" height="68"/>
-                                                                <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
-                                                                <color key="textColor" red="0.44923898960000003" green="0.44923898960000003" blue="0.44923898960000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                        </subviews>
-                                                    </stackView>
-                                                </subviews>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="trailing" secondItem="0W8-tz-Btr" secondAttribute="trailing" constant="20" id="2Un-Nr-6Za"/>
-                                                    <constraint firstItem="0W8-tz-Btr" firstAttribute="top" secondItem="rem-Gf-0Ja" secondAttribute="top" id="Q5a-Sx-XK4"/>
-                                                    <constraint firstAttribute="bottom" secondItem="0W8-tz-Btr" secondAttribute="bottom" id="dOA-cj-k66"/>
-                                                    <constraint firstItem="0W8-tz-Btr" firstAttribute="leading" secondItem="rem-Gf-0Ja" secondAttribute="leading" constant="20" id="had-84-op2"/>
-                                                </constraints>
-                                            </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RAU-xa-et6" userLabel="EmailView">
-                                                <rect key="frame" x="0.0" y="145.66666666666666" width="354" height="67.666666666666657"/>
+                                                <rect key="frame" x="0.0" y="97" width="354" height="92"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="YJI-pR-Jzn">
-                                                        <rect key="frame" x="20" y="0.0" width="314" height="67.666666666666671"/>
+                                                        <rect key="frame" x="20" y="0.0" width="314" height="92"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FWS-mu-V5O">
-                                                                <rect key="frame" x="0.0" y="0.0" width="147" height="67.666666666666671"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="147" height="92"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                                 <color key="textColor" red="0.42966678740000003" green="0.48156386610000002" blue="0.53572773929999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4B-Jq-ngs">
-                                                                <rect key="frame" x="167" y="0.0" width="147" height="67.666666666666671"/>
+                                                                <rect key="frame" x="167" y="0.0" width="147" height="92"/>
                                                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
                                                                 <color key="textColor" red="0.44923898960000003" green="0.44923898960000003" blue="0.44923898960000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -1143,19 +1114,19 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hdk-1H-XDG" userLabel="EmailView">
-                                                <rect key="frame" x="0.0" y="218.33333333333331" width="354" height="67.666666666666686"/>
+                                                <rect key="frame" x="0.0" y="194" width="354" height="92"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="yai-V9-bxX">
-                                                        <rect key="frame" x="20" y="0.0" width="314" height="67.666666666666671"/>
+                                                        <rect key="frame" x="20" y="0.0" width="314" height="92"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NOK-Nl-etq">
-                                                                <rect key="frame" x="0.0" y="0.0" width="147" height="67.666666666666671"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="147" height="92"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                                 <color key="textColor" red="0.42966678740000003" green="0.48156386610000002" blue="0.53572773929999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m6O-xe-xvb">
-                                                                <rect key="frame" x="167" y="0.0" width="147" height="67.666666666666671"/>
+                                                                <rect key="frame" x="167" y="0.0" width="147" height="92"/>
                                                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
                                                                 <color key="textColor" red="0.44923898960000003" green="0.44923898960000003" blue="0.44923898960000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -1289,7 +1260,6 @@
                     <connections>
                         <outlet property="emailLabel" destination="m6O-xe-xvb" id="LmD-ZW-Z6O"/>
                         <outlet property="grammerCorrectionOutlet" destination="5lD-z3-nDd" id="WIl-is-KDi"/>
-                        <outlet property="nameLabel" destination="4Jg-oF-EAn" id="hjR-a6-wDA"/>
                         <outlet property="scrollBackOutlet" destination="p23-9B-z4v" id="zIt-dy-zpX"/>
                         <outlet property="speakSelectedWordOutlet" destination="myF-Ee-Q8q" id="LXa-8l-mxl"/>
                         <outlet property="usernameLabel" destination="k4B-Jq-ngs" id="YGf-z0-Vwm"/>
@@ -1337,7 +1307,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="Z8b-44-tY5"/>
         <segue reference="xdK-pM-5z2"/>
-        <segue reference="RTB-cx-MQK"/>
+        <segue reference="lUW-RB-xSc"/>
         <segue reference="XNJ-hQ-gfi"/>
     </inferredMetricsTieBreakers>
 </document>

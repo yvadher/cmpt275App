@@ -158,6 +158,7 @@ class registerController: UIViewController {
                         UserDefaults.standard.set(true, forKey: "isLoggedIn")
                         UserDefaults.standard.synchronize()
                         
+                        UserDefaults.standard.set(_userNameData, forKey: "userName")
                         //Perform segue to go to the main page
                         OperationQueue.main.addOperation {
                             self.performSegue(withIdentifier: "mainPageRegistration", sender: self)

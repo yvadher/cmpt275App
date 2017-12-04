@@ -25,11 +25,18 @@ class LoginController: UIViewController{
         print ("User logged in: ")
         print (UserDefaults.standard.bool(forKey: "isLoggedIn"))
         if (UserDefaults.standard.bool(forKey: "isLoggedIn")){
+            
+            
+            //
             // Perform segue to go to main page
             OperationQueue.main.addOperation {
                 self.performSegue(withIdentifier: "mainPageSegue", sender: Any?.self)
             }
         }else {
+            if ((UserDefaults.standard.string(forKey: "userEmail")) != nil){
+               fetchUserDetails()
+            }
+            
             UserDefaults.standard.set(true, forKey: "speakSelected")
             UserDefaults.standard.set(false, forKey: "grammer")
             UserDefaults.standard.set(true, forKey: "scrollBack")
@@ -124,6 +131,7 @@ class LoginController: UIViewController{
                         //Save user logged in(true) information to the userDefaults
                         UserDefaults.standard.set(true, forKey: "isLoggedIn")
                         UserDefaults.standard.set(userNameData, forKey: "userEmail")
+                        
                         UserDefaults.standard.synchronize()
                         
                         // Perform segue to go to main page
