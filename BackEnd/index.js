@@ -16,8 +16,7 @@ const MONGO_URL = 'mongodb://admin:admin@ds121535.mlab.com:21535/gotalkdev';
 let rawDataUserConfig = fs.readFileSync('userConfigDefault.json');
 let defaultConfigJson = JSON.parse(rawDataUserConfig);
 
-//To - do : Move all the data mongoose to differnet file.
-
+//User schema
 var users = new Schema({
 		userName : String,
 		userEmail : String,
@@ -33,6 +32,8 @@ var users = new Schema({
 	{
 		collection: 'users'
 	});
+
+	//User schema time plugin
 users.plugin(timestamps);
 
 var Model = mongoose.model('Model', users);
@@ -48,6 +49,8 @@ app.use(bodyParser.json()); // support json encoded bodies
 app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 app.use(express.static(__dirname + '/public'));
 
+
+//Save data api Which takes the username password and email as input
 app.post('/save/', cors(), function(req, res) {
 	console.log("Came to save!!!!!!!!!!!!");
 	var data = req.body;
@@ -191,7 +194,7 @@ function sendEmail(email, stringToPass){
 	// https://github.com/sendgrid/sendgrid-nodejs
 	console.log("@@@@@@ email: "+email+" pwd: "+ stringToPass);
 	const sgMail = require('@sendgrid/mail');
-	sgMail.setApiKey("Add api key");
+	sgMail.setApiKey("Public key");
 	var msg = {
 	  to: email,
 	  from: 'noreply@gotalk.com',
@@ -267,6 +270,8 @@ app.post('/api/getUser', cors(), function(req,res){
 });
 
 
+
+//For all other api send public
 
 app.get('*', function(req, res) {
 	console.log("Sending the index.html");
