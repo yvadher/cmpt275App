@@ -111,6 +111,8 @@
                                                 </subviews>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                                 <constraints>
+                                                    <constraint firstItem="dHr-Mf-vg0" firstAttribute="leading" secondItem="7Lc-JJ-tyG" secondAttribute="leading" id="9Uk-wI-c76"/>
+                                                    <constraint firstAttribute="trailing" secondItem="dHr-Mf-vg0" secondAttribute="trailing" constant="4" id="XOX-2i-1gD"/>
                                                     <constraint firstAttribute="width" constant="88" id="v1U-VX-aHc"/>
                                                 </constraints>
                                             </stackView>
@@ -135,10 +137,10 @@
                                                                     <rect key="frame" x="0.0" y="0.0" width="90" height="120"/>
                                                                     <subviews>
                                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="General" translatesAutoresizingMaskIntoConstraints="NO" id="gQh-2O-N1s" userLabel="CategoryImage">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="88" height="101.66666666666667"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="84" height="101.66666666666667"/>
                                                                         </imageView>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="General" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O9P-Lu-MSV" userLabel="CategoryLabel">
-                                                                            <rect key="frame" x="0.0" y="101.66666666666667" width="88" height="18.333333333333329"/>
+                                                                            <rect key="frame" x="0.0" y="101.66666666666667" width="84" height="18.333333333333329"/>
                                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
@@ -151,10 +153,10 @@
                                                             </subviews>
                                                         </view>
                                                         <constraints>
-                                                            <constraint firstAttribute="trailing" secondItem="zlz-7X-CWP" secondAttribute="trailing" id="5rB-OZ-tMe"/>
+                                                            <constraint firstAttribute="trailing" secondItem="zlz-7X-CWP" secondAttribute="trailing" constant="2" id="5rB-OZ-tMe"/>
                                                             <constraint firstItem="zlz-7X-CWP" firstAttribute="top" secondItem="ZWu-20-Gej" secondAttribute="top" id="9f7-KU-mfy"/>
                                                             <constraint firstAttribute="bottom" secondItem="zlz-7X-CWP" secondAttribute="bottom" id="UoN-aO-zK1"/>
-                                                            <constraint firstItem="zlz-7X-CWP" firstAttribute="leading" secondItem="ZWu-20-Gej" secondAttribute="leading" id="nBb-Zr-hrR"/>
+                                                            <constraint firstItem="zlz-7X-CWP" firstAttribute="leading" secondItem="ZWu-20-Gej" secondAttribute="leading" constant="2" id="nBb-Zr-hrR"/>
                                                         </constraints>
                                                         <connections>
                                                             <outlet property="categoryImg" destination="gQh-2O-N1s" id="Pye-1K-Lhd"/>
