@@ -29,6 +29,11 @@ class LoginController: UIViewController{
             OperationQueue.main.addOperation {
                 self.performSegue(withIdentifier: "mainPageSegue", sender: Any?.self)
             }
+        }else {
+            UserDefaults.standard.set(true, forKey: "speakSelected")
+            UserDefaults.standard.set(false, forKey: "grammer")
+            UserDefaults.standard.set(true, forKey: "scrollBack")
+            UserDefaults.standard.synchronize()
         }
         
     }

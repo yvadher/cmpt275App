@@ -304,8 +304,20 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 speakLine(line: imgName)
             }
             
+            //If settings has been set to scroll back than relode the pictographic  buttons and category collection
             if (settings.scrollBack){
+                //set category to 0, first category
                 currentCategory = 0
+                //relode pictographic collection
+                pictographCollection.reloadData()
+                pictographCollection.layoutIfNeeded()
+                
+                //Relode the category collection with animated
+                categoriesCollection.reloadData()
+                categoriesCollection.layoutIfNeeded()
+                categoriesCollection.scrollToItem(at: IndexPath(row: 0, section: 0),
+                                                  at: .left,
+                                                  animated: true)
             }
             
             displayCollection.reloadData()
