@@ -20,11 +20,7 @@ class webViewController: UIViewController {
         // Add FAQs link
         let myURL = URL(string: "http://gotalkapp.herokuapp.com/")
         let myRequest = URLRequest(url: myURL!)
-       // webView.navigationDelegate = (self as! WKNavigationDelegate)
         webView.load(myRequest)
-        
-        
-        
         
     }
     

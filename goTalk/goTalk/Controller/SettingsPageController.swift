@@ -15,18 +15,26 @@ struct settings {
     static var speakSelectedWord : Bool = UserDefaults.standard.bool(forKey: "speakSelected")
     static var scrollBack : Bool = UserDefaults.standard.bool(forKey: "scrollBack")
 }
-class SettingsPageController : UIViewController{
+class SettingsPageController : UIViewController, UIPickerViewDelegate, UIPickerViewDataSource{
     
     override func viewDidLoad() {
         grammerCorrectionOutlet.setOn(UserDefaults.standard.bool(forKey: "grammer"), animated: true)
         speakSelectedWordOutlet.setOn(UserDefaults.standard.bool(forKey: "speakSelected"), animated: true)
         scrollBackOutlet.setOn(UserDefaults.standard.bool(forKey: "scrollBack"), animated: true)
+        
+        usernameLabel.text = UserDefaults.standard.string(forKey: "userName")
+        emailLabel.text = UserDefaults.standard.string(forKey: "userEmail")
+        
+        picker.delegate = self
+        pickerData = ["English" , "French"]
+        
     }
     
     
-    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
+    
+    
     
     @IBOutlet weak var grammerCorrectionOutlet: UISwitch!
     @IBOutlet weak var scrollBackOutlet: UISwitch!
@@ -73,6 +81,29 @@ class SettingsPageController : UIViewController{
             scrollBackOutlet.setOn(false, animated: true)
             UserDefaults.standard.set(false, forKey: "scrollBack")
             UserDefaults.standard.synchronize()
+        }
+        
+    }
+    
+    @IBOutlet weak var picker: UIPickerView!
+    
+    var pickerData: [String] = [String]()
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return pickerData[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return pickerData.count
+    }
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if (pickerData[row] == "English"){
+            UserDefaults.standard.set("en-US", forKey: "UserLang")
+        }else {
+            UserDefaults.standard.set("fr-CA", forKey: "UserLang")
         }
         
     }

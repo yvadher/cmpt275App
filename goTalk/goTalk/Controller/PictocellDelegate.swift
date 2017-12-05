@@ -24,6 +24,7 @@ extension ViewController: pictographicCellDelegate{
             }
         }
     }
+    
     // Function that is called when user presses the favorites button
     func heartTapped(cell: pictographDisplayCell) {
         if let indexPath = pictographCollection.indexPath(for: cell){

@@ -54,7 +54,7 @@ extension ViewController {
                     print(error)
                 }
             }
-            }.resume()
+        }.resume()
         
         //MARK: -------------------------Send request END-----------------------------------------------
     }
