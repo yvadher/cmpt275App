@@ -1,6 +1,7 @@
 ## Welcome to CMPT 275 Application Page 
-- Check out webpage at for development history: [yvadher.github.io/cmpt275App](https://yvadher.github.io/cmpt275App/)
-- App website [https://gotalkapp.herokuapp.com/](https://gotalkapp.herokuapp.com/)
+- Check out our webpage for the development history: [yvadher.github.io/cmpt275App](https://yvadher.github.io/cmpt275App/)
+- goTalk App website: [https://gotalkapp.herokuapp.com/](https://gotalkapp.herokuapp.com/)
+
 #### Fall 2017 - Professor Herbert H. Tsang
 
 #### Group Number:  2
@@ -21,11 +22,11 @@
 
  | Task        | Assignment Details                                                                      | File                                        | Submission Date |
  |-------------|-----------------------------------------------------------------------------------------|---------------------------------------------|-----------------|
- | Assignment1 | [Project Plan and Website](Documents/Assignment1_Instruction.pdf)                       | [Submission Pdf](Documents/Assignment1.pdf) |                 |
- | Assignment2 | [Requirement, Design and Quality Assurance Plan](Documents/Assignment2_Instruction.pdf) | [Requirement Document](Documents/Assignment2_RequirmentDocument.pdf) <br> [Design Document](Documents/Assignment2_Design.pdf)<br> [QA Document](Documents/Assignment2_QA.pdf)   |                 |
- | Assignment3 | [Requirement, Design and Quality Assurance Plan Version 1](Documents/Assignment3_Instruction.pdf) | [Requirement Document](Documents/Assignment3_RequirmentDocument.pdf) <br> [Design Document](Documents/Assignment3_Design.pdf)<br> [QA Document](Documents/Assignment3_QA.pdf)   |                 |
- | Assignment4 | [Requirement, Design and Quality Assurance Plan Version 2](Documents/Assignment4_Instruction.pdf) | [Requirement Document](Documents/Assignment4_RequirmentDocument.pdf) <br> [Design Document](Documents/Assignment4_Design.pdf)<br> [QA Document](Documents/Assignment4_QA.pdf)   |                 |
- | Assignment5 |                                                                                         |                                             |                 |
+ | Assignment1 | [Project Plan and Website](Documents/Assignment1_Instruction.pdf)                       | [Project Proposal](Documents/Assignment1_ProjectProposal.pdf) | September 27, 2017 |
+ | Assignment2 | [Requirement, Design and Quality Assurance Plan](Documents/Assignment2_Instruction.pdf) | [Requirement Document](Documents/Assignment2_RequirmentDocument.pdf) <br> [Design Document](Documents/Assignment2_Design.pdf)<br> [QA Document](Documents/Assignment2_QA.pdf)   | October 18/20, 2017 |
+ | Assignment3 | [Requirement, Design and Quality Assurance Plan Version 1](Documents/Assignment3_Instruction.pdf) | [Requirement Document](Documents/Assignment3_RequirmentDocument.pdf) <br> [Design Document](Documents/Assignment3_Design.pdf)<br> [QA Document](Documents/Assignment3_QA.pdf)   | November 6, 2017 |
+ | Assignment4 | [Requirement, Design and Quality Assurance Plan Version 2](Documents/Assignment4_Instruction.pdf) | [Requirement Document](Documents/Assignment4_RequirmentDocument.pdf) <br> [Design Document](Documents/Assignment4_Design.pdf)<br> [QA Document](Documents/Assignment4_QA.pdf)   | November 20, 2017 |
+ | Assignment5 | [Requirement, Design and Quality Assurance Plan Version 3; Tutorial & Features Fulfillment](Documents/Assignment5_Instruction.pdf) | [Requirement Document](Documents/Assignment5_RequirmentDocument.pdf) <br> [Design Document](Documents/Assignment5_Design.pdf) <br> [QA Document](Documents/Assignment5_QA.pdf) <br> [Tutorial](Documents/Assignment5_Tutorial.pdf) <br> [Features Fulfillment](Documents/Assignment5_FeaturesFulfillmentReq.pdf)  | December 4, 2017 |
  
 ## Team Members
 

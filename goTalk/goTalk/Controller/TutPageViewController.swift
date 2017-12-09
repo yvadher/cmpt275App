@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TutRootPageViewController: UIPageViewController, UIPageViewControllerDataSource {
+class TutPageViewController: UIPageViewController, UIPageViewControllerDataSource {
     
     lazy var viewControllerList:[UIViewController] = {
         let sb = UIStoryboard(name: "Main", bundle: nil)
@@ -17,7 +17,7 @@ class TutRootPageViewController: UIPageViewController, UIPageViewControllerDataS
         let vc2 = sb.instantiateViewController(withIdentifier: "TutTwo")
         let vc3 = sb.instantiateViewController(withIdentifier: "TutThree")
         let vc4 = sb.instantiateViewController(withIdentifier: "TutFour")
-    
+        
         
         return [vc1, vc2, vc3, vc4]
     }()
@@ -58,4 +58,5 @@ class TutRootPageViewController: UIPageViewController, UIPageViewControllerDataS
         return viewControllerList[nextIndex]
     }
 }
+
 

@@ -21,12 +21,12 @@
 		075ECDA11FC276A600642843 /* registerationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075ECDA01FC276A600642843 /* registerationTest.swift */; };
 		07BE2EFE1FD4CDF800FC46CC /* getUserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BE2EFD1FD4CDF800FC46CC /* getUserDetails.swift */; };
 		07C3759E1FC6257100591A0E /* webViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C3759D1FC6257100591A0E /* webViewController.swift */; };
+		07CBEF561FD5659F00BCC4D2 /* TutPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CBEF551FD5659F00BCC4D2 /* TutPageViewController.swift */; };
 		07D94D6F1FB684D9003E5BF7 /* ForgotPassController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D94D6D1FB684D9003E5BF7 /* ForgotPassController.swift */; };
 		07E057B61FBFB59E00305119 /* PictocellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E057B51FBFB59E00305119 /* PictocellDelegate.swift */; };
 		07E057B81FBFB6E300305119 /* speakWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E057B71FBFB6E300305119 /* speakWords.swift */; };
 		07FB5B9B1FC2752600DC69A4 /* EmailValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FB5B9A1FC2752600DC69A4 /* EmailValidation.swift */; };
 		5EDD72651FC2E36800388E36 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EDD72631FC2E36800388E36 /* SWRevealViewController.m */; };
-		CA79A12B1FD54DFE000EF4CC /* TutPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA79A12A1FD54DFE000EF4CC /* TutPageViewController.swift */; };
 		CAB3A97F1FA53A700036147C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB3A97E1FA53A700036147C /* AppDelegate.swift */; };
 		CAB3A9811FA53A700036147C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB3A9801FA53A700036147C /* ViewController.swift */; };
 		CAB3A9841FA53A700036147C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAB3A9821FA53A700036147C /* Main.storyboard */; };
@@ -76,6 +76,7 @@
 		075ECDA01FC276A600642843 /* registerationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registerationTest.swift; sourceTree = "<group>"; };
 		07BE2EFD1FD4CDF800FC46CC /* getUserDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getUserDetails.swift; sourceTree = "<group>"; };
 		07C3759D1FC6257100591A0E /* webViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = webViewController.swift; path = goTalk/Controller/webViewController.swift; sourceTree = SOURCE_ROOT; };
+		07CBEF551FD5659F00BCC4D2 /* TutPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutPageViewController.swift; sourceTree = "<group>"; };
 		07D94D6D1FB684D9003E5BF7 /* ForgotPassController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPassController.swift; sourceTree = "<group>"; };
 		07E057B51FBFB59E00305119 /* PictocellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictocellDelegate.swift; sourceTree = "<group>"; };
 		07E057B71FBFB6E300305119 /* speakWords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = speakWords.swift; sourceTree = "<group>"; };
@@ -84,7 +85,6 @@
 		5EDD72631FC2E36800388E36 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		5EDD72641FC2E36800388E36 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		BDAD10A31FB02CA400D0366D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CA79A12A1FD54DFE000EF4CC /* TutPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutPageViewController.swift; sourceTree = "<group>"; };
 		CAB3A97B1FA53A700036147C /* goTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = goTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAB3A97E1FA53A700036147C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAB3A9801FA53A700036147C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -148,7 +148,6 @@
 				070D18111FCD17A90022536A /* Libraries */,
 				07C3759D1FC6257100591A0E /* webViewController.swift */,
 				07FB5B9A1FC2752600DC69A4 /* EmailValidation.swift */,
-				CA79A12A1FD54DFE000EF4CC /* TutPageViewController.swift */,
 				07D94D6D1FB684D9003E5BF7 /* ForgotPassController.swift */,
 				CAB3A9801FA53A700036147C /* ViewController.swift */,
 				07E057B71FBFB6E300305119 /* speakWords.swift */,
@@ -161,6 +160,7 @@
 				07578E2C1FCD445800633BA4 /* sideMenuController.swift */,
 				074BF8011FD0FA80000A6390 /* SettingsPageController.swift */,
 				07BE2EFD1FD4CDF800FC46CC /* getUserDetails.swift */,
+				07CBEF551FD5659F00BCC4D2 /* TutPageViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -424,7 +424,7 @@
 				CAB3A9811FA53A700036147C /* ViewController.swift in Sources */,
 				07C3759E1FC6257100591A0E /* webViewController.swift in Sources */,
 				073CE30C1FAC15C8000B3759 /* categoryCell.swift in Sources */,
-				CA79A12B1FD54DFE000EF4CC /* TutPageViewController.swift in Sources */,
+				07CBEF561FD5659F00BCC4D2 /* TutPageViewController.swift in Sources */,
 				07E057B81FBFB6E300305119 /* speakWords.swift in Sources */,
 				07578E2D1FCD445800633BA4 /* sideMenuController.swift in Sources */,
 				5EDD72651FC2E36800388E36 /* SWRevealViewController.m in Sources */,
