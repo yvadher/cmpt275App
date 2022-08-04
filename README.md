@@ -30,6 +30,9 @@
  
 ## Team Members
 
+* **Yagnik Vadher** : yvaddher@sfu.ca  
+> Yagnik is an avid computer engineering student with a passion for software systems. Yagnik codes mainly in Javascript with Angular framework, Python and C/C++. With co-op work experience in both IoT firmware projects and backend system software, he has developed a great software background. Yagnik has also worked with machine learning, and has diverse experience in software technologies.
+
 * **Fahd Chaudhry** : mchaudhr@sfu.ca 
 > Fahd is a keen Engineering Science student studying at Simon Fraser University. With a deep interest in technology and computers, Fahd is ready to tackle the challenges in the real world. Having an innate passion for coding, Fahd can can develop in C/C++, Python and VB/VBA programming languages. 
 
@@ -41,9 +44,6 @@
 
 * **Shawn Thai** : shawnt@sfu.ca  
 > Shawn is a third year SFU Engineering Science student with an interest in computer engineering. Shawn codes primarily in C++ and Python to create small programs and games, and during his free time, tries to learn new programming languages. Motivated by the coming of new, fast growing technologies, Shawn is eager to learn more about software development and project management.
-
-* **Yagnik Vadher** : yvaddher@sfu.ca  
-> Yagnik is an avid computer engineering student with a passion for software systems. Yagnik codes mainly in Javascript with Angular framework, Python and C/C++. With co-op work experience in both IoT firmware projects and backend system software, he has developed a great software background. Yagnik has also worked with machine learning, and has diverse experience in software technologies.
   
 ## Team Schedule  
 - [Calender](https://calendar.google.com/calendar/embed?src=kishorraj110%40gmail.com&ctz=America/Vancouver)
